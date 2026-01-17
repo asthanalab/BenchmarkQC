@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchmark-qc"
+version = "0.1.0"
+description = "Benchmark QC Hamiltonians (N2, FeS, U2)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "UNLICENSED"}
+authors = [{name = "Benchmark-QC contributors"}]
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "pennylane",
+  "pyscf",
+  "basis_set_exchange",
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["benchmark_qc*"]
