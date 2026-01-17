@@ -6,14 +6,11 @@ import contextlib
 import os
 import sys
 
-import basis_set_exchange as bse
 import numpy as np
 import pennylane as qml
 import pyscf
 from pyscf import ao2mo, gto, scf
 from pyscf.mcscf import CASCI
-
-from asf.wrapper import find_from_mol
 
 pyscf.__config__.B3LYP_WITH_VWN5 = False
 
@@ -46,6 +43,21 @@ def H_gen(
 
     This mirrors the original `N2/ham_pyscf.py` implementation.
     """
+
+    # Imports that are optional for just importing the package.
+    try:
+        import basis_set_exchange as bse
+    except Exception as e:  # pragma: no cover
+        raise RuntimeError(
+            "Missing dependency `basis_set_exchange`. Install it (e.g., `pip install basis_set_exchange`)."
+        ) from e
+
+    try:
+        from asf.wrapper import find_from_mol
+    except Exception as e:  # pragma: no cover
+        raise RuntimeError(
+            "Missing dependency `asf` (active space finder). Install it to generate N2 Hamiltonians."
+        ) from e
 
     basis = bse.get_basis(basis_input, elements=elements, fmt="nwchem")
 

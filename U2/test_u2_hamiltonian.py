@@ -16,89 +16,30 @@ Run examples:
 Notes:
 - For U2 here the Hamiltonian is 12 qubits (dimension 4096), so we use a sparse
   eigensolver by default to avoid building a 4096x4096 dense matrix.
+
+Docs:
+- docs/USAGE.md
+- docs/NPZ_FORMAT.md
 """
 
 from __future__ import annotations
 
 import argparse
 
-import numpy as np
+import sys
+from pathlib import Path
 
 
-def _infer_n_qubits(terms: np.ndarray) -> int:
-    """Infer number of qubits from PennyLane term wire indices."""
+# Make repo root importable even when running from inside the U2 folder.
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
 
-    max_wire = -1
-    for term in terms:
-        wires = getattr(term, "wires", None)
-        if wires is None:
-            continue
-        try:
-            wire_list = list(wires)
-        except Exception:
-            continue
-        if wire_list:
-            max_wire = max(max_wire, max(wire_list))
-
-    if max_wire < 0:
-        raise ValueError("Could not infer number of qubits from Hamiltonian terms.")
-
-    return max_wire + 1
-
-
-def _pick_point_index(labels: np.ndarray, index: int | None, bond: float | None) -> int:
-    """Choose a point index either directly or by nearest bond length."""
-
-    if (index is None) == (bond is None):
-        raise ValueError("Specify exactly one of --index or --bond")
-
-    if index is not None:
-        if index < 0 or index >= len(labels):
-            raise IndexError(f"index {index} out of range (0..{len(labels)-1})")
-        return index
-
-    assert bond is not None
-    labels_f = np.array(labels, dtype=float)
-    return int(np.argmin(np.abs(labels_f - float(bond))))
-
-
-def _ground_energy_from_terms(terms: np.ndarray) -> tuple[float, str]:
-    """Compute the Hamiltonian ground-state energy from saved PennyLane terms.
-
-    Returns:
-      (energy, method_used)
-    """
-
-    import pennylane as qml
-
-    n_qubits = _infer_n_qubits(terms)
-    dim = 2**n_qubits
-    wire_order = list(range(n_qubits))
-
-    use_sparse = dim > 1024
-
-    if not use_sparse:
-        h_mat = np.zeros((dim, dim), dtype=np.complex128)
-        for term in terms:
-            h_mat += qml.matrix(term, wire_order=wire_order)
-        h_mat = (h_mat + h_mat.conj().T) / 2
-        e0 = float(np.min(np.linalg.eigvalsh(h_mat)).real)
-        return e0, f"dense (dim={dim})"
-
-    from scipy.sparse import csr_matrix
-    from scipy.sparse.linalg import eigsh
-
-    h_sparse = csr_matrix((dim, dim), dtype=np.complex128)
-    for term in terms:
-        if hasattr(term, "sparse_matrix"):
-            h_sparse = h_sparse + term.sparse_matrix(wire_order=wire_order)
-        else:
-            h_sparse = h_sparse + csr_matrix(qml.matrix(term, wire_order=wire_order))
-
-    h_sparse = (h_sparse + h_sparse.getH()) * 0.5
-
-    e0 = float(eigsh(h_sparse, k=1, which="SA", return_eigenvectors=False)[0].real)
-    return e0, f"sparse-eigsh (dim={dim})"
+from benchmark_qc.hamiltonian_test import (  # noqa: E402
+    ground_energy_from_terms,
+    load_hamiltonian_npz,
+    pick_point_index,
+)
 
 
 def main() -> int:
@@ -124,18 +65,15 @@ def main() -> int:
 
     args = parser.parse_args()
 
-    data = np.load(args.npz, allow_pickle=True)
-    labels = data["labels"]
-    hs = data["Hs"]
-    casci_energies = data["casci_energies"]
+    data = load_hamiltonian_npz(args.npz)
 
-    i = _pick_point_index(labels, index=args.index, bond=args.bond)
-    chosen_label = float(labels[i])
+    i = pick_point_index(data.labels, index=args.index, bond=args.bond)
+    chosen_label = float(data.labels[i])
 
-    terms = hs[i]
-    e0, method = _ground_energy_from_terms(terms)
+    terms = data.hs[i]
+    e0, method = ground_energy_from_terms(terms)
 
-    e_ref = float(casci_energies[i])
+    e_ref = float(data.ref_energies[i])
     abs_diff = abs(e0 - e_ref)
 
     print(f"NPZ: {args.npz}")

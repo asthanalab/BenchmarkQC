@@ -6,14 +6,11 @@ import contextlib
 import os
 import sys
 
-import basis_set_exchange as bse
 import numpy as np
 import pennylane as qml
 import pyscf
 from pyscf import ao2mo, gto, scf
 from pyscf.mcscf import CASCI
-
-from asf.wrapper import find_from_mol
 
 pyscf.__config__.B3LYP_WITH_VWN5 = False
 
@@ -42,10 +39,24 @@ def H_gen(
     savefile: str = "H_data.npz",
     geom_id=None,
 ):
-    """Generate a qubit Hamiltonian H and CASCI energy for FeS (active-space selected by ASF).
+    """Generate a qubit Hamiltonian H, CASCI energy, and an operator pool for FeS.
 
     This mirrors the original `FeS/FeS_pyscf.py` implementation.
     """
+
+    try:
+        import basis_set_exchange as bse
+    except Exception as e:  # pragma: no cover
+        raise RuntimeError(
+            "Missing dependency `basis_set_exchange`. Install it (e.g., `pip install basis_set_exchange`)."
+        ) from e
+
+    try:
+        from asf.wrapper import find_from_mol
+    except Exception as e:  # pragma: no cover
+        raise RuntimeError(
+            "Missing dependency `asf` (active space finder). Install it to generate FeS Hamiltonians."
+        ) from e
 
     basis = bse.get_basis(basis_input, elements=elements, fmt="nwchem")
 
@@ -104,4 +115,71 @@ def H_gen(
             casci_energies=np.array(Es),
         )
 
-    return H, cas_energy
+    # ---------------- operator pool (singles + doubles) ----------------
+    # This matches the original FeS script: build excitation operators in the
+    # active space, split into alpha/beta using even/odd spin-orbital indices.
+    try:
+        import sympy as sp
+    except Exception as e:  # pragma: no cover
+        raise RuntimeError(
+            "Missing dependency `sympy`, required for FeS operator-pool generation. "
+            "Install it (e.g., `pip install sympy`)."
+        ) from e
+
+    electrons = nelecas
+    orbitals = ncas * 2
+
+    n_alpha_sym, n_beta_sym = sp.symbols("N_alpha N_beta")
+    eq1 = n_alpha_sym + n_beta_sym - electrons
+    eq2 = n_alpha_sym - n_beta_sym - mol.spin
+
+    soln = sp.solve((eq1, eq2), (n_alpha_sym, n_beta_sym), dict=True)
+    n_alpha = int(soln[0][n_alpha_sym])
+    n_beta = int(soln[0][n_beta_sym])
+
+    alpha = [i for i in range(orbitals) if i % 2 == 0]
+    beta = [i for i in range(orbitals) if i % 2 == 1]
+
+    alpha_occ = alpha[:n_alpha]
+    beta_occ = beta[:n_beta]
+    alpha_virt = [a for a in alpha if a not in alpha_occ]
+    beta_virt = [b for b in beta if b not in beta_occ]
+
+    assert n_alpha + n_beta == electrons, "N_alpha + N_beta must equal nelecas"
+
+    delta_sz = 0
+    if delta_sz not in (0, 1, -1, 2, -2):
+        raise ValueError(
+            f"Expected values for 'delta_sz' are 0, +/- 1 and +/- 2 but got ({delta_sz})."
+        )
+
+    sz = np.array([0.5 if (i % 2 == 0) else -0.5 for i in range(orbitals)])
+
+    singles: list[list[int]] = []
+    for r in alpha_occ:
+        for p in alpha_virt:
+            if sz[p] - sz[r] == delta_sz:
+                singles.append([r, p])
+
+    for r in beta_occ:
+        for p in beta_virt:
+            if sz[p] - sz[r] == delta_sz:
+                singles.append([r, p])
+
+    doubles = [
+        sorted([s, r, q, p])
+        for s in alpha_occ
+        for r in beta_occ
+        for q in alpha_virt
+        for p in beta_virt
+        if (sz[p] + sz[q] - sz[r] - sz[s]) == delta_sz
+    ]
+
+    op1 = [qml.fermi.FermiWord({(0, x[0]): "+", (1, x[1]): "-"}) for x in singles]
+    op2 = [
+        qml.fermi.FermiWord({(0, x[0]): "+", (1, x[1]): "+", (2, x[2]): "-", (3, x[3]): "-"})
+        for x in doubles
+    ]
+    operator_pool = op1 + op2
+
+    return H, cas_energy, operator_pool
