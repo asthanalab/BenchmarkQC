@@ -1,0 +1,345 @@
+{
+  "schema": "benchmark-qc.si-table-i-inventory.v1",
+  "source_table": "U2response/DD-ART-06-2026-000368/submission_bundle_2026-08-12/05_supporting_data/si_unified_benchmark_table.tex",
+  "source_machine_readable_records": "U2response/DD-ART-06-2026-000368/submission_bundle_Fe2S2_candidate_v2_2026-08-12/05_supporting_data/unified_benchmark_rows.json",
+  "scope": "Every molecule/active-space variant and every geometry row in SI Table I. This inventory records payload availability; it is not an application-results catalog.",
+  "geometry_row_count": 26,
+  "status_definitions": {
+    "checked_in_payload": "A validated Hamiltonian archive is present in this repository.",
+    "cloud_placeholder_payload": "A source filename is present in OneDrive but no validated payload is available.",
+    "results_metadata_only": "No validated source Hamiltonian or integral payload is available."
+  },
+  "variants": [
+    {
+      "table_number": 1,
+      "system_id": "n2_ccpvdz_cas10e8o_canonical",
+      "system": "N2",
+      "active_space": "CAS(10e,8o)",
+      "basis_and_relativistic_treatment": "cc-pVDZ; nonrelativistic",
+      "active_orbital_definition": "N 2s/2p valence, source MOs 2--9",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r1p0977",
+          "bond_length_angstrom": 1.0977,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz"
+        },
+        {
+          "label": "stretched_r2p0000",
+          "bond_length_angstrom": 2.0,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 2,
+      "system_id": "n2_ccpvdz_cas10e8o_casci_natural",
+      "system": "N2",
+      "active_space": "CAS(10e,8o)",
+      "basis_and_relativistic_treatment": "cc-pVDZ; nonrelativistic",
+      "active_orbital_definition": "CASCI-natural rotation of the N 2s/2p valence span",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r1p0977",
+          "bond_length_angstrom": 1.0977,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz"
+        },
+        {
+          "label": "stretched_r2p0000",
+          "bond_length_angstrom": 2.0,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 3,
+      "system_id": "n2_sto6g_cas4e4o_legacy",
+      "system": "N2",
+      "active_space": "CAS(4e,4o)",
+      "basis_and_relativistic_treatment": "STO-6G; nonrelativistic",
+      "active_orbital_definition": "N 2p pi/pi-star selector span, source MOs 5--8",
+      "geometry_rows": [
+        {
+          "label": "r1p2000",
+          "bond_length_angstrom": 1.2,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/N2/N2_PES_H1.npz"
+        },
+        {
+          "label": "r2p0000",
+          "bond_length_angstrom": 2.0,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/N2/N2_PES_H1.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 4,
+      "system_id": "fes_anorccmb_cas6e6o_legacy",
+      "system": "FeS",
+      "active_space": "CAS(6e,6o)",
+      "basis_and_relativistic_treatment": "ANO-RCC-MB; nonrelativistic",
+      "active_orbital_definition": "Six archived historical orbitals",
+      "geometry_rows": [
+        {
+          "label": "r2p4000",
+          "bond_length_angstrom": 2.4,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/FeS/FeS_PES_H.npz"
+        },
+        {
+          "label": "r3p0000",
+          "bond_length_angstrom": 3.0,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/FeS/FeS_PES_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 5,
+      "system_id": "u2_sfx2c_anorccmb_cas6e6o_legacy",
+      "system": "U2",
+      "active_space": "CAS(6e,6o)",
+      "basis_and_relativistic_treatment": "ANO-RCC-MB; SF-X2C-1e",
+      "active_orbital_definition": "Singlet-CASSCF orbitals optimized at 2.50 Angstrom and projected to each geometry",
+      "geometry_rows": [
+        {
+          "label": "r2p4000",
+          "bond_length_angstrom": 2.4,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/U2/U2_PES_H.npz"
+        },
+        {
+          "label": "r2p4800",
+          "bond_length_angstrom": 2.48,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/U2/U2_PES_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 6,
+      "system_id": "fes_cas14e10o_anorccvdzp_sfx2c",
+      "system": "FeS",
+      "active_space": "CAS(14e,10o)",
+      "basis_and_relativistic_treatment": "ANO-RCC-VDZP; SF-X2C-1e",
+      "active_orbital_definition": "Fe 3d, Fe 4s, S 3s, and S 3p span; source MOs 14--23",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r2p0170",
+          "bond_length_angstrom": 2.017,
+          "status": "checked_in_payload",
+          "result_record": "fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/results.json",
+          "source_archive": "datasets/benchmarkQC/FeS/systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "stretched_r3p0000",
+          "bond_length_angstrom": 3.0,
+          "status": "checked_in_payload",
+          "result_record": "fes_cas14e10o_anorccvdzp_sfx2c/stretched_r3p0000/results.json",
+          "source_archive": "datasets/benchmarkQC/FeS/systems/fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/fes_cas14e10o_anorccvdzp_sfx2c/stretched_r3p0000/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    },
+    {
+      "table_number": 7,
+      "system_id": "fe2s2_cas10e10o_anorccvdz_mb",
+      "system": "Fe2S2",
+      "active_space": "CAS(10e,10o)",
+      "basis_and_relativistic_treatment": "Fe ANO-RCC-VDZ; S,C,H ANO-RCC-MB; nonrelativistic",
+      "active_orbital_definition": "Fe 3d projector span for both Fe centers",
+      "geometry_rows": [
+        {
+          "label": "published",
+          "status": "checked_in_payload",
+          "result_record": "validation/fe2s2_exact_reference_283930/results/published_geometry/results.json",
+          "source_archive": "datasets/benchmarkQC/Fe2S2/systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/fe2s2_exact_reference_283930/results/published_geometry/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "stretched",
+          "status": "checked_in_payload",
+          "result_record": "validation/fe2s2_exact_reference_283930/results/bridge_stretched_1p10/results.json",
+          "source_archive": "datasets/benchmarkQC/Fe2S2/systems/fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/fe2s2_exact_reference_283930/results/bridge_stretched_1p10/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    },
+    {
+      "table_number": 8,
+      "system_id": "u2_cas6e10o_anorccvdzp_sfx2c",
+      "system": "U2",
+      "active_space": "CAS(6e,10o)",
+      "basis_and_relativistic_treatment": "ANO-RCC-VDZP; SF-X2C-1e",
+      "active_orbital_definition": "ActiveSpaceFinder U 5f/6d span with septet-CASSCF refinement",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r2p4300",
+          "bond_length_angstrom": 2.43,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/U2/systems/u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300/hamiltonian.npz",
+          "availability_note": "Reconstructed from a validated QCANT singlet certificate because the SI-side OneDrive Hamiltonian file was a dataless placeholder.",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/u2_partial_reference_desktop_20260804_88f8a4cc_8f7bda40_29e6d3f4/inputs/certificates/equilibrium_r2p4300_validated_lowest_singlet.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "stretched_r2p8000",
+          "bond_length_angstrom": 2.8,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/U2/systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/hamiltonian.npz",
+          "availability_note": "Reconstructed from a validated QCANT singlet certificate because the SI-side OneDrive Hamiltonian file was a dataless placeholder.",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/u2_partial_reference_desktop_20260804_88f8a4cc_8f7bda40_29e6d3f4/inputs/certificates/stretched_r2p8000_validated_lowest_singlet.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    },
+    {
+      "table_number": 9,
+      "system_id": "c2h4_cas2e2o_augccpvdz",
+      "system": "C2H4",
+      "active_space": "CAS(2e,2o)",
+      "basis_and_relativistic_treatment": "aug-cc-pVDZ; nonrelativistic",
+      "active_orbital_definition": "C=C pi and pi-star; source MOs 7--8",
+      "geometry_rows": [
+        {
+          "label": "planar_0deg",
+          "status": "checked_in_payload",
+          "result_record": "c2h4_cas2e2o_augccpvdz/planar_0deg/results.json",
+          "source_archive": "datasets/benchmarkQC/C2H4/systems/c2h4_cas2e2o_augccpvdz_planar_0deg/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2h4_cas2e2o_augccpvdz/planar_0deg/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "twisted_90deg",
+          "status": "checked_in_payload",
+          "result_record": "c2h4_cas2e2o_augccpvdz/twisted_90deg/results.json",
+          "source_archive": "datasets/benchmarkQC/C2H4/systems/c2h4_cas2e2o_augccpvdz_twisted_90deg/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2h4_cas2e2o_augccpvdz/twisted_90deg/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    },
+    {
+      "table_number": 10,
+      "system_id": "ch2_cas6e6o_augccpvtz",
+      "system": "CH2",
+      "active_space": "CAS(6e,6o)",
+      "basis_and_relativistic_treatment": "aug-cc-pVTZ; nonrelativistic",
+      "active_orbital_definition": "C 2s/2p and two H 1s combinations; source MOs 1--6",
+      "geometry_rows": [
+        {
+          "label": "bent_102deg",
+          "status": "checked_in_payload",
+          "result_record": "ch2_cas6e6o_augccpvtz/bent_102deg/results.json",
+          "source_archive": "datasets/benchmarkQC/CH2/systems/ch2_cas6e6o_augccpvtz_bent_102deg/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/bent_102deg/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "open_140deg",
+          "status": "checked_in_payload",
+          "result_record": "ch2_cas6e6o_augccpvtz/open_140deg/results.json",
+          "source_archive": "datasets/benchmarkQC/CH2/systems/ch2_cas6e6o_augccpvtz_open_140deg/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/open_140deg/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    },
+    {
+      "table_number": 11,
+      "system_id": "c2_cas8e8o_augccpvtz",
+      "system": "C2",
+      "active_space": "CAS(8e,8o)",
+      "basis_and_relativistic_treatment": "aug-cc-pVTZ; nonrelativistic",
+      "active_orbital_definition": "C 2s/2p valence span; source MOs 2--9",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r1p2430",
+          "bond_length_angstrom": 1.243,
+          "status": "checked_in_payload",
+          "result_record": "c2_cas8e8o_augccpvtz/equilibrium_r1p2430/results.json",
+          "source_archive": "datasets/benchmarkQC/C2/systems/c2_cas8e8o_augccpvtz_equilibrium_r1p2430/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2_cas8e8o_augccpvtz/equilibrium_r1p2430/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "stretched_r2p2000",
+          "bond_length_angstrom": 2.2,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 12,
+      "system_id": "o2_cas12e8o_augccpvtz",
+      "system": "O2",
+      "active_space": "CAS(12e,8o)",
+      "basis_and_relativistic_treatment": "aug-cc-pVTZ; nonrelativistic",
+      "active_orbital_definition": "O 2s/2p valence span; source MOs 2--9",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r1p2075",
+          "bond_length_angstrom": 1.2075,
+          "status": "checked_in_payload",
+          "result_record": "o2_cas12e8o_augccpvtz/equilibrium_r1p2075/results.json",
+          "source_archive": "datasets/benchmarkQC/O2/systems/o2_cas12e8o_augccpvtz_equilibrium_r1p2075/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/o2_cas12e8o_augccpvtz/equilibrium_r1p2075/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "stretched_r2p0000",
+          "bond_length_angstrom": 2.0,
+          "status": "checked_in_payload",
+          "result_record": "o2_cas12e8o_augccpvtz/stretched_r2p0000/results.json",
+          "source_archive": "datasets/benchmarkQC/O2/systems/o2_cas12e8o_augccpvtz_stretched_r2p0000/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/o2_cas12e8o_augccpvtz/stretched_r2p0000/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    },
+    {
+      "table_number": 13,
+      "system_id": "feh_cas9e10o_augccpvtzdk_sfx2c",
+      "system": "FeH",
+      "active_space": "CAS(9e,10o)",
+      "basis_and_relativistic_treatment": "aug-cc-pVTZ-DK; SF-X2C-1e",
+      "active_orbital_definition": "Fe 3d, Fe 4s, Fe 4p, and H 1s; source MOs 9--16 and 18--19",
+      "geometry_rows": [
+        {
+          "label": "equilibrium_r1p5680",
+          "bond_length_angstrom": 1.568,
+          "status": "checked_in_payload",
+          "result_record": "feh_cas9e10o_augccpvtzdk_sfx2c/equilibrium_r1p5680/results.json",
+          "source_archive": "datasets/benchmarkQC/FeH/systems/feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/feh_cas9e10o_augccpvtzdk_sfx2c/equilibrium_r1p5680/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        },
+        {
+          "label": "stretched_r2p3000",
+          "bond_length_angstrom": 2.3,
+          "status": "checked_in_payload",
+          "result_record": "feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/results.json",
+          "source_archive": "datasets/benchmarkQC/FeH/systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/hamiltonian.npz",
+          "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/inputs.npz",
+          "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
+        }
+      ]
+    }
+  ],
+  "payload_summary": {
+    "geometry_rows": 26,
+    "checked_in_payload": 26,
+    "cloud_placeholder_payload": 0,
+    "results_metadata_only": 0
+  }
+}

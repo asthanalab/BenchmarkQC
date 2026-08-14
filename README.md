@@ -1,44 +1,115 @@
 # Benchmark-QC
 
-## Installation (PyPI)
+[![CI](https://github.com/AsthanaLab/BenchmarkQC/actions/workflows/python-package.yml/badge.svg)](https://github.com/AsthanaLab/BenchmarkQC/actions/workflows/python-package.yml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-0A7BBB.svg)](LICENSE)
+[![Datasets](https://img.shields.io/badge/datasets-78-6E56CF.svg)](datasets/catalog.json)
 
-You can install this package directly from PyPI:
+<p>
+  <a href="docs/README.md">Documentation</a> ·
+  <a href="datasets/catalog.json">Dataset catalog</a> ·
+  <a href="docs/API.md">Python API</a> ·
+  <a href="https://github.com/AsthanaLab/BenchmarkQC/issues">Report an issue</a>
+</p>
+
+Benchmark-QC is a versioned collection of molecular quantum-computing
+benchmark Hamiltonians and portable active-space integral archives. It puts
+the original BenchmarkQC systems and the corrected MolVQE-21 reference cases
+in one consistent, checksum-pinned repository.
+
+## What is included
+
+The repository contains 78 benchmark catalog entries: 51 BenchmarkQC point
+systems and 27 corrected MolVQE-21 point systems. Each bond distance and each
+active-space/orbital variant is represented as its own catalog entry:
+
+- `datasets/benchmarkQC/`: the C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2
+  benchmark families, including legacy compatibility archives and newer
+  numeric source archives.
+- `datasets/molvqe21/`: 27 MolVQE-21 cases imported from Mushir’s corrected
+  caches in `asthanaa/benchmarkkrylov`. The two source records without
+  corrected benchmark caches are intentionally excluded.
+- `src/benchmark_qc/`: importable loaders, integral conversion utilities, and
+  physics-aware validation helpers.
+- `datasets/catalog.json`: the machine-readable inventory with SHA-256 values,
+  model metadata, and relative paths.
+- `datasets/benchmarkQC/reference_results.json`: common scalar CASCI, CISD,
+  CCSD, Rényi-0.25, and cumulant records for all 51 BenchmarkQC points.
+- `docs/SI_TABLE_I_AUDIT.md` and
+  `datasets/benchmarkQC/si_table_i_inventory.json`: the complete audit of all
+  26 SI Table I geometry rows and their reconstruction provenance.
+- `docs/ACTIVE_SPACE_AND_METHOD_AUDIT.md`: active-space evidence, limitations,
+  literature checks, and scalar-method data coverage for all 51 BenchmarkQC
+  records.
+- `applications/`: a documented, ignored workspace for local experiments.
+  Application calculations and their outputs are not part of this repository.
+
+The checked-in dataset archives are reference artifacts, not a record of a
+particular local environment. Dataset builders preserve their input hashes,
+orbital selections, numerical conventions, and validation metadata so that a
+future rebuild can be audited.
+
+## Quick start
 
 ```sh
-pip install benchmark-qc
+git clone https://github.com/AsthanaLab/BenchmarkQC.git
+cd BenchmarkQC
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e .
+python -m pytest -q
 ```
 
-[![Docs](https://img.shields.io/badge/docs-README-blue)](docs/README.md)
+The package can then load the corrected MolVQE-21 cases directly:
 
-Benchmark qubit Hamiltonians for N2, FeS, and U2.
+```python
+from benchmark_qc.molvqe21 import list_cases, load_hamiltonian, load_source_integrals
 
+case = list_cases()[0]
+hamiltonian = load_hamiltonian(case.case_id)
+integrals = load_source_integrals(case.case_id)
+print(case.case_id, integrals.n_qubits, hamiltonian.ref_energies[0])
+```
 
-This repo stores pre-generated Hamiltonians in `.npz` files (one per system) and provides:
-- A small Python package (`benchmark_qc/`) with shared utilities
-- Backwards-compatible notebook wrappers in each system folder
-- Simple test scripts that validate the saved Hamiltonians
+For the complete set of loaders, file contracts, validation commands, and
+dataset-specific caveats, start with [the documentation index](docs/README.md).
 
-## Documentation
+## Scientific scope and caveats
 
-Start here: [docs/README.md](docs/README.md)
+- The legacy `.npz` Hamiltonian contract stores PennyLane operators in an
+  object array. Load those files only from a trusted checkout and verify the
+  catalog checksum first.
+- Numeric integral archives use `allow_pickle=False` and are the preferred
+  input for reproducible Hamiltonian reconstruction.
+- Every catalog entry has a normalized spatial one-/two-electron integral
+  archive. The 27 legacy BenchmarkQC point archives that originally retained
+  only JW operators now include a minimum-norm, real, chemist-symmetry
+  reconstruction that regenerates the checked-in JW Hamiltonian. Those files
+  are explicitly labeled as operator-equivalent frames; they do not claim to
+  recover the unavailable original AO/MO coefficient frame.
+- The accepted Fe2S2 historical records deliberately preserve their qualified
+  nonstationary default-RHF/CASCI orbital frame. They are not natural-orbital
+  or Active Space Finder selections; the constructed nested CAS(8e,8o) record
+  is clearly labeled as a present-work control.
+- MolVQE-21 contains only the 27 corrected-cache systems. `Ferrocene_ceo` and
+  `feo4_2minus_ceo` are excluded because corrected benchmark caches were not
+  available.
+- Scalar CASCI, CISD, CCSD, Rényi-0.25, and two-body-cumulant records are
+  available under `reference_results` for all 51 BenchmarkQC point systems.
+  SI values are preserved as published; missing legacy controls are computed
+  from the checked-in normalized archives and marked with their provenance.
+  Application calculations remain ignored under `applications/`.
 
-## Install (recommended)
+## Contributing and citation
 
-Editable install so notebooks/scripts can import the package from any folder:
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before adding a dataset. New
+systems must include a portable source archive, provenance, validation tests,
+catalog metadata, and checksums. See [Adding a molecular dataset](docs/ADDING_DATASETS.md)
+for the acceptance checklist.
 
-- `pip install -e .`
+If this repository supports published work, please use the metadata in
+[CITATION.cff](CITATION.cff) and preserve the dataset commit in your methods
+section.
 
-If you prefer conda, see [docs/USAGE.md](docs/USAGE.md) for the `bench` environment setup.
-
-## Run Hamiltonian sanity checks
-
-From the repo root:
-
-- `python N2/test_n2_hamiltonian.py --index 0`
-- `python FeS/test_fes_hamiltonian.py --index 0`
-- `python U2/test_u2_hamiltonian.py --index 0`
-
-## Notes
-
-- FeS is open-shell/high-spin. The FeS test restricts diagonalization to the same `(N_alpha, N_beta)` sector as the stored CASCI reference (see [docs/USAGE.md](docs/USAGE.md)).
-- The saved `.npz` files include a `labels` array (bond lengths). The exact per-system grids are listed in [docs/USAGE.md](docs/USAGE.md) under “Stored geometry points (bond lengths)”.
+Released under the [BSD 3-Clause license](LICENSE).

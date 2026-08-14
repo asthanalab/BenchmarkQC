@@ -1,0 +1,390 @@
+{
+  "claim_boundary": "Independent PySCF 2.4/2.11 agreement for the reconstructed nested CAS(8e,8o) extension; not a historical paper row",
+  "comparisons": {
+    "active_projector_frobenius_difference": 2.152496178969413e-08,
+    "casci_energy_difference_hartree": 3.186073627148289e-11,
+    "ccsd_energy_difference_hartree": 3.3153924050566275e-11,
+    "cisd_energy_difference_hartree": 3.257127900724299e-11,
+    "core_constant_difference_hartree": 9.55282075665309e-10,
+    "cumulant_C2_difference": 5.181038376100844e-10,
+    "largest_determinant_probability_difference": 2.2251589459898469e-10,
+    "n92_equal": true,
+    "one_body_integral_frobenius_difference_hartree": 2.303571107976121e-09,
+    "renyi_h0p25_difference_nats": 2.246851593667998e-09,
+    "two_body_integral_frobenius_difference_hartree": 1.238694810746928e-08
+  },
+  "dataset_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o",
+  "gates": {
+    "active_core_constant_cross_version": true,
+    "active_one_body_cross_version": true,
+    "active_projector_cross_version": true,
+    "active_two_body_cross_version": true,
+    "casci_energy_cross_version": true,
+    "ccsd_energy_cross_version": true,
+    "cisd_energy_cross_version": true,
+    "cumulant_C2_cross_version": true,
+    "largest_determinant_cross_version": true,
+    "n92_cross_version": true,
+    "numeric_archives_pickle_free_and_finite": true,
+    "parent_active_indices_identical": true,
+    "primary_and_crosscheck_reports_accepted": true,
+    "renyi_h0p25_cross_version": true
+  },
+  "inputs": {
+    "crosscheck_report": {
+      "hamiltonian_sha256": "4a94f1dbbbca89e2b747d71561f149d775a564bce597e0f561de26290b660910",
+      "path": "crosscheck_candidate_report.json",
+      "sha256": "12d66ef7db3cd470872200cc2e471662ca38c369cc9f3ad3afbd05bd2bf1fbca",
+      "source_integrals_sha256": "0eebbe0f83f272a1bf1391e582cd34fe113468f95c9635288c12731680f66250"
+    },
+    "primary_report": {
+      "hamiltonian_sha256": "712b208acef6314c7ab7cbafe96d0c740ed9909836ffc40a0308c2235350facf",
+      "path": "../acceptance_report.json",
+      "sha256": "ff35a37b81b07fa289e76a4b4fd09457dce9aa429f5fa6e01e30ece48c29a51d",
+      "source_integrals_sha256": "6671351f0546e50c859a0151763c01c9b13f186fc71a4e327eb7594124da2db0"
+    }
+  },
+  "numeric_archive_audit": {
+    "crosscheck": {
+      "active_mo_indices": {
+        "dtype": "int64",
+        "sha256": "fece8d601cd4c9020e24f9e4a47feedefb2bceff5e9798d8056aea8700052eaa",
+        "shape": [
+          8
+        ]
+      },
+      "ccsd_t1": {
+        "dtype": "float64",
+        "sha256": "7a2d0b4d09e4d22d7e400e5dea44a523cc4df099ef819d1871651f9eb1028525",
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "ccsd_t2": {
+        "dtype": "float64",
+        "sha256": "b08730b89c4fa53616e9570ec33b4ede7d907ed9ecb022aa4194ff70146ff8c2",
+        "shape": [
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "cisd_coefficients": {
+        "dtype": "float64",
+        "sha256": "9cad956532ed545df2bc487c5879f5174ca083ac17361f692ec10359d477f6af",
+        "shape": [
+          273
+        ]
+      },
+      "control_reference_mo_coeff": {
+        "dtype": "float64",
+        "sha256": "8d220d2847273f05343930f1688b951b2bb8b0376ce7fdd38f5c324de781f96b",
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "control_reference_mo_occupations": {
+        "dtype": "float64",
+        "sha256": "384fa6b25408adeae0cc1291ee1505e31e8ae27b6bdde296617fb5fae38ceee8",
+        "shape": [
+          8
+        ]
+      },
+      "core_constant": {
+        "dtype": "float64",
+        "sha256": "801fdac9a1a9a39d08e949d4cce52fe322f87ed924fe7e030e1e592371e0f2fe",
+        "shape": [
+          1
+        ]
+      },
+      "fci_coefficients": {
+        "dtype": "float64",
+        "sha256": "08edc143eff920fb80a15ed6d5e2d469e846b8221db850ff3698dd2731044cc1",
+        "shape": [
+          70,
+          70
+        ]
+      },
+      "geometry_angstrom": {
+        "dtype": "float64",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "shape": [
+          0,
+          3
+        ]
+      },
+      "nested_active_indices_zero_based": {
+        "dtype": "int64",
+        "sha256": "d0781a694f9ec9d72c282a7f7108829e5893e7396da18f0db0e82911b5d45c76",
+        "shape": [
+          8
+        ]
+      },
+      "one_body_integrals": {
+        "dtype": "float64",
+        "sha256": "c3515074291e196a9326720b03625b9a9e920d6afb6a877a128c2d2d448f1a3f",
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "one_rdm_spinorbital": {
+        "dtype": "float64",
+        "sha256": "183c4fe0b3655477e22dc2a8fe30a3cf93e1df53f018ce34c15ac85aa2eab06e",
+        "shape": [
+          16,
+          16
+        ]
+      },
+      "parent_active_mo_indices": {
+        "dtype": "int64",
+        "sha256": "d0781a694f9ec9d72c282a7f7108829e5893e7396da18f0db0e82911b5d45c76",
+        "shape": [
+          8
+        ]
+      },
+      "parent_active_spatial_orbital_count": {
+        "dtype": "int64",
+        "sha256": "0c27700c82d333aa295692f1814040a962d7bc530253af661d97635dd5ed7af9",
+        "shape": []
+      },
+      "parent_to_rhf_mo_coeff": {
+        "dtype": "float64",
+        "sha256": "00d7dc7b7339730c13cd786c07e888a227f75dd725648c49ed3254418a01ffb3",
+        "shape": [
+          20,
+          20
+        ]
+      },
+      "reference_determinant": {
+        "dtype": "bool",
+        "sha256": "3cda893eb18b58e6bf19bae09cd9cdd08450668b0d367b909b527ddadab7232c",
+        "shape": [
+          16
+        ]
+      },
+      "rhf_mo_energies": {
+        "dtype": "float64",
+        "sha256": "f3e0b66004ce015afdd8afb9e471fa6f616b7a52874c94b72ef0ec535097017e",
+        "shape": [
+          20
+        ]
+      },
+      "rhf_mo_occupations": {
+        "dtype": "float64",
+        "sha256": "c50842b1183198dc9c5e0493d4ff4a3db64739bc274793fa45aa532be0fa7b21",
+        "shape": [
+          20
+        ]
+      },
+      "two_body_cumulant_spinorbital": {
+        "dtype": "float64",
+        "sha256": "85e4c8de62dcf1cdf5281810a1703c1d30f2e881473624dd5d39afe66cca1145",
+        "shape": [
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "two_body_integrals": {
+        "dtype": "float64",
+        "sha256": "9bdce364353ffef9bb2fdd28821369ffbb86f6d7eedf73278d8a1282d0bb32a4",
+        "shape": [
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "two_rdm_spinorbital": {
+        "dtype": "float64",
+        "sha256": "1f38a934dd6865c467a019bf850d6bab83ebda23594a6bb61e3feac351295098",
+        "shape": [
+          16,
+          16,
+          16,
+          16
+        ]
+      }
+    },
+    "primary": {
+      "active_mo_indices": {
+        "dtype": "int64",
+        "sha256": "fece8d601cd4c9020e24f9e4a47feedefb2bceff5e9798d8056aea8700052eaa",
+        "shape": [
+          8
+        ]
+      },
+      "ccsd_t1": {
+        "dtype": "float64",
+        "sha256": "5963c969373e7a5240972284c0357d24d23f5ff35fa56147f756a5bcf5c6db15",
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "ccsd_t2": {
+        "dtype": "float64",
+        "sha256": "7197fee3a4c6d6fb1aec94fd45e76ba12d2de9aae27aff417e5b6a8ce562b966",
+        "shape": [
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "cisd_coefficients": {
+        "dtype": "float64",
+        "sha256": "cf2626e4d3e535a4ef8fe26074ecef28112911e4ab4a0430c2dca090ed3ea337",
+        "shape": [
+          273
+        ]
+      },
+      "control_reference_mo_coeff": {
+        "dtype": "float64",
+        "sha256": "3bb2b7b15e88981dbafaa415e8130f0bb0157fffd45ce9e2f99fe53b00f376e8",
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "control_reference_mo_occupations": {
+        "dtype": "float64",
+        "sha256": "384fa6b25408adeae0cc1291ee1505e31e8ae27b6bdde296617fb5fae38ceee8",
+        "shape": [
+          8
+        ]
+      },
+      "core_constant": {
+        "dtype": "float64",
+        "sha256": "081ff00d7c2ff1b0089a6a5330269e497a19a252d615ffb287a2aef60e124d6d",
+        "shape": [
+          1
+        ]
+      },
+      "fci_coefficients": {
+        "dtype": "float64",
+        "sha256": "4c91211b4d65c38fffef1aed8035b492b540b96b7af4ec975ed1765a780b617e",
+        "shape": [
+          70,
+          70
+        ]
+      },
+      "geometry_angstrom": {
+        "dtype": "float64",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "shape": [
+          0,
+          3
+        ]
+      },
+      "nested_active_indices_zero_based": {
+        "dtype": "int64",
+        "sha256": "d0781a694f9ec9d72c282a7f7108829e5893e7396da18f0db0e82911b5d45c76",
+        "shape": [
+          8
+        ]
+      },
+      "one_body_integrals": {
+        "dtype": "float64",
+        "sha256": "1599d71f41145ae4cd52eb969dad9fcb19433ba2970cdd1b87a01cd8fe5267f1",
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "one_rdm_spinorbital": {
+        "dtype": "float64",
+        "sha256": "36def60edc4b16373467b4e1509204d645b66f6dc748c6a003e3d8797054b711",
+        "shape": [
+          16,
+          16
+        ]
+      },
+      "parent_active_mo_indices": {
+        "dtype": "int64",
+        "sha256": "d0781a694f9ec9d72c282a7f7108829e5893e7396da18f0db0e82911b5d45c76",
+        "shape": [
+          8
+        ]
+      },
+      "parent_active_spatial_orbital_count": {
+        "dtype": "int64",
+        "sha256": "0c27700c82d333aa295692f1814040a962d7bc530253af661d97635dd5ed7af9",
+        "shape": []
+      },
+      "parent_to_rhf_mo_coeff": {
+        "dtype": "float64",
+        "sha256": "0dfef43644b25561fc3dab2593859eddba350837326117601ca4ef763bab77d8",
+        "shape": [
+          20,
+          20
+        ]
+      },
+      "reference_determinant": {
+        "dtype": "bool",
+        "sha256": "3cda893eb18b58e6bf19bae09cd9cdd08450668b0d367b909b527ddadab7232c",
+        "shape": [
+          16
+        ]
+      },
+      "rhf_mo_energies": {
+        "dtype": "float64",
+        "sha256": "cd23a17604776e8579b6494cdb8a203944d4b718d0c63692505e70c587aefefd",
+        "shape": [
+          20
+        ]
+      },
+      "rhf_mo_occupations": {
+        "dtype": "float64",
+        "sha256": "c50842b1183198dc9c5e0493d4ff4a3db64739bc274793fa45aa532be0fa7b21",
+        "shape": [
+          20
+        ]
+      },
+      "two_body_cumulant_spinorbital": {
+        "dtype": "float64",
+        "sha256": "c2842cebb92fd0dcc277f5854274e1c489ce5a944ed0bfe58d579a7ae0c80f72",
+        "shape": [
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "two_body_integrals": {
+        "dtype": "float64",
+        "sha256": "72ad368b5b23e4f77be5e9ab395920a339742402e3397010e8db76df8622d052",
+        "shape": [
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "two_rdm_spinorbital": {
+        "dtype": "float64",
+        "sha256": "b831d0802c42c80570d76f2f22bcf0c940400314b7fea8b8d5579ce8538d1bad",
+        "shape": [
+          16,
+          16,
+          16,
+          16
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "hostname": "UNDMEDAASTHANAD",
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 17:06:14) [Clang 19.1.7 ]",
+    "username": "ayush.asthana"
+  },
+  "schema": "benchmark-qc.fe2s2-cross-version-certificate.v1",
+  "status": "accepted"
+}

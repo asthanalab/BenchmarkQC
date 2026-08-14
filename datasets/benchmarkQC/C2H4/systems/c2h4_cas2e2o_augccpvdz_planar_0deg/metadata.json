@@ -1,0 +1,99 @@
+{
+  "active_space": {
+    "active_electrons": 2,
+    "active_spatial_orbitals": 2,
+    "qubits": 4,
+    "spin_2S": 0
+  },
+  "basis": "aug-cc-pVDZ; nonrelativistic",
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        -0.675,
+        0.0,
+        0.0
+      ],
+      [
+        0.675,
+        0.0,
+        0.0
+      ],
+      [
+        -1.2429004987062282,
+        0.930370369030107,
+        0.0
+      ],
+      [
+        -1.2429004987062282,
+        -0.930370369030107,
+        0.0
+      ],
+      [
+        1.2429004987062282,
+        0.930370369030107,
+        0.0
+      ],
+      [
+        1.2429004987062282,
+        -0.930370369030107,
+        0.0
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "planar_0deg"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/C2H4/systems/c2h4_cas2e2o_augccpvdz_planar_0deg/hamiltonian.npz",
+    "pauli_term_count": 23,
+    "sha256": "9f0536f350c9acd358af1da0f5f911fa6b05b3f7e6f059661a31648e34a7f0f3"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/C2H4/systems/c2h4_cas2e2o_augccpvdz_planar_0deg/inputs/source_integrals.npz",
+    "sha256": "8ceccc502f7de9f59017fc88c101eda2cf468f5ad4d66ee89c6b809a82d07e86"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2h4_cas2e2o_augccpvdz/planar_0deg/inputs.npz",
+    "source_input_sha256": "8ceccc502f7de9f59017fc88c101eda2cf468f5ad4d66ee89c6b809a82d07e86",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2h4_cas2e2o_augccpvdz/planar_0deg/reference_results.npz",
+    "source_reference_sha256": "88ebb40f87c87cd36c3e666b81fdffdfebe49ee875bbe34b18615204bddd5ab0"
+  },
+  "reference_energy_hartree": -78.0691581246013,
+  "reference_results": {
+    "casci_energy_hartree": -78.0691581246013,
+    "ccsd_energy_hartree": -78.0691581246065,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -78.06915812460132,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.08298424528098017,
+    "renyi_0p25_nats": 0.4806553403006877,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "planar_0deg",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "c2h4_cas2e2o_augccpvdz/planar_0deg/results.json",
+        "release_validation": "passed",
+        "sha256": "7a3638260616d1122acc33a19c2843177e9596f96441d319fb5599b541558b40"
+      },
+      "system_id": "c2h4_cas2e2o_augccpvdz"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 0.0,
+    "absolute_error_vs_source_reference_hartree": 0.0,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -78.0691581246013,
+    "source_reference_energy_hartree": -78.0691581246013,
+    "target_energy_hartree": -78.0691581246013,
+    "target_energy_rounded_to_table_hartree": -78.069,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "system": "C2H4",
+  "system_id": "c2h4_cas2e2o_augccpvdz_planar_0deg"
+}

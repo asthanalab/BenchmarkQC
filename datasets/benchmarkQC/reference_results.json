@@ -1,0 +1,964 @@
+{
+  "schema": "benchmark-qc.reference-results.v1",
+  "description": "Scalar CASCI, CISD, CCSD, R\u00e9nyi-0.25, and two-body-cumulant records for every BenchmarkQC point-level system.",
+  "case_count": 51,
+  "cases": {
+    "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -75.41966083838146,
+      "cisd_energy_hartree": -75.35903986797105,
+      "ccsd_energy_hartree": -75.3717841597211,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 5.671679247626301,
+      "cumulant_C2": 1.5654876264212096,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "c2_cas8e8o_augccpvtz",
+        "geometry_id": "stretched_r2p2000",
+        "result_source": {
+          "path": "c2_cas8e8o_augccpvtz/stretched_r2p2000/results.json",
+          "release_validation": "passed",
+          "sha256": "afefd64a1ec9ad31d091821af8d8763bb6034cb3b99e901f8e7c5e080b8eadac"
+        }
+      }
+    },
+    "c2_cas8e8o_augccpvtz_equilibrium_r1p2430": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -75.62029347253048,
+      "cisd_energy_hartree": -75.53264717831975,
+      "ccsd_energy_hartree": -75.52984110208341,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.841937251011294,
+      "cumulant_C2": 0.6929879925245183,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "c2_cas8e8o_augccpvtz",
+        "geometry_id": "equilibrium_r1p2430",
+        "result_source": {
+          "path": "c2_cas8e8o_augccpvtz/equilibrium_r1p2430/results.json",
+          "release_validation": "passed",
+          "sha256": "e337853b83778de785c68952117f8e4bf14ef991242986b038c1e632a3c7b3e4"
+        }
+      }
+    },
+    "c2h4_cas2e2o_augccpvdz_planar_0deg": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -78.0691581246013,
+      "cisd_energy_hartree": -78.06915812460132,
+      "ccsd_energy_hartree": -78.0691581246065,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 0.4806553403006877,
+      "cumulant_C2": 0.08298424528098017,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "c2h4_cas2e2o_augccpvdz",
+        "geometry_id": "planar_0deg",
+        "result_source": {
+          "path": "c2h4_cas2e2o_augccpvdz/planar_0deg/results.json",
+          "release_validation": "passed",
+          "sha256": "7a3638260616d1122acc33a19c2843177e9596f96441d319fb5599b541558b40"
+        }
+      }
+    },
+    "c2h4_cas2e2o_augccpvdz_twisted_90deg": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -77.95435497575266,
+      "cisd_energy_hartree": -77.95435497575266,
+      "ccsd_energy_hartree": -77.9543549757507,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 0.6935813831974577,
+      "cumulant_C2": 0.875000000000002,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "c2h4_cas2e2o_augccpvdz",
+        "geometry_id": "twisted_90deg",
+        "result_source": {
+          "path": "c2h4_cas2e2o_augccpvdz/twisted_90deg/results.json",
+          "release_validation": "passed",
+          "sha256": "a36ac52f45da2da0070eba1414b473138aab8e718d8862f0d2c5d4801171618c"
+        }
+      }
+    },
+    "ch2_cas6e6o_augccpvtz_bent_102deg": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -38.92873176648936,
+      "cisd_energy_hartree": -38.92657348114583,
+      "ccsd_energy_hartree": -38.92830082958296,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.9346095867857174,
+      "cumulant_C2": 0.1418119794849291,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "ch2_cas6e6o_augccpvtz",
+        "geometry_id": "bent_102deg",
+        "result_source": {
+          "path": "ch2_cas6e6o_augccpvtz/bent_102deg/results.json",
+          "release_validation": "passed",
+          "sha256": "0ce51f8d81e6f1f19ba9e9622a24fcf5945d0c4ade51df49e3c58f8d8bd7dd48"
+        }
+      }
+    },
+    "ch2_cas6e6o_augccpvtz_open_140deg": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -38.90416513357388,
+      "cisd_energy_hartree": -38.90078028401481,
+      "ccsd_energy_hartree": -38.90362590953595,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.9388366499808374,
+      "cumulant_C2": 0.32528598305210776,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "ch2_cas6e6o_augccpvtz",
+        "geometry_id": "open_140deg",
+        "result_source": {
+          "path": "ch2_cas6e6o_augccpvtz/open_140deg/results.json",
+          "release_validation": "passed",
+          "sha256": "0e5a2220f5c72fab8093a132613141d7f6489a6841d1b3c94eb4af534f3e4998"
+        }
+      }
+    },
+    "fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -5058.113901629829,
+      "cisd_energy_hartree": -5057.881317821479,
+      "ccsd_energy_hartree": -5057.952282142609,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 7.461230865924779,
+      "cumulant_C2": 4.475026750001346,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fe2s2_cas10e10o_anorccvdz_mb",
+        "geometry_id": "bridge_stretched_1p10",
+        "result_source": null
+      }
+    },
+    "fe2s2_cas10e10o_anorccvdz_mb_published_geometry": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -5058.275918325761,
+      "cisd_energy_hartree": -5057.904416103547,
+      "ccsd_energy_hartree": -5058.052529449834,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 8.13363913071443,
+      "cumulant_C2": 6.241200674300581,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fe2s2_cas10e10o_anorccvdz_mb",
+        "geometry_id": "published_geometry",
+        "result_source": null
+      }
+    },
+    "fe2s2_chan30e20o_historical_rhf_cas4e4o_point0": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -116.15474998779426,
+      "cisd_energy_hartree": -116.15474589468376,
+      "ccsd_energy_hartree": -116.15474974192813,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 1.532814066066578,
+      "cumulant_C2": 0.2425186811604375,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fe2s2_chan30e20o_vi66_cas4e4o_legacy",
+        "geometry_id": "archived_integral_frame",
+        "result_source": {
+          "active_fcidump_sha256": "7357a7971b4dd3be9ab8e747bec801d0f07486fdbcf61f65a6c69e8c931eba18",
+          "path": "validation/fe2s2_historical_all_spaces_20260812/Fe2S2_vi66_all_spaces_summary.json",
+          "reference_npz_sha256": "0179f1d8d7b789fa621eb9688a894f7cdda043188ae8c5d4cbdf3fe28eac773c",
+          "release_validation": "validated legacy frame; nonstationary parent-RHF qualification",
+          "result_json_sha256": "5598dcb9d41df876553853f783fd5e323d5091e471a1b5ee8b6bdc58f7ec365b",
+          "sha256": "c10bef377b4191f6bf3bbb0c22ca13ad461ef72239419ad9a3ccdbf5f1580ef3"
+        }
+      }
+    },
+    "fe2s2_chan30e20o_historical_rhf_cas6e6o_point0": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -116.15625982795386,
+      "cisd_energy_hartree": -116.1561849226785,
+      "ccsd_energy_hartree": -116.15619403159668,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 3.0221215489221076,
+      "cumulant_C2": 0.28329738176500885,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fe2s2_chan30e20o_vi66_cas6e6o_legacy",
+        "geometry_id": "archived_integral_frame",
+        "result_source": {
+          "active_fcidump_sha256": "9245fd4d02d7154d70d3c1bc332a390e049cb4985ff60ba70bbee802603b38b0",
+          "path": "validation/fe2s2_historical_all_spaces_20260812/Fe2S2_vi66_all_spaces_summary.json",
+          "reference_npz_sha256": "9242b0d20b8d1242c1d8e83d9377b4a13d683dc9618e0ba8d6609b6de9dcbfbc",
+          "release_validation": "validated legacy frame; nonstationary parent-RHF qualification",
+          "result_json_sha256": "8b857dec242d0cc700f19fd0ff454db641bd125651d8a7f1cc367c94a8e3fccd",
+          "sha256": "c10bef377b4191f6bf3bbb0c22ca13ad461ef72239419ad9a3ccdbf5f1580ef3"
+        }
+      }
+    },
+    "fe2s2_chan30e20o_historical_rhf_cas8e6o_point0": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -116.15857228045772,
+      "cisd_energy_hartree": -116.1585460355622,
+      "ccsd_energy_hartree": -116.15856619743963,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.856612621074474,
+      "cumulant_C2": 0.2702597782719671,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fe2s2_chan30e20o_vi66_cas8e6o_legacy",
+        "geometry_id": "archived_integral_frame",
+        "result_source": {
+          "active_fcidump_sha256": "37b2d0adfb183ee0ee9e4f207cf4a3691f444d6e3543fef0929e4a924dd630cf",
+          "path": "validation/fe2s2_historical_all_spaces_20260812/Fe2S2_vi66_all_spaces_summary.json",
+          "reference_npz_sha256": "ed2aeedf333ebef25c49b1a13c97333ef7dd6594595deaef055ab58ed6e12dff",
+          "release_validation": "validated legacy frame; nonstationary parent-RHF qualification",
+          "result_json_sha256": "a24bcdc8c24f60b6a7e0f709f43646ee18a433be66bf391497abac9bdee329a1",
+          "sha256": "c10bef377b4191f6bf3bbb0c22ca13ad461ef72239419ad9a3ccdbf5f1580ef3"
+        }
+      }
+    },
+    "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -116.16151636450809,
+      "cisd_energy_hartree": -116.16112026246387,
+      "ccsd_energy_hartree": -116.16118628087456,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.889532973316796,
+      "cumulant_C2": 0.2606372888864521,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o",
+        "geometry_id": "archived_integral_frame",
+        "result_source": {
+          "benchmarkqc_accepted_variant": "Fe2S2/cas6e6o_chan30e20o/accepted/nested_cas8e8o",
+          "cross_version_certificate": {
+            "path": "validation/fe2s2_nested_cas8e8o_desktop_20260812/cross_version_certificate_v7.json",
+            "sha256": "09475213578baa4b02921a83958681876ffe5f890009b3cadc3147d17c1432a5"
+          },
+          "hamiltonian_sha256": "712b208acef6314c7ab7cbafe96d0c740ed9909836ffc40a0308c2235350facf",
+          "path": "validation/fe2s2_nested_cas8e8o_desktop_20260812/primary_pyscf2p4/candidate_report.json",
+          "release_validation": "accepted nested extension with independent PySCF 2.4/2.11 agreement; nonstationary parent-RHF qualification",
+          "sha256": "443286c9ded92d80e802bdce0ceb44be1bd29dcf0dfcfa77d0dfe2b4f8b7579f",
+          "source_integrals_sha256": "6671351f0546e50c859a0151763c01c9b13f186fc71a4e327eb7594124da2db0"
+        }
+      }
+    },
+    "feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1271.891370939278,
+      "cisd_energy_hartree": -1271.8809376842955,
+      "ccsd_energy_hartree": -1271.890886165144,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 5.91822560873138,
+      "cumulant_C2": 0.39293540420822975,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "feh_cas9e10o_augccpvtzdk_sfx2c",
+        "geometry_id": "equilibrium_r1p5680",
+        "result_source": {
+          "path": "feh_cas9e10o_augccpvtzdk_sfx2c/equilibrium_r1p5680/results.json",
+          "release_validation": "passed",
+          "sha256": "1edb3013d9fb6b39153a8bd1012e8e74977306b08556918dd8efc906be0e1828"
+        }
+      }
+    },
+    "feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1271.8774476006429,
+      "cisd_energy_hartree": -1271.85536173379,
+      "ccsd_energy_hartree": -1271.878544948935,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 6.21294441725178,
+      "cumulant_C2": 0.48365956619328615,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "feh_cas9e10o_augccpvtzdk_sfx2c",
+        "geometry_id": "stretched_r2p3000",
+        "result_source": {
+          "path": "feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/results.json",
+          "release_validation": "passed",
+          "sha256": "0b224a397c353da39a828f5c402b1552d914c172efc156ee6662b83554eaec76"
+        }
+      }
+    },
+    "fes_anorccmb_cas6e6o_r1p8260": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.373599804053,
+      "cisd_energy_hartree": -1655.3735998039772,
+      "ccsd_energy_hartree": -1655.3735998040356,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 1.923207731456331,
+      "cumulant_C2": 0.14227181479739875,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.333550061416,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r2p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4241139492565,
+      "cisd_energy_hartree": -1655.4241139490462,
+      "ccsd_energy_hartree": -1655.4241139490475,
+      "cisd_status": "computed",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 2.2790975437673904,
+      "cumulant_C2": 0.29320455557450403,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.2983841640828,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r2p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4574094107952,
+      "cisd_energy_hartree": -1655.457383071352,
+      "ccsd_energy_hartree": -1655.4574094114096,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 2.0362250092972167,
+      "cumulant_C2": 0.33239382467080747,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.2668278121428,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r2p4000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.464853271137,
+      "cisd_energy_hartree": -1655.464853271137,
+      "ccsd_energy_hartree": -1655.4648532711394,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.0566293731960994,
+      "cumulant_C2": 0.33712675450104285,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fes_anorccmb_cas6e6o_legacy",
+        "geometry_id": "r2p4000",
+        "result_source": {
+          "path": "cases/fes_anorccmb_cas6e6o_legacy/r2p4000/results.json",
+          "release_validation": "passed",
+          "sha256": "2f46ab47a02d45ab1335c360daeab2b6e1580d9ced8427e2200854149e9bfb63"
+        }
+      }
+    },
+    "fes_anorccmb_cas6e6o_r2p6000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.460250114289,
+      "cisd_energy_hartree": -1655.4600174009383,
+      "ccsd_energy_hartree": -1655.4634122771438,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703723,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.2194564852362,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r2p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4485848090662,
+      "cisd_energy_hartree": -1655.4483521339278,
+      "ccsd_energy_hartree": -1655.445957757782,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703713,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.1895223215574,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r3p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4345794739559,
+      "cisd_energy_hartree": -1655.4345794739559,
+      "ccsd_energy_hartree": -1655.4345794739547,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703711,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fes_anorccmb_cas6e6o_legacy",
+        "geometry_id": "r3p0000",
+        "result_source": {
+          "path": "cases/fes_anorccmb_cas6e6o_legacy/r3p0000/results.json",
+          "release_validation": "passed",
+          "sha256": "b74eb1d0732ea519ab64ae8c62cae2458e17abc8a6ed017bee7cbe75695096e4"
+        }
+      }
+    },
+    "fes_anorccmb_cas6e6o_r3p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.421743886867,
+      "cisd_energy_hartree": -1655.420979591935,
+      "ccsd_energy_hartree": -1655.4131567671711,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280547,
+      "cumulant_C2": 0.9953703703703697,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.1315871395882,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r3p6000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.423921416679,
+      "cisd_energy_hartree": -1655.4237148129012,
+      "ccsd_energy_hartree": -1655.3768182674103,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703745,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.1111283047005,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r3p7000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4259477193232,
+      "cisd_energy_hartree": -1655.4259414369612,
+      "ccsd_energy_hartree": -1655.3771666039265,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703699,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.1090477305409,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r4p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4300216149663,
+      "cisd_energy_hartree": -1655.4300099666802,
+      "ccsd_energy_hartree": -1655.3782422555532,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703687,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.0966131049593,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r4p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4296386391854,
+      "cisd_energy_hartree": -1655.4296386336603,
+      "ccsd_energy_hartree": -1655.3312011869602,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703726,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.2996036837553,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r4p5000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4310596350235,
+      "cisd_energy_hartree": -1655.4310584633151,
+      "ccsd_energy_hartree": -1654.9069776145982,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703722,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1654.9080227278566,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_anorccmb_cas6e6o_r4p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1655.4312797419961,
+      "cisd_energy_hartree": -1655.4312527933962,
+      "ccsd_energy_hartree": -1655.45255402624,
+      "cisd_status": "computed-not-converged",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 1.7917594692280552,
+      "cumulant_C2": 0.9953703703703689,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -1655.085181645414,
+        "reference_occupied_virtual_gradient_norm": null
+      }
+    },
+    "fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1669.9551860647196,
+      "cisd_energy_hartree": -1669.9389742217618,
+      "ccsd_energy_hartree": -1669.93297206854,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.231065314761071,
+      "cumulant_C2": 0.33653089709808764,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fes_cas14e10o_anorccvdzp_sfx2c",
+        "geometry_id": "equilibrium_r2p0170",
+        "result_source": {
+          "path": "fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/results.json",
+          "release_validation": "passed",
+          "sha256": "dabcd17e84f78f6e94a5ec4a13af8d97d1b295a581e861ebb1049f625d980d9a"
+        }
+      }
+    },
+    "fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -1669.944898829754,
+      "cisd_energy_hartree": -1669.9359417000735,
+      "ccsd_energy_hartree": -1669.830068533551,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 3.9719558208103565,
+      "cumulant_C2": 0.34770630558495336,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "fes_cas14e10o_anorccvdzp_sfx2c",
+        "geometry_id": "stretched_r3p0000",
+        "result_source": {
+          "path": "fes_cas14e10o_anorccvdzp_sfx2c/stretched_r3p0000/results.json",
+          "release_validation": "passed",
+          "sha256": "5b89f8340f10cd0fb50e7b425821d12b37c935b88e2d84a121faeab0bb7628dd"
+        }
+      }
+    },
+    "n2_ccpvdz_cas10e8o_canonical_r1p0977": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -109.03438038143912,
+      "cisd_energy_hartree": -109.0305556253265,
+      "ccsd_energy_hartree": -109.03277411095675,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 3.8754206369958,
+      "cumulant_C2": 0.12121000210926845,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "n2_ccpvdz_cas10e8o_canonical",
+        "geometry_id": "equilibrium_r1p0977",
+        "result_source": {
+          "path": "cases/n2_ccpvdz_cas10e8o_canonical/equilibrium_r1p0977/results.json",
+          "release_validation": "passed",
+          "sha256": "7e3713a4d2b9862edaf46d766813656975e7816e9dbd0f08a75f10a509a8db74"
+        }
+      }
+    },
+    "n2_ccpvdz_cas10e8o_canonical_r2p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.75697642204231,
+      "cisd_energy_hartree": -108.63932968514197,
+      "ccsd_energy_hartree": -108.79797370400544,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 5.064997494374635,
+      "cumulant_C2": 1.9597116828805363,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "n2_ccpvdz_cas10e8o_canonical",
+        "geometry_id": "stretched_r2p0000",
+        "result_source": {
+          "path": "cases/n2_ccpvdz_cas10e8o_canonical/stretched_r2p0000/results.json",
+          "release_validation": "passed",
+          "sha256": "f42c919f348a86905ff854c6609a7ce77cf5f46df31603b2d4261d46650f643a"
+        }
+      }
+    },
+    "n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -109.03438038143909,
+      "cisd_energy_hartree": -109.03055767956567,
+      "ccsd_energy_hartree": -109.03277526823175,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 3.79510717149143,
+      "cumulant_C2": 0.12121000210946889,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "n2_ccpvdz_cas10e8o_casci_natural",
+        "geometry_id": "equilibrium_r1p0977",
+        "result_source": {
+          "path": "cases/n2_ccpvdz_cas10e8o_casci_natural/equilibrium_r1p0977/results.json",
+          "release_validation": "passed",
+          "sha256": "d3f1a4ed587a18d19ea61bef005506a3b8c7d7a4e931ae3c4142a907d9f464c4"
+        }
+      }
+    },
+    "n2_ccpvdz_cas10e8o_casci_natural_orbitals_r2p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.75697642204233,
+      "cisd_energy_hartree": -108.63860455012413,
+      "ccsd_energy_hartree": -108.80022635792288,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.863397659996669,
+      "cumulant_C2": 1.959711682881418,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "n2_ccpvdz_cas10e8o_casci_natural",
+        "geometry_id": "stretched_r2p0000",
+        "result_source": {
+          "path": "cases/n2_ccpvdz_cas10e8o_casci_natural/stretched_r2p0000/results.json",
+          "release_validation": "passed",
+          "sha256": "3991583e72d242387b2b2473f1659c7ddcaa90660848430891bacec207362b50"
+        }
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r0p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -107.79193467397278,
+      "cisd_energy_hartree": -107.79120401679248,
+      "ccsd_energy_hartree": -107.79180022380709,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 1.6909613678026443,
+      "cumulant_C2": 0.04982241118903953,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -107.74111574112094,
+        "reference_occupied_virtual_gradient_norm": 9.474898070478491e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r1p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.54782787003145,
+      "cisd_energy_hartree": -108.54513562186553,
+      "ccsd_energy_hartree": -108.54711590115565,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.172445358938685,
+      "cumulant_C2": 0.10970701074893899,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -108.46495776512705,
+        "reference_occupied_virtual_gradient_norm": 9.348906141553319e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r1p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.66443033527696,
+      "cisd_energy_hartree": -108.65581620763429,
+      "ccsd_energy_hartree": -108.66156409088408,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 1.8503955792428213,
+      "cumulant_C2": 0.23787055012151642,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "n2_sto6g_cas4e4o_legacy",
+        "geometry_id": "r1p2000",
+        "result_source": {
+          "path": "cases/n2_sto6g_cas4e4o_legacy/r1p2000/results.json",
+          "release_validation": "passed",
+          "sha256": "95793e2a9c2cfebd6171a08cbac5a32979d4241abb624f8f8bfd5d5f7f53907b"
+        }
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r1p4000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.59978166970491,
+      "cisd_energy_hartree": -108.57704402960262,
+      "ccsd_energy_hartree": -108.59265744008967,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 1.9916235956935386,
+      "cumulant_C2": 0.5299083790107406,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -108.40843321531617,
+        "reference_occupied_virtual_gradient_norm": 9.30650579202151e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r1p6000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.50932737763677,
+      "cisd_energy_hartree": -108.46426932132864,
+      "ccsd_energy_hartree": -108.50601233874825,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.1008127973903257,
+      "cumulant_C2": 1.0682657509814597,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -108.23682826642823,
+        "reference_occupied_virtual_gradient_norm": 9.266542477388113e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r1p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.43212865493233,
+      "cisd_energy_hartree": -108.37186669689395,
+      "ccsd_energy_hartree": -108.44664808397208,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.2093980163791755,
+      "cumulant_C2": 1.5038311758400835,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -108.0698714368197,
+        "reference_occupied_virtual_gradient_norm": 9.213440286180977e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r2p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.36572506485685,
+      "cisd_energy_hartree": -108.3008098740477,
+      "ccsd_energy_hartree": -108.39299450884985,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.229184134205345,
+      "cumulant_C2": 1.6693874645085391,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "n2_sto6g_cas4e4o_legacy",
+        "geometry_id": "r2p0000",
+        "result_source": {
+          "path": "cases/n2_sto6g_cas4e4o_legacy/r2p0000/results.json",
+          "release_validation": "passed",
+          "sha256": "cbecbf05e8fc2bee7451f69b337004f86260055b63e0a9955a2681f43519d076"
+        }
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r2p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.30724918032749,
+      "cisd_energy_hartree": -108.23999220906302,
+      "ccsd_energy_hartree": -108.00254854514723,
+      "cisd_status": "computed",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 2.329811297553776,
+      "cumulant_C2": 1.7226695851879512,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -107.80572688595922,
+        "reference_occupied_virtual_gradient_norm": 9.139836623198842e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r2p4000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.25724895423257,
+      "cisd_energy_hartree": -108.1881325370068,
+      "ccsd_energy_hartree": -108.0753281113335,
+      "cisd_status": "computed",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 2.2327921293876742,
+      "cumulant_C2": 1.7405464534683204,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -107.71095952814274,
+        "reference_occupied_virtual_gradient_norm": 9.142841738062052e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r2p6000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.21638155919862,
+      "cisd_energy_hartree": -108.14580350057341,
+      "ccsd_energy_hartree": -108.2542989740818,
+      "cisd_status": "computed",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.24441228638841,
+      "cumulant_C2": 1.746728990498286,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -107.63724626783446,
+        "reference_occupied_virtual_gradient_norm": 9.145402185786049e-14
+      }
+    },
+    "n2_sto6g_cas4e4o_legacy_r2p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.18437348193214,
+      "cisd_energy_hartree": -108.11270383672642,
+      "ccsd_energy_hartree": -105.18665267771419,
+      "cisd_status": "computed",
+      "ccsd_status": "computed-not-converged",
+      "renyi_0p25_nats": 2.2629103149215415,
+      "cumulant_C2": 1.7488777206067692,
+      "source": {
+        "kind": "computed from checked-in normalized integral archive",
+        "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+        "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+        "reference_determinant_energy_hartree": -107.58086912374397,
+        "reference_occupied_virtual_gradient_norm": 9.119843777526817e-14
+      }
+    },
+    "o2_cas12e8o_augccpvtz_equilibrium_r1p2075": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -149.75701080939123,
+      "cisd_energy_hartree": -149.75299417693438,
+      "ccsd_energy_hartree": -149.75538024039872,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.9326041884964353,
+      "cumulant_C2": 0.1213890810042357,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "o2_cas12e8o_augccpvtz",
+        "geometry_id": "equilibrium_r1p2075",
+        "result_source": {
+          "path": "o2_cas12e8o_augccpvtz/equilibrium_r1p2075/results.json",
+          "release_validation": "passed",
+          "sha256": "80acbd984b67e8ed6a345b941918f7794efcad05479ff509970217da1e528472"
+        }
+      }
+    },
+    "o2_cas12e8o_augccpvtz_stretched_r2p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -149.6143039628574,
+      "cisd_energy_hartree": -149.61201102926293,
+      "ccsd_energy_hartree": -149.61221045253393,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 3.233555292714753,
+      "cumulant_C2": 0.753586299840915,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "o2_cas12e8o_augccpvtz",
+        "geometry_id": "stretched_r2p0000",
+        "result_source": {
+          "path": "o2_cas12e8o_augccpvtz/stretched_r2p0000/results.json",
+          "release_validation": "passed",
+          "sha256": "fb2357ac9a92d5c4955b4077dfb470f6120d228bef009384b754af0970f4c775"
+        }
+      }
+    },
+    "u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -55957.17583824898,
+      "cisd_energy_hartree": -55957.11014111589,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "table-value",
+      "ccsd_status": "validated-unavailable",
+      "renyi_0p25_nats": 7.835424909314143,
+      "cumulant_C2": 1.9222573080633287,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "u2_cas6e10o_anorccvdzp_sfx2c",
+        "geometry_id": "equilibrium_r2p4300",
+        "result_source": null
+      }
+    },
+    "u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -55957.18982335859,
+      "cisd_energy_hartree": -55957.060990289276,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "table-value",
+      "ccsd_status": "validated-unavailable",
+      "renyi_0p25_nats": 7.696489254036021,
+      "cumulant_C2": 2.275528485179651,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "u2_cas6e10o_anorccvdzp_sfx2c",
+        "geometry_id": "stretched_r2p8000",
+        "result_source": null
+      }
+    },
+    "u2_sfx2c_anorccmb_cas6e6o_r2p4000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -55985.6038903157,
+      "cisd_energy_hartree": -55985.58717679948,
+      "ccsd_energy_hartree": -55985.60290537202,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.7700015823075494,
+      "cumulant_C2": 0.39517224515201294,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "u2_sfx2c_anorccmb_cas6e6o_legacy",
+        "geometry_id": "r2p4000",
+        "result_source": {
+          "path": "cases/u2_sfx2c_anorccmb_cas6e6o_legacy/r2p4000/results.json",
+          "release_validation": "passed",
+          "sha256": "204c9294f150aba1ce3cc85b263bbf2bffa10892d26b84442de9d082ce6b6f30"
+        }
+      }
+    },
+    "u2_sfx2c_anorccmb_cas6e6o_r2p4800": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -55985.662823909115,
+      "cisd_energy_hartree": -55985.64497966624,
+      "ccsd_energy_hartree": -55985.661709005515,
+      "cisd_status": "table-value",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.800281053840303,
+      "cumulant_C2": 0.38558940321955865,
+      "source": {
+        "kind": "SI Table I scalar record",
+        "system_id": "u2_sfx2c_anorccmb_cas6e6o_legacy",
+        "geometry_id": "r2p4800",
+        "result_source": {
+          "path": "cases/u2_sfx2c_anorccmb_cas6e6o_legacy/r2p4800/results.json",
+          "release_validation": "passed",
+          "sha256": "1ff183f1e0b1ffef1ca8903b0a71267ca977538d0f89f6425e80449d226c9d89"
+        }
+      }
+    }
+  }
+}

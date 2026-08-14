@@ -1,0 +1,80 @@
+{
+  "active_space": {
+    "active_electrons": 14,
+    "active_spatial_orbitals": 10,
+    "qubits": 20,
+    "spin_2S": 4
+  },
+  "basis": "ANO-RCC-VDZP; SF-X2C-1e",
+  "geometry": {
+    "bond_length_angstrom": 2.017,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -1.0085
+      ],
+      [
+        0.0,
+        0.0,
+        1.0085
+      ]
+    ],
+    "point_label": 2.017,
+    "point_name": "equilibrium_r2p0170"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/FeS/systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/hamiltonian.npz",
+    "pauli_term_count": 13573,
+    "sha256": "404e91aa656bf09f4406730f1fa8eb08a28656ccfedb917e3cabd493c497e7d0"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/FeS/systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/inputs/source_integrals.npz",
+    "sha256": "d97c0c014d60193fc5fc57ff1c08bc78bb9345853fcda763d96ffff996f9576f"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/inputs.npz",
+    "source_input_sha256": "d97c0c014d60193fc5fc57ff1c08bc78bb9345853fcda763d96ffff996f9576f",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/reference_results.npz",
+    "source_reference_sha256": "f0f1a3ea4034a19064d561a3dd10745e3f002901dde15bd3097f1615f8e6fdca"
+  },
+  "reference_energy_hartree": -1669.9551860647196,
+  "reference_results": {
+    "casci_energy_hartree": -1669.9551860647196,
+    "ccsd_energy_hartree": -1669.93297206854,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -1669.9389742217618,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.33653089709808764,
+    "renyi_0p25_nats": 4.231065314761071,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "equilibrium_r2p0170",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/results.json",
+        "release_validation": "passed",
+        "sha256": "dabcd17e84f78f6e94a5ec4a13af8d97d1b295a581e861ebb1049f625d980d9a"
+      },
+      "system_id": "fes_cas14e10o_anorccvdzp_sfx2c"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 2.9558577807620168e-12,
+    "absolute_error_vs_source_reference_hartree": 2.9558577807620168e-12,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -1669.9551860647166,
+    "source_reference_energy_hartree": -1669.9551860647196,
+    "target_energy_hartree": -1669.9551860647196,
+    "target_energy_rounded_to_table_hartree": -1669.955,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "system": "FeS",
+  "system_id": "fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170"
+}

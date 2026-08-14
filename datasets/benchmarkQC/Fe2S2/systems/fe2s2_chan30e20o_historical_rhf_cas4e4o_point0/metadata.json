@@ -1,0 +1,55 @@
+{
+  "active_space": {
+    "active_electrons": 4,
+    "active_spatial_orbitals": 4,
+    "qubits": 8,
+    "spin_2S": 0
+  },
+  "geometry": {
+    "point_index_in_source_archive": 0,
+    "point_label": 0.0
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/Fe2S2/systems/fe2s2_chan30e20o_historical_rhf_cas4e4o_point0/hamiltonian.npz",
+    "sha256": "b169a848b609c42307742582738f240ae18c822579328642946ad02979a5133f"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/Fe2S2/systems/fe2s2_chan30e20o_historical_rhf_cas4e4o_point0/inputs/source_integrals.npz",
+    "sha256": "5b263fd2bb30f8540fd21a8bce49d02c35ebad831b31e068b9e304aa1db6b4fa"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas4e4o/Fe2S2_H.npz",
+    "source_archive_sha256": "2847bf8303decb37e39e166e1f64eb7f49883c837474cab12bb3ca4b45722df5",
+    "source_catalog_id": "fe2s2_chan30e20o_historical_rhf_cas4e4o"
+  },
+  "reference_energy_hartree": -116.15474998779426,
+  "reference_results": {
+    "casci_energy_hartree": -116.15474998779426,
+    "ccsd_energy_hartree": -116.15474974192813,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -116.15474589468376,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.2425186811604375,
+    "renyi_0p25_nats": 1.532814066066578,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "archived_integral_frame",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "active_fcidump_sha256": "7357a7971b4dd3be9ab8e747bec801d0f07486fdbcf61f65a6c69e8c931eba18",
+        "path": "validation/fe2s2_historical_all_spaces_20260812/Fe2S2_vi66_all_spaces_summary.json",
+        "reference_npz_sha256": "0179f1d8d7b789fa621eb9688a894f7cdda043188ae8c5d4cbdf3fe28eac773c",
+        "release_validation": "validated legacy frame; nonstationary parent-RHF qualification",
+        "result_json_sha256": "5598dcb9d41df876553853f783fd5e323d5091e471a1b5ee8b6bdc58f7ec365b",
+        "sha256": "c10bef377b4191f6bf3bbb0c22ca13ad461ef72239419ad9a3ccdbf5f1580ef3"
+      },
+      "system_id": "fe2s2_chan30e20o_vi66_cas4e4o_legacy"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "source_metadata_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/metadata.json",
+  "system": "Fe2S2",
+  "system_id": "fe2s2_chan30e20o_historical_rhf_cas4e4o_point0"
+}

@@ -1,0 +1,61 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 4
+  },
+  "geometry": {
+    "bond_length_angstrom": 3.0,
+    "point_index_in_source_archive": 6,
+    "point_label": 3.0
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/FeS/systems/fes_anorccmb_cas6e6o_r3p0000/hamiltonian.npz",
+    "sha256": "94fcfd33a533c1f9a1a2432d9f586cc9fcf24c1f30658e65f7f4e26dc5be1135"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "frame_status": "Jordan-Wigner-equivalent; original orbital coefficient frame unavailable",
+    "path": "datasets/benchmarkQC/FeS/systems/fes_anorccmb_cas6e6o_r3p0000/inputs/source_integrals.npz",
+    "sha256": "49f83cdc2c02436ac38a717164123d1945e2f0bfa1bb3dbe110f9a7976e1d27a"
+  },
+  "provenance": {
+    "integral_reconstruction": {
+      "linear_system_rank": 253,
+      "linear_system_smallest_retained_singular_value": 0.08831222028636301,
+      "method": "minimum-norm inverse Jordan-Wigner reconstruction over real spatial one-/two-body coefficients",
+      "operator_equivalence_max_pauli_error": 3.183231456205249e-12,
+      "tool": "tools/recover_missing_integrals.py",
+      "warning": "This archive reproduces the saved JW Hamiltonian but does not recover the original AO/MO orbital frame."
+    },
+    "source_archive_path": "datasets/benchmarkQC/FeS/FeS_PES_H.npz",
+    "source_archive_sha256": "82eb7b758c921d2b93e049ba8399597c8b2aa2849d7571bbd683d86483bdb7d0",
+    "source_catalog_id": "fes_anorccmb_cas6e6o"
+  },
+  "reference_energy_hartree": -1655.4345794739536,
+  "reference_results": {
+    "casci_energy_hartree": -1655.4345794739559,
+    "ccsd_energy_hartree": -1655.4345794739547,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -1655.4345794739559,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.9953703703703711,
+    "renyi_0p25_nats": 1.7917594692280552,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "r3p0000",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "cases/fes_anorccmb_cas6e6o_legacy/r3p0000/results.json",
+        "release_validation": "passed",
+        "sha256": "b74eb1d0732ea519ab64ae8c62cae2458e17abc8a6ed017bee7cbe75695096e4"
+      },
+      "system_id": "fes_anorccmb_cas6e6o_legacy"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "system": "FeS",
+  "system_id": "fes_anorccmb_cas6e6o_r3p0000"
+}

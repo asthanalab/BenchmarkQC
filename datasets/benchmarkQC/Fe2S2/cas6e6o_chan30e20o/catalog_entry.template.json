@@ -1,0 +1,51 @@
+{
+  "schema": "benchmark-qc.catalog-entry-template.v1",
+  "publication_state": "template only; this file is not an entry in datasets/catalog.json",
+  "historical_cas4e4o": {
+    "id": "fe2s2_chan30e20o_historical_rhf_cas4e4o",
+    "system": "Fe2S2",
+    "status": "current-after-acceptance",
+    "active_electrons": 4,
+    "active_spatial_orbitals": 4,
+    "qubits": 8,
+    "spin_2S": 0
+  },
+  "historical_cas6e6o": {
+    "id": "fe2s2_chan30e20o_historical_rhf_cas6e6o",
+    "system": "Fe2S2",
+    "status": "current-after-acceptance",
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "historical_cas8e6o": {
+    "id": "fe2s2_chan30e20o_historical_rhf_cas8e6o",
+    "system": "Fe2S2",
+    "status": "current-after-acceptance",
+    "active_electrons": 8,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "nested_cas8e8o": {
+    "id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o",
+    "system": "Fe2S2",
+    "status": "current-after-acceptance",
+    "active_electrons": 8,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0,
+    "historical_paper_space": false,
+    "active_space_finder_used": false
+  },
+  "asf_dmrg_cas6e6o": {
+    "id": "fe2s2_chan30e20o_asf_dmrg_cas6e6o",
+    "system": "Fe2S2",
+    "status": "current-after-acceptance",
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  }
+}

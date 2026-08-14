@@ -1,0 +1,84 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "basis": "aug-cc-pVTZ; nonrelativistic",
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0336618828644992,
+        0.0,
+        0.37622215765823575
+      ],
+      [
+        -1.0336618828644992,
+        0.0,
+        0.37622215765823575
+      ]
+    ],
+    "point_label": 140.0,
+    "point_name": "open_140deg"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/CH2/systems/ch2_cas6e6o_augccpvtz_open_140deg/hamiltonian.npz",
+    "pauli_term_count": 563,
+    "sha256": "eefe7e2320e59cc377347f64906b1acc21a2e53e21d60ce2a0163800e37215ec"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/CH2/systems/ch2_cas6e6o_augccpvtz_open_140deg/inputs/source_integrals.npz",
+    "sha256": "898e43c2c128c48f5beb82044eb1d29850519e1fe5de05ee16516bc2b7c4467b"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/open_140deg/inputs.npz",
+    "source_input_sha256": "898e43c2c128c48f5beb82044eb1d29850519e1fe5de05ee16516bc2b7c4467b",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/open_140deg/reference_results.npz",
+    "source_reference_sha256": "8601eaa4ea5a3c463358af68d171783326c11cd1ed748e40bbe57042d49f70db"
+  },
+  "reference_energy_hartree": -38.90416513357388,
+  "reference_results": {
+    "casci_energy_hartree": -38.90416513357388,
+    "ccsd_energy_hartree": -38.90362590953595,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -38.90078028401481,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.32528598305210776,
+    "renyi_0p25_nats": 2.9388366499808374,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "open_140deg",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "ch2_cas6e6o_augccpvtz/open_140deg/results.json",
+        "release_validation": "passed",
+        "sha256": "0e5a2220f5c72fab8093a132613141d7f6489a6841d1b3c94eb4af534f3e4998"
+      },
+      "system_id": "ch2_cas6e6o_augccpvtz"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 6.394884621840902e-14,
+    "absolute_error_vs_source_reference_hartree": 6.394884621840902e-14,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -38.90416513357382,
+    "source_reference_energy_hartree": -38.90416513357388,
+    "target_energy_hartree": -38.90416513357388,
+    "target_energy_rounded_to_table_hartree": -38.904,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "system": "CH2",
+  "system_id": "ch2_cas6e6o_augccpvtz_open_140deg"
+}

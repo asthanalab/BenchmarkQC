@@ -1,0 +1,232 @@
+{
+  "acceptance": {
+    "claim_boundary": "Validated numerical extension for a nested active-space comparison; not one of the historical paper calculations",
+    "mode": "reconstructed_nested_extension",
+    "published_energy_target_used": false,
+    "runtime_role": "primary_pyscf2p4"
+  },
+  "artifacts": {
+    "hamiltonian": {
+      "path": "Fe2S2_H.npz",
+      "pauli_term_count": 5793,
+      "sha256": "712b208acef6314c7ab7cbafe96d0c740ed9909836ffc40a0308c2235350facf"
+    },
+    "source_integrals": {
+      "path": "inputs/source_integrals.npz",
+      "sha256": "6671351f0546e50c859a0151763c01c9b13f186fc71a4e327eb7594124da2db0"
+    }
+  },
+  "dataset_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o",
+  "gates": {
+    "active_space_ci_normalized": true,
+    "active_space_energy_finite": true,
+    "active_space_fci_converged": true,
+    "active_space_physical_residual": true,
+    "active_space_rdm_contraction": true,
+    "active_space_rdm_energy": true,
+    "active_space_rdm_hermiticity": true,
+    "active_space_rdm_trace": true,
+    "active_space_singlet": true,
+    "active_space_spin_eigenvector": true,
+    "adds_one_lower_and_one_upper_parent_orbital": true,
+    "historical_cas6_control_energy": true,
+    "historical_cas6_control_state": true,
+    "legacy_default_rhf_remains_nonconverged": true,
+    "legacy_rhf_energy_fingerprint": true,
+    "legacy_rhf_gradient_fingerprint": true,
+    "legacy_rhf_mo_fingerprint_policy": true,
+    "legacy_source_checksum": true,
+    "nested_default_partition": true,
+    "parent_checksum": true,
+    "registered_runtime_version": true,
+    "strictly_contains_historical_cas6_span": true,
+    "target_active_space_sector": true,
+    "variational_nesting_energy": true
+  },
+  "method": {
+    "active_indices_in_rhf_frame_zero_based": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "active_space_finder_used": false,
+    "expected_parent_frame": {
+      "cas6_energy_hartree": -116.15625982795386,
+      "mo_coefficients_sha256": "0dfef43644b25561fc3dab2593859eddba350837326117601ca4ef763bab77d8",
+      "pyscf_version": "2.4.0",
+      "require_exact_mo_coefficients_sha256": true,
+      "rhf_energy_hartree": -116.13503262533489,
+      "rhf_gradient_norm": 0.0004845940182351517
+    },
+    "external_indices_in_rhf_frame_zero_based": [
+      19
+    ],
+    "frozen_core_indices_in_rhf_frame_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "historical_nonstationarity_note": "The source used the default RHF cycle limit without a convergence check. The same faithfully replayed, nonstationary frame is retained for comparability.",
+    "historical_paper_space": false,
+    "legacy_source": {
+      "path": "provenance/vi66cycle_legacy_source.py",
+      "scope_note": "The source explicitly defines CAS(6e,6o). CAS(8e,8o) is a new nested extension constructed by the same default-partition rule; it is not a historical paper row.",
+      "sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26"
+    },
+    "name": "nested extension of legacy default-RHF/CASCI partition",
+    "nested_parent_space": {
+      "added_indices_zero_based": [
+        11,
+        18
+      ],
+      "historical_cas6_indices_zero_based": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "orbital_frame_status": "legacy_nonstationary_default_rhf",
+    "recipe": "checksum-bound default PySCF RHF replay on the parent FCIDUMP, CASCI(8e,8o) default orbital partition, then singlet-adapted direct_spin0 FCI, followed by independent direct_spin1 physical-Hamiltonian and S^2 residual checks",
+    "rhf_converged": false,
+    "rhf_energy_hartree": -116.13503262533489,
+    "rhf_mo_coefficients_match_registered_reference": true,
+    "rhf_mo_coefficients_sha256": "0dfef43644b25561fc3dab2593859eddba350837326117601ca4ef763bab77d8",
+    "rhf_occupied_virtual_gradient_norm": 0.0004845940182351517,
+    "runtime_role": "primary_pyscf2p4",
+    "stationary_rhf_claim": false
+  },
+  "parent": {
+    "ecore_hartree": 0.0,
+    "ms2": 0,
+    "nelec": 30,
+    "norb": 20,
+    "path": "../../parent/chan_fe2s2_cas30e20o.FCIDUMP",
+    "sha256": "95d8786af06eeea2107e19ffd98c66a6ca97fc8c9864175a4f6d64512b6f2df9"
+  },
+  "results": {
+    "cas8_minus_historical_cas6_energy_hartree": -0.005256536554242075,
+    "casci_energy_hartree": -116.16151636450809,
+    "classical_controls": {
+      "ccsd_converged": true,
+      "ccsd_energy_hartree": -116.16118628087456,
+      "ccsd_fixed_point_update_norm": 1.0736629667497727e-10,
+      "cisd_converged": true,
+      "cisd_energy_hartree": -116.16112026246387,
+      "control_gate_policy": "CISD and CCSD are reported controls and do not gate acceptance of the exact CASCI Hamiltonian",
+      "reference_determinant_energy_hartree": -116.13503262533501,
+      "reference_frame": "active Hamiltonian orbital frame with occupied and virtual blocks semicanonicalized",
+      "reference_occupied_virtual_gradient_norm": 0.00024180668388417247
+    },
+    "correlation_descriptors": {
+      "cumulant_C2": 0.2606372888864521,
+      "cumulant_definition": "C2 = (1/4) sum_pqrs |lambda_pqrs|^2 in the full interleaved spin-orbital basis",
+      "cumulant_frobenius_norm": 1.0210529641237072,
+      "largest_determinant_probability": 0.8718223421452893,
+      "n92": 2,
+      "renyi_h0p25_nats": 4.889532973316796,
+      "renyi_probability_cutoff": 1e-15,
+      "renyi_retained_probability_mass": 0.9999999999999746,
+      "renyi_retained_support": 4796
+    },
+    "historical_cas6_same_process_control": {
+      "casci_energy_hartree": -116.15625982795385,
+      "difference_hartree": 1.4210854715202004e-14,
+      "expected_energy_hartree": -116.15625982795386,
+      "solver": {
+        "arpack_krylov_subspace": 120,
+        "arpack_maximum_iterations": 20000,
+        "arpack_penalized_energy_consistency_error_hartree": 1.7763568394002505e-15,
+        "arpack_penalized_residual_norm_hartree": 5.0587766533907714e-15,
+        "arpack_refinement_converged": true,
+        "arpack_refinement_used": true,
+        "arpack_spin_penalty_shift_hartree": 0.5,
+        "arpack_tolerance": 1e-13,
+        "ci_norm": 1.0,
+        "converged": true,
+        "energy_convergence_tolerance_hartree": 1e-13,
+        "initial_physical_hamiltonian_residual_norm_hartree": 6.250345841906463e-08,
+        "initial_spin_eigenvector_residual_norm": 1.2660758933986052e-07,
+        "maximum_davidson_cycles": 1000,
+        "maximum_davidson_subspace": 50,
+        "multiplicity": 1.0,
+        "penalized_eigenvalue_hartree": -3.6986723670424855,
+        "physical_hamiltonian_residual_norm_hartree": 5.528089637566046e-15,
+        "pyscf_davidson_spin_penalty_shift_hartree": 0.5,
+        "pyscf_solver_converged": false,
+        "residual_convergence_tolerance_hartree": 1e-11,
+        "solver": "SpinPenaltyFCISolver",
+        "spin_eigenvector_residual_norm": 4.075370215716973e-15,
+        "spin_square": 3.650792802580444e-30
+      }
+    },
+    "rdm_checks": {
+      "one_rdm_trace_error": 8.881784197001252e-16,
+      "two_rdm_contraction_error": 1.026083358152062e-14,
+      "two_rdm_hermiticity_error": 0.0
+    },
+    "rdm_energy_error_hartree": 0.0,
+    "rdm_reconstructed_energy_hartree": -116.16151636450809,
+    "solver": {
+      "arpack_krylov_subspace": 120,
+      "arpack_maximum_iterations": 20000,
+      "arpack_penalized_energy_consistency_error_hartree": 8.881784197001252e-16,
+      "arpack_penalized_residual_norm_hartree": 8.37251786659195e-15,
+      "arpack_refinement_converged": true,
+      "arpack_refinement_used": true,
+      "arpack_spin_penalty_shift_hartree": 0.5,
+      "arpack_tolerance": 1e-13,
+      "ci_norm": 0.9999999999999999,
+      "converged": true,
+      "energy_convergence_tolerance_hartree": 1e-13,
+      "initial_physical_hamiltonian_residual_norm_hartree": 5.0736848736288165e-08,
+      "initial_spin_eigenvector_residual_norm": 1.278325688500153e-07,
+      "maximum_davidson_cycles": 1000,
+      "maximum_davidson_subspace": 50,
+      "multiplicity": 1.0,
+      "penalized_eigenvalue_hartree": -6.692736464874647,
+      "physical_hamiltonian_residual_norm_hartree": 7.347618329602562e-15,
+      "pyscf_davidson_spin_penalty_shift_hartree": null,
+      "pyscf_solver_converged": false,
+      "residual_convergence_tolerance_hartree": 1e-11,
+      "solver": "FCISolver",
+      "spin_eigenvector_residual_norm": 8.242170932771422e-15,
+      "spin_square": 8.224298641516813e-30
+    }
+  },
+  "runtime": {
+    "execution_site": "desktop",
+    "hostname": "UNDMEDAASTHANAD",
+    "numpy": "1.26.3",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "pyscf": "2.4.0",
+    "python": "3.10.15 | packaged by conda-forge | (main, Sep 30 2024, 17:48:38) [Clang 17.0.6 ]",
+    "slurm_job_id": null,
+    "username": "ayush.asthana",
+    "wall_seconds": 6.880590915679932
+  },
+  "schema": "benchmark-qc.fe2s2-candidate.v1",
+  "status": "accepted",
+  "target": {
+    "active_electrons": 8,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0
+  },
+  "variant": "nested_cas8e8o"
+}

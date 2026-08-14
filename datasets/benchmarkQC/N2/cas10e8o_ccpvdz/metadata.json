@@ -1,0 +1,127 @@
+{
+  "schema": "benchmark-qc.dataset-metadata.v1",
+  "system": {
+    "name": "dinitrogen",
+    "formula": "N2",
+    "charge": 0,
+    "spin_2S": 0
+  },
+  "electronic_structure_model": {
+    "basis": "cc-pVDZ",
+    "active_electrons": 10,
+    "active_spatial_orbitals": 8,
+    "active_spin_orbitals": 16,
+    "active_alpha_electrons": 5,
+    "active_beta_electrons": 5,
+    "frozen_core_spatial_mos_zero_based": [0, 1],
+    "source_canonical_active_subspace_indices_zero_based": [2, 3, 4, 5, 6, 7, 8, 9],
+    "relativistic_treatment": "none"
+  },
+  "hamiltonian": {
+    "spatial_integral_order": "PySCF chemist notation (pq|rs)",
+    "second_quantized_spin_order": "interleaved; even spin-orbital/wire indices are alpha and odd indices are beta",
+    "qubit_mapping": "Jordan-Wigner",
+    "integral_coefficient_cutoff": 1e-14,
+    "energy_unit": "Hartree",
+    "geometry_unit": "Angstrom",
+    "legacy_npz_keys": ["labels", "Hs", "casci_energies"],
+    "trusted_source_warning": "Hs contains pickled PennyLane operator objects; load with allow_pickle=True only from a trusted source"
+  },
+  "geometries": [
+    {
+      "id": "equilibrium_r1p0977",
+      "role": "equilibrium",
+      "bond_length_angstrom": 1.0977,
+      "coordinates_angstrom": [[0.0, 0.0, -0.54885], [0.0, 0.0, 0.54885]]
+    },
+    {
+      "id": "stretched_r2p0000",
+      "role": "stretched",
+      "bond_length_angstrom": 2.0,
+      "coordinates_angstrom": [[0.0, 0.0, -1.0], [0.0, 0.0, 1.0]]
+    }
+  ],
+  "variants": {
+    "canonical": {
+      "orbital_basis": "geometry-specific canonical RHF molecular orbitals",
+      "casci_energies_hartree": [-109.03438038143877, -108.75697642204275],
+      "pauli_term_counts": [1181, 1181],
+      "output": {
+        "path": "canonical/N2_PES_H.npz",
+        "sha256": "b9eefb9ead764e49effc8818a413ba0cbf3f9f537a1191d9cdc9ebd197bb3e3a"
+      },
+      "source_integral_archives": [
+        {
+          "geometry_id": "equilibrium_r1p0977",
+          "path": "canonical/inputs/equilibrium_r1p0977.npz",
+          "sha256": "ac539f022f151095f9631b0df4aaa6090de92e3ab4cf761400f6c628d2d396c6"
+        },
+        {
+          "geometry_id": "stretched_r2p0000",
+          "path": "canonical/inputs/stretched_r2p0000.npz",
+          "sha256": "486c9dd7e7896d8193c4d757ce0d75d5b81466d1c5e87cfd62853fe8b24e474e"
+        }
+      ]
+    },
+    "casci_natural_orbitals": {
+      "orbital_basis": "geometry-specific spin-summed exact-CASCI natural orbitals",
+      "orbital_definition": "The rotation is restricted to the same eight-dimensional canonical-RHF active subspace and ordered by decreasing natural occupation; no CASSCF optimization is used",
+      "interpretation_limit": "Exact target-state information is used to define these orbitals; this is an orbital-preconditioning sensitivity dataset and the canonical variant is its unpreconditioned control",
+      "casci_energies_hartree": [-109.03438038143884, -108.7569764220421],
+      "canonical_energy_invariance_abs_hartree": [7.105427357601002e-14, 6.536993168992922e-13],
+      "natural_orbital_occupations": [
+        [1.9981117175217153, 1.9945528647184716, 1.9888052448706963, 1.9499052293017358, 1.9499052293017354, 0.05762181635520731, 0.05762181635520664, 0.0034760815752316646],
+        [1.9981704585641882, 1.995220803738391, 1.677060936923122, 1.3335098620509416, 1.3335098620508294, 0.6680720848311833, 0.6680720848310716, 0.32638390701027525]
+      ],
+      "pauli_term_counts": [1185, 1189],
+      "output": {
+        "path": "casci_natural_orbitals/N2_PES_H.npz",
+        "sha256": "2d454b1a4d465a66988634720dc13fedd7fdb3537332f59c6eecf7f0553ffbc6"
+      },
+      "source_integral_archives": [
+        {
+          "geometry_id": "equilibrium_r1p0977",
+          "path": "casci_natural_orbitals/inputs/equilibrium_r1p0977.npz",
+          "sha256": "50df766462244b22c64bfe2da191817dca077d80f29bdc78b539a1183dd27e31"
+        },
+        {
+          "geometry_id": "stretched_r2p0000",
+          "path": "casci_natural_orbitals/inputs/stretched_r2p0000.npz",
+          "sha256": "fa6d3cbe015055311736ff0232671c3f191c76fdae6a840dfedaa472e5a51335"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "source_campaign": "QCANT change1_largeN2",
+    "source_repository": "https://github.com/AsthanaLab/QCANT",
+    "source_execution_date": "2026-08-02",
+    "source_execution_location": "remote desktop",
+    "source_qcant_commit": "99c4cd7eeeefd8f2f03558d4f70923131a28dd4a",
+    "source_software": {
+      "python": "3.12.4",
+      "numpy": "1.26.4",
+      "scipy": "1.14.1",
+      "pyscf": "2.11.0",
+      "openfermion": "0.11.0",
+      "pennylane": "0.44.0"
+    },
+    "archive_generator": "generate_hamiltonians.py",
+    "archive_generation_command": "python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --write --output-root <output-directory>",
+    "archive_verification_command": "python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check"
+  },
+  "validation": {
+    "source_campaign_validation_passed": true,
+    "source_campaign_validation_tolerance_hartree": 1e-8,
+    "fresh_vs_saved_jordan_wigner_max_coefficient_difference": 0.0,
+    "fixed_sector": {
+      "active_electrons": 10,
+      "spin_2S": 0,
+      "dimension": 3136
+    },
+    "saved_jordan_wigner_vs_casci_abs_difference_hartree": {
+      "canonical": [2.8421709430404007e-13, 1.9895196601282805e-13],
+      "casci_natural_orbitals": [6.536993168992922e-13, 6.252776074688882e-13]
+    }
+  }
+}

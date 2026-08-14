@@ -1,0 +1,9 @@
+# Known-working environment for loading and regenerating the checked-in
+# PennyLane-object archives. Update these pins only with regenerated checksum
+# and fixed-sector validation evidence.
+numpy==1.26.4
+scipy==1.14.1
+pennylane==0.44.0
+pyscf==2.11.0
+basis-set-exchange==0.12
+pytest==9.0.2

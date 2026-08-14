@@ -1,0 +1,80 @@
+{
+  "active_space": {
+    "active_electrons": 9,
+    "active_spatial_orbitals": 10,
+    "qubits": 20,
+    "spin_2S": 3
+  },
+  "basis": "aug-cc-pVTZ-DK; SF-X2C-1e",
+  "geometry": {
+    "bond_length_angstrom": 2.3,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -1.15
+      ],
+      [
+        0.0,
+        0.0,
+        1.15
+      ]
+    ],
+    "point_label": 2.3,
+    "point_name": "stretched_r2p3000"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/FeH/systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/hamiltonian.npz",
+    "pauli_term_count": 12567,
+    "sha256": "f7cf0774dfd907a215e8912dcfd2c2c2779ad8bc6e7f8e4770e58890d1c19e2c"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/FeH/systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/inputs/source_integrals.npz",
+    "sha256": "199c5e0e01c7de917f0ad3c2b05f4054e6c8cb5ddc2a6a8ec3722a9ed966ec5e"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/inputs.npz",
+    "source_input_sha256": "199c5e0e01c7de917f0ad3c2b05f4054e6c8cb5ddc2a6a8ec3722a9ed966ec5e",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/reference_results.npz",
+    "source_reference_sha256": "1be39267aeeaea31c981d10d65d0d861c494ce95f025653464413a21e52d8ea9"
+  },
+  "reference_energy_hartree": -1271.8774476006429,
+  "reference_results": {
+    "casci_energy_hartree": -1271.8774476006429,
+    "ccsd_energy_hartree": -1271.878544948935,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -1271.85536173379,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.48365956619328615,
+    "renyi_0p25_nats": 6.21294441725178,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "stretched_r2p3000",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/results.json",
+        "release_validation": "passed",
+        "sha256": "0b224a397c353da39a828f5c402b1552d914c172efc156ee6662b83554eaec76"
+      },
+      "system_id": "feh_cas9e10o_augccpvtzdk_sfx2c"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 6.821210263296962e-13,
+    "absolute_error_vs_source_reference_hartree": 6.821210263296962e-13,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -1271.8774476006422,
+    "source_reference_energy_hartree": -1271.8774476006429,
+    "target_energy_hartree": -1271.8774476006429,
+    "target_energy_rounded_to_table_hartree": -1271.877,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "system": "FeH",
+  "system_id": "feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000"
+}

@@ -1,0 +1,122 @@
+{
+  "active_space": {
+    "active_electrons": 10,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0
+  },
+  "active_space_variant": {
+    "canonical_energy_invariance_abs_hartree": [
+      7.105427357601002e-14,
+      6.536993168992922e-13
+    ],
+    "casci_energies_hartree": [
+      -109.03438038143884,
+      -108.7569764220421
+    ],
+    "interpretation_limit": "Exact target-state information is used to define these orbitals; this is an orbital-preconditioning sensitivity dataset and the canonical variant is its unpreconditioned control",
+    "natural_orbital_occupations": [
+      [
+        1.9981117175217153,
+        1.9945528647184716,
+        1.9888052448706963,
+        1.9499052293017358,
+        1.9499052293017354,
+        0.05762181635520731,
+        0.05762181635520664,
+        0.0034760815752316646
+      ],
+      [
+        1.9981704585641882,
+        1.995220803738391,
+        1.677060936923122,
+        1.3335098620509416,
+        1.3335098620508294,
+        0.6680720848311833,
+        0.6680720848310716,
+        0.32638390701027525
+      ]
+    ],
+    "orbital_basis": "geometry-specific spin-summed exact-CASCI natural orbitals",
+    "orbital_definition": "The rotation is restricted to the same eight-dimensional canonical-RHF active subspace and ordered by decreasing natural occupation; no CASSCF optimization is used",
+    "output": {
+      "path": "casci_natural_orbitals/N2_PES_H.npz",
+      "sha256": "2d454b1a4d465a66988634720dc13fedd7fdb3537332f59c6eecf7f0553ffbc6"
+    },
+    "pauli_term_counts": [
+      1185,
+      1189
+    ],
+    "source_integral_archives": [
+      {
+        "geometry_id": "equilibrium_r1p0977",
+        "path": "casci_natural_orbitals/inputs/equilibrium_r1p0977.npz",
+        "sha256": "50df766462244b22c64bfe2da191817dca077d80f29bdc78b539a1183dd27e31"
+      },
+      {
+        "geometry_id": "stretched_r2p0000",
+        "path": "casci_natural_orbitals/inputs/stretched_r2p0000.npz",
+        "sha256": "fa6d3cbe015055311736ff0232671c3f191c76fdae6a840dfedaa472e5a51335"
+      }
+    ]
+  },
+  "geometry": {
+    "bond_length_angstrom": 1.0977,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -0.54885
+      ],
+      [
+        0.0,
+        0.0,
+        0.54885
+      ]
+    ],
+    "id": "equilibrium_r1p0977",
+    "point_index_in_source_archive": 0,
+    "point_label": 1.0977,
+    "role": "equilibrium"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/N2/systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977/hamiltonian.npz",
+    "sha256": "91c1bd6c249203bbc29b4ed876fd963e3f1a06118705614be1cb0ca4540dbf01"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/N2/systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977/inputs/source_integrals.npz",
+    "sha256": "50df766462244b22c64bfe2da191817dca077d80f29bdc78b539a1183dd27e31"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz",
+    "source_archive_sha256": "2d454b1a4d465a66988634720dc13fedd7fdb3537332f59c6eecf7f0553ffbc6",
+    "source_catalog_id": "n2_ccpvdz_cas10e8o_casci_natural_orbitals"
+  },
+  "reference_energy_hartree": -109.03438038143884,
+  "reference_results": {
+    "casci_energy_hartree": -109.03438038143909,
+    "ccsd_energy_hartree": -109.03277526823175,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -109.03055767956567,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.12121000210946889,
+    "renyi_0p25_nats": 3.79510717149143,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "equilibrium_r1p0977",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "cases/n2_ccpvdz_cas10e8o_casci_natural/equilibrium_r1p0977/results.json",
+        "release_validation": "passed",
+        "sha256": "d3f1a4ed587a18d19ea61bef005506a3b8c7d7a4e931ae3c4142a907d9f464c4"
+      },
+      "system_id": "n2_ccpvdz_cas10e8o_casci_natural"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "source_metadata_path": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/metadata.json",
+  "system": "N2",
+  "system_id": "n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977"
+}

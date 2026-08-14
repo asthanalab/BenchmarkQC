@@ -1,0 +1,114 @@
+{
+  "schema": "benchmark-qc.dataset-metadata.v1",
+  "system": {
+    "name": "dicarbon",
+    "formula": "C2",
+    "charge": 0,
+    "state": "X 1Sigma_g+",
+    "spin_2S": 0
+  },
+  "electronic_structure_model": {
+    "basis": "aug-cc-pVTZ",
+    "basis_spherical_harmonics": true,
+    "basis_text_sha256": "d30de04dadb2056e2654e6408252b30e1143d8fe8a583523e89b267664a6f21f",
+    "active_electrons": 8,
+    "active_spatial_orbitals": 8,
+    "active_spin_orbitals": 16,
+    "active_alpha_electrons": 4,
+    "active_beta_electrons": 4,
+    "frozen_core_spatial_orbitals": 2,
+    "source_selected_mp2_natural_orbital_indices_zero_based": [2, 3, 4, 5, 6, 7, 8, 9],
+    "relativistic_treatment": "none"
+  },
+  "hamiltonian": {
+    "spatial_integral_order": "PySCF chemist notation (pq|rs)",
+    "second_quantized_spin_order": "interleaved; even spin-orbital/wire indices are alpha and odd indices are beta",
+    "qubit_mapping": "Jordan-Wigner",
+    "integral_coefficient_cutoff": 1e-14,
+    "energy_unit": "Hartree",
+    "geometry_unit": "Angstrom",
+    "legacy_npz_keys": ["labels", "Hs", "casci_energies"],
+    "trusted_source_warning": "Hs contains pickled PennyLane operator objects; load with allow_pickle=True only from a trusted source"
+  },
+  "geometries": [
+    {
+      "id": "stretched_r2p2000",
+      "role": "stretched",
+      "bond_length_angstrom": 2.2,
+      "coordinates_angstrom": [[0.0, 0.0, -1.1], [0.0, 0.0, 1.1]]
+    }
+  ],
+  "variants": {
+    "casci_natural_orbitals": {
+      "orbital_basis": "geometry-specific state-specific CASCI natural orbitals",
+      "orbital_definition": "Eigenvectors of the spin-summed one-particle density matrix of the validated X 1Sigma_g+ CASCI state, restricted to the same eight-dimensional parent active-HF subspace and ordered by decreasing natural occupation",
+      "parent_orbital_frame": "active-HF orbitals obtained within an eight-orbital subspace selected from MP2 natural orbitals",
+      "interpretation_limit": "Exact target-state information is used to define these orbitals; this is an orbital-preconditioning benchmark and is neither a CASSCF optimization nor an independently available black-box orbital choice",
+      "exact_target_information_used": true,
+      "casci_energies_hartree": [-75.41966083838146],
+      "reference_determinant_energies_hartree": [-75.05129009076941],
+      "natural_orbital_occupations": [[1.9614528141136904, 1.9438978889458896, 1.413140623649, 0.9784451202319453, 0.9762048438572233, 0.5890745691498872, 0.07646866487866846, 0.061315475173672966]],
+      "natural_orbital_rotation_sha256": "c75f2eb30fb3297bdb14db259456824748d2998e5ea32e988e874a20d58f8c70",
+      "pauli_term_counts": [4925],
+      "output": {
+        "path": "casci_natural_orbitals/C2_PES_H.npz",
+        "sha256": "cfbb8aed1e37abd4e38c7655b1dc3c828f52eb5e95d9f8a839906666f7c33659"
+      },
+      "source_integral_archives": [
+        {
+          "geometry_id": "stretched_r2p2000",
+          "path": "casci_natural_orbitals/inputs/stretched_r2p2000.npz",
+          "sha256": "2fe9cecb00ec844a7479e78bb3c81b59686f700777ecc0c54f4c4e641c1bc10a"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "source_campaign": "QCANT change3_benchmark10_reference plus change4_method_benchmark CASCI-natural preparation",
+    "source_repository": "https://github.com/AsthanaLab/QCANT",
+    "source_artifacts": {
+      "parent_inputs_sha256": "82d69fd0a9883ea2ed9579632e8720bc48a98f2485e55c44f38a03a28685448c",
+      "parent_results_sha256": "afefd64a1ec9ad31d091821af8d8763bb6034cb3b99e901f8e7c5e080b8eadac",
+      "parent_reference_results_sha256": "01cd5f01acff071dad2abf5e1e3fc86fc2442377aae4c7087222547313f8a76a",
+      "natural_inputs_sha256": "b556792b31e84423daea9ba47077a54a4a38986bd3b9861475bbc7a944c930b2",
+      "natural_results_sha256": "5afd23d759326376eb5cf9ca3dee1d32529476eb24a7a1ea91aa34e64fda84cb",
+      "natural_reference_results_sha256": "3bf39a6f99aab4f0defc010bc41490beb90ce67684fac8d42404027eac334bee"
+    },
+    "source_completion_utc": "2026-08-10T12:39:00.898627+00:00",
+    "database_export_date": "2026-08-10",
+    "execution_scope": "remote compute resources; portable artifacts are pinned by SHA-256",
+    "archive_generation_software": {
+      "python": "3.12.13",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pyscf": "2.11.0",
+      "pennylane": "0.37.0"
+    },
+    "source_archive_builder": "build_source_archive.py",
+    "hamiltonian_generator": "generate_hamiltonian.py",
+    "archive_generation_command": "python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --write --output-root <output-directory>",
+    "archive_verification_command": "python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check",
+    "target_state_verification_command": "python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/test_hamiltonian.py"
+  },
+  "validation": {
+    "source_campaign_validation_passed": true,
+    "orbital_energy_invariance_error_hartree": 0.0,
+    "source_target_state_rayleigh_error_hartree": -3.126388037344441e-13,
+    "source_target_state_hamiltonian_residual_norm_hartree": 7.820408148390814e-13,
+    "source_target_state_s2_expectation": 2.110219672318496e-25,
+    "rotation_orthogonality_error": 2.1570477995611415e-15,
+    "natural_occupation_reconstruction_error": 2.115786075348506e-15,
+    "fresh_vs_saved_jordan_wigner_max_coefficient_difference": 0.0,
+    "target_state_validation": {
+      "active_electrons": 8,
+      "spin_2S": 0,
+      "fixed_ms_determinant_dimension": 4900,
+      "solver": "PySCF direct_spin1 FCI with an S^2=0 penalty",
+      "reported_energy_hamiltonian": "unpenalized physical Hamiltonian",
+      "saved_jordan_wigner_vs_casci_abs_difference_hartree": 1.4210854715202004e-14,
+      "physical_hamiltonian_residual_norm_hartree": 6.813e-13,
+      "s2_expectation": 2.125e-25
+    },
+    "fixed_ms_caution": "The lowest state in the unrestricted M_S=0 determinant sector is not the requested singlet; validation must enforce S^2=0 and then evaluate the unpenalized Hamiltonian"
+  }
+}

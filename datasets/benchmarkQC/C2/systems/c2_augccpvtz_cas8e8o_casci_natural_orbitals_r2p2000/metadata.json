@@ -1,0 +1,107 @@
+{
+  "active_space": {
+    "active_electrons": 8,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0
+  },
+  "active_space_variant": {
+    "casci_energies_hartree": [
+      -75.41966083838146
+    ],
+    "exact_target_information_used": true,
+    "interpretation_limit": "Exact target-state information is used to define these orbitals; this is an orbital-preconditioning benchmark and is neither a CASSCF optimization nor an independently available black-box orbital choice",
+    "natural_orbital_occupations": [
+      [
+        1.9614528141136904,
+        1.9438978889458896,
+        1.413140623649,
+        0.9784451202319453,
+        0.9762048438572233,
+        0.5890745691498872,
+        0.07646866487866846,
+        0.061315475173672966
+      ]
+    ],
+    "natural_orbital_rotation_sha256": "c75f2eb30fb3297bdb14db259456824748d2998e5ea32e988e874a20d58f8c70",
+    "orbital_basis": "geometry-specific state-specific CASCI natural orbitals",
+    "orbital_definition": "Eigenvectors of the spin-summed one-particle density matrix of the validated X 1Sigma_g+ CASCI state, restricted to the same eight-dimensional parent active-HF subspace and ordered by decreasing natural occupation",
+    "output": {
+      "path": "casci_natural_orbitals/C2_PES_H.npz",
+      "sha256": "cfbb8aed1e37abd4e38c7655b1dc3c828f52eb5e95d9f8a839906666f7c33659"
+    },
+    "parent_orbital_frame": "active-HF orbitals obtained within an eight-orbital subspace selected from MP2 natural orbitals",
+    "pauli_term_counts": [
+      4925
+    ],
+    "reference_determinant_energies_hartree": [
+      -75.05129009076941
+    ],
+    "source_integral_archives": [
+      {
+        "geometry_id": "stretched_r2p2000",
+        "path": "casci_natural_orbitals/inputs/stretched_r2p2000.npz",
+        "sha256": "2fe9cecb00ec844a7479e78bb3c81b59686f700777ecc0c54f4c4e641c1bc10a"
+      }
+    ]
+  },
+  "geometry": {
+    "bond_length_angstrom": 2.2,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -1.1
+      ],
+      [
+        0.0,
+        0.0,
+        1.1
+      ]
+    ],
+    "id": "stretched_r2p2000",
+    "point_index_in_source_archive": 0,
+    "point_label": 2.2,
+    "role": "stretched"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/C2/systems/c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000/hamiltonian.npz",
+    "sha256": "7ccba91d91a2de6263fb7ec72175d430729fc3dfaadb9850825df8e1dab8c2b5"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/C2/systems/c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000/inputs/source_integrals.npz",
+    "sha256": "2fe9cecb00ec844a7479e78bb3c81b59686f700777ecc0c54f4c4e641c1bc10a"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz",
+    "source_archive_sha256": "cfbb8aed1e37abd4e38c7655b1dc3c828f52eb5e95d9f8a839906666f7c33659",
+    "source_catalog_id": "c2_augccpvtz_cas8e8o_casci_natural_orbitals"
+  },
+  "reference_energy_hartree": -75.41966083838146,
+  "reference_results": {
+    "casci_energy_hartree": -75.41966083838146,
+    "ccsd_energy_hartree": -75.3717841597211,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -75.35903986797105,
+    "cisd_status": "table-value",
+    "cumulant_C2": 1.5654876264212096,
+    "renyi_0p25_nats": 5.671679247626301,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "stretched_r2p2000",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "c2_cas8e8o_augccpvtz/stretched_r2p2000/results.json",
+        "release_validation": "passed",
+        "sha256": "afefd64a1ec9ad31d091821af8d8763bb6034cb3b99e901f8e7c5e080b8eadac"
+      },
+      "system_id": "c2_cas8e8o_augccpvtz"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "source_metadata_path": "datasets/benchmarkQC/C2/cas8e8o_augccpvtz/metadata.json",
+  "system": "C2",
+  "system_id": "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000"
+}

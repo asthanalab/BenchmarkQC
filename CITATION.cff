@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use Benchmark-QC, please cite the repository and the source publications for the datasets used."
+title: "Benchmark-QC"
+type: software
+authors:
+  - name: "Benchmark-QC contributors"
+version: "0.1.0"
+license: "BSD-3-Clause"
+repository-code: "https://github.com/AsthanaLab/BenchmarkQC"
+url: "https://github.com/AsthanaLab/BenchmarkQC"

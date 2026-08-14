@@ -1,0 +1,76 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 10,
+    "qubits": 20,
+    "spin_2S": 0
+  },
+  "basis": "ANO-RCC-VDZP; SF-X2C-1e",
+  "geometry": {
+    "bond_length_angstrom": 2.8,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -1.4
+      ],
+      [
+        0.0,
+        0.0,
+        1.4
+      ]
+    ],
+    "point_label": 2.8,
+    "point_name": "stretched_r2p8000"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/U2/systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/hamiltonian.npz",
+    "pauli_term_count": 14323,
+    "sha256": "cf45c06ee8823e1f9047775a86c3cf2d5c738209d45c4cd7312d6ce6b269f32b"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/U2/systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/inputs/source_integrals.npz",
+    "sha256": "1e3a16fed76d3620c5338982f1b63d0ce915f003debf864dbe28d1a9092a7efb"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/validation/u2_partial_reference_desktop_20260804_88f8a4cc_8f7bda40_29e6d3f4/inputs/certificates/stretched_r2p8000_validated_lowest_singlet.npz",
+    "source_input_sha256": "7bee3b3c499420274f6a6ebc92079757879dbd8f0fc1c581026fde09eacac01f",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/validation/u2_singlet_certificate_v5_283952_283953/results/stretched_r2p8000_validated_lowest_singlet.json",
+    "source_reference_sha256": "7030c1f88a758750a11b098c612be4c9d7f94a1ee25e43ae9147978e68ee5fd9"
+  },
+  "reference_energy_hartree": -55957.18982335859,
+  "reference_results": {
+    "casci_energy_hartree": -55957.18982335859,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "validated-unavailable",
+    "cisd_energy_hartree": -55957.060990289276,
+    "cisd_status": "table-value",
+    "cumulant_C2": 2.275528485179651,
+    "renyi_0p25_nats": 7.696489254036021,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "stretched_r2p8000",
+      "kind": "SI Table I scalar record",
+      "result_source": null,
+      "system_id": "u2_cas6e10o_anorccvdzp_sfx2c"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 0.0,
+    "absolute_error_vs_source_reference_hartree": 0.0,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -55957.18982335859,
+    "source_reference_energy_hartree": -55957.18982335859,
+    "target_energy_hartree": -55957.18982335859,
+    "target_energy_rounded_to_table_hartree": -55957.19,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "system": "U2",
+  "system_id": "u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000"
+}

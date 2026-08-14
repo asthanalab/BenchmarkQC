@@ -1,0 +1,200 @@
+{
+  "schema": "benchmark-qc.dataset-metadata.v1",
+  "publication_state": "candidate-only; no variant is cataloged until promotion",
+  "system": {
+    "name": "tetrakis(methylthiolate)-bridged [2Fe-2S] cluster",
+    "formula": "[Fe2S2(SCH3)4]2-",
+    "charge": -2,
+    "state": "singlet",
+    "spin_2S": 0,
+    "geometry": "The numerical geometry is not encoded in the distributed FCIDUMP; inherited from the cited Li-Chan calculation"
+  },
+  "parent_hamiltonian": {
+    "model": "CAS(30e,20o)",
+    "active_electrons": 30,
+    "active_spatial_orbitals": 20,
+    "active_spin_orbitals": 40,
+    "ms2": 0,
+    "fcidump_path": "parent/chan_fe2s2_cas30e20o.FCIDUMP",
+    "sha256": "95d8786af06eeea2107e19ffd98c66a6ca97fc8c9864175a4f6d64512b6f2df9",
+    "basis_and_orbital_provenance_limit": "The FCIDUMP contains integrals and the CAS sector but no AO basis labels, coordinates, MO coefficients, or chemical orbital labels. These fields must not be reconstructed by guesswork.",
+    "literature_dmrg_energy_hartree": -116.6056091,
+    "citation": {
+      "authors": "Zhendong Li and Garnet Kin-Lic Chan",
+      "title": "Spin-projected matrix product states: Versatile tool for strongly correlated systems",
+      "journal": "Journal of Chemical Theory and Computation",
+      "year": 2017,
+      "doi": "10.1021/acs.jctc.7b00270"
+    }
+  },
+  "target_models": {
+    "historical_cas4e4o": {
+      "active_electrons": 4,
+      "active_spatial_orbitals": 4,
+      "active_spin_orbitals": 8,
+      "active_alpha_electrons": 2,
+      "active_beta_electrons": 2,
+      "spin_2S": 0,
+      "published_casci_energy_hartree": -116.154749
+    },
+    "historical_cas6e6o": {
+      "active_electrons": 6,
+      "active_spatial_orbitals": 6,
+      "active_spin_orbitals": 12,
+      "active_alpha_electrons": 3,
+      "active_beta_electrons": 3,
+      "spin_2S": 0,
+      "published_casci_energy_hartree": -116.156259
+    },
+    "historical_cas8e6o": {
+      "active_electrons": 8,
+      "active_spatial_orbitals": 6,
+      "active_spin_orbitals": 12,
+      "active_alpha_electrons": 4,
+      "active_beta_electrons": 4,
+      "spin_2S": 0,
+      "published_casci_energy_hartree": -116.158572
+    },
+    "nested_cas8e8o": {
+      "active_electrons": 8,
+      "active_spatial_orbitals": 8,
+      "active_spin_orbitals": 16,
+      "active_alpha_electrons": 4,
+      "active_beta_electrons": 4,
+      "spin_2S": 0,
+      "published_casci_energy_applicable": false,
+      "historical_paper_space": false,
+      "parent_active_indices_zero_based": [11, 12, 13, 14, 15, 16, 17, 18]
+    },
+    "shared_hamiltonian_conventions": {
+    "qubit_mapping": "Jordan-Wigner",
+    "spin_orbital_order": "interleaved alpha/beta",
+    "integral_order": "PySCF chemist notation (pq|rs)",
+    "legacy_archive_label_semantics": "The sole label 0.0 is an archive point identifier, not a bond length, because the FCIDUMP has no coordinates"
+    }
+  },
+  "candidate_variants": {
+    "historical_cas4e4o": {
+      "status": "not yet accepted",
+      "definition": "Shared legacy default-RHF frame followed by the default CASCI(4,4) orbital partition and direct_spin1 FCI",
+      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "stationary_rhf_claim": false,
+      "active_space_finder_used": false,
+      "claim_boundary": "This reproduces the paper Hamiltonian but is neither a converged conventional RHF frame nor an ASF-selected active space.",
+      "legacy_source_path": "provenance/vi66cycle_legacy_source.py",
+      "legacy_source_sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26",
+      "validated_desktop_reference": {
+        "status": "validated_legacy_frame",
+        "pyscf": "2.4.0",
+        "casci_energy_hartree": -116.15474998779426,
+        "cisd_energy_hartree": -116.15474589468376,
+        "ccsd_energy_hartree": -116.15474974192813,
+        "renyi_h0p25_nats": 1.532814066066578,
+        "cumulant_C2": 0.2425186811604375,
+        "n92": 2,
+        "largest_determinant_probability": 0.8875530585352216,
+        "active_parent_indices_zero_based": [13, 14, 15, 16],
+        "fcidump_sha256": "7357a7971b4dd3be9ab8e747bec801d0f07486fdbcf61f65a6c69e8c931eba18",
+        "reference_npz_sha256": "0179f1d8d7b789fa621eb9688a894f7cdda043188ae8c5d4cbdf3fe28eac773c",
+        "result_json_sha256": "5598dcb9d41df876553853f783fd5e323d5091e471a1b5ee8b6bdc58f7ec365b"
+      }
+    },
+    "historical_cas6e6o": {
+      "status": "not yet accepted",
+      "definition": "Checksum-bound reproduction of the supplied historical source: shared default PySCF RHF frame, default CASCI(6,6) orbital partition, then direct_spin1 FCI",
+      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "stationary_rhf_claim": false,
+      "active_space_finder_used": false,
+      "claim_boundary": "This reproduces the paper Hamiltonian but is neither a converged conventional RHF frame nor an ASF-selected active space.",
+      "legacy_source_path": "provenance/vi66cycle_legacy_source.py",
+      "legacy_source_sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26",
+      "validated_desktop_reference": {
+        "status": "validated_legacy_frame",
+        "pyscf": "2.4.0",
+        "casci_energy_hartree": -116.15625982795386,
+        "cisd_energy_hartree": -116.1561849226785,
+        "ccsd_energy_hartree": -116.15619403159668,
+        "renyi_h0p25_nats": 3.0221215489221076,
+        "cumulant_C2": 0.28329738176500885,
+        "n92": 2,
+        "largest_determinant_probability": 0.8577730293688101,
+        "active_parent_indices_zero_based": [12, 13, 14, 15, 16, 17],
+        "fcidump_sha256": "9245fd4d02d7154d70d3c1bc332a390e049cb4985ff60ba70bbee802603b38b0",
+        "reference_npz_sha256": "9242b0d20b8d1242c1d8e83d9377b4a13d683dc9618e0ba8d6609b6de9dcbfbc",
+        "result_json_sha256": "8b857dec242d0cc700f19fd0ff454db641bd125651d8a7f1cc367c94a8e3fccd"
+      }
+    },
+    "historical_cas8e6o": {
+      "status": "not yet accepted",
+      "definition": "Shared legacy default-RHF frame followed by the default CASCI(8,6) orbital partition and direct_spin1 FCI",
+      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "stationary_rhf_claim": false,
+      "active_space_finder_used": false,
+      "claim_boundary": "This reproduces the paper Hamiltonian but is neither a converged conventional RHF frame nor an ASF-selected active space.",
+      "legacy_source_path": "provenance/vi66cycle_legacy_source.py",
+      "legacy_source_sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26",
+      "validated_desktop_reference": {
+        "status": "validated_legacy_frame",
+        "pyscf": "2.4.0",
+        "casci_energy_hartree": -116.15857228045772,
+        "cisd_energy_hartree": -116.1585460355622,
+        "ccsd_energy_hartree": -116.15856619743963,
+        "renyi_h0p25_nats": 2.856612621074474,
+        "cumulant_C2": 0.2702597782719671,
+        "n92": 2,
+        "largest_determinant_probability": 0.8666904579281923,
+        "active_parent_indices_zero_based": [11, 12, 13, 14, 15, 16],
+        "fcidump_sha256": "37b2d0adfb183ee0ee9e4f207cf4a3691f444d6e3543fef0929e4a924dd630cf",
+        "reference_npz_sha256": "ed2aeedf333ebef25c49b1a13c97333ef7dd6594595deaef055ab58ed6e12dff",
+        "result_json_sha256": "a24bcdc8c24f60b6a7e0f709f43646ee18a433be66bf391497abac9bdee329a1"
+      }
+    },
+    "nested_cas8e8o": {
+      "status": "not yet accepted",
+      "definition": "Current-project same-protocol nested CAS(8e,8o) extension of the shared legacy default-RHF frame",
+      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "stationary_rhf_claim": false,
+      "active_space_finder_used": false,
+      "historical_paper_space": false,
+      "published_energy_target_used": false,
+      "claim_boundary": "This is a validated nested comparison model, not one of the historical paper active spaces.",
+      "required_cross_version_validation": "Independent PySCF 2.4/2.11 reports and an accepted cross-version certificate"
+    },
+    "asf_dmrg_cas6e6o": {
+      "status": "not yet accepted",
+      "definition": "Strict fixed-size Active Space Finder selection from pair information computed from singlet DMRG RDMs of the full Chan CAS(30e,20o) parent",
+      "active_space_finder_used": true,
+      "strict_selection_is_default": true,
+      "unfiltered_fallback_policy": "Disabled by default; enabled only by the explicit --fallback-unfiltered flag, with strict failure and fallback use recorded in candidate_report.json",
+      "energy_is_not_a_selection_objective": true,
+      "exact_target_information_used_for_orbital_selection": true
+    }
+  },
+  "acceptance_policy": {
+    "catalog_rule": "Only promote a candidate whose report status is accepted, every Boolean gate passes, and every artifact checksum verifies",
+    "historical_energy_tolerance_hartree": 1e-6,
+    "published_precision_note": "All three historical paper targets are printed to six decimal places; the acceptance window is therefore capped at 1 microhartree. The recovered CAS(6e,6o) source produces -116.15625982795386 Ha, matching the printed -116.156259 Ha by truncation.",
+    "required_checks": [
+      "parent FCIDUMP checksum and CAS header",
+      "desktop or Talon execution provenance",
+      "requested CAS(4e,4o), CAS(6e,6o), CAS(8e,6o), derived nested CAS(8e,8o), or modern ASF CAS(6e,6o) sector",
+      "FCI convergence and physical-Hamiltonian residual",
+      "S^2=0 singlet purity",
+      "1-RDM and 2-RDM consistency",
+      "RDM energy reconstruction",
+      "published CASCI energy reproduction for historical candidates, or accepted same-frame cross-version certification for the derived CAS(8e,8o) extension",
+      "artifact SHA-256 checksums"
+    ]
+  },
+  "shared_legacy_frame_validation": {
+    "execution_site": "desktop",
+    "hostname": "UNDMEDAASTHANAD",
+    "pyscf_primary": "2.4.0",
+    "independent_cross_check": "PySCF 2.11; all three CASCI energies and correlation descriptors agree within the recorded tight cross-version tolerances",
+    "parent_rhf_converged": false,
+    "parent_rhf_energy_hartree": -116.13503262533489,
+    "parent_rhf_orbital_gradient_norm": 0.0004845940182351517,
+    "parent_rhf_mo_coefficients_sha256": "0dfef43644b25561fc3dab2593859eddba350837326117601ca4ef763bab77d8"
+  },
+  "accepted_variants": {}
+}
