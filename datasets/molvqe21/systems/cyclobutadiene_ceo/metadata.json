@@ -1,0 +1,162 @@
+{
+  "active_space": {
+    "active_electrons": 4,
+    "active_spatial_orbitals": 4,
+    "qubits": 8,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "cc-pvdz",
+  "charge": 0,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        1.5531999999501027,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.3656999999561261,
+        0.0
+      ],
+      [
+        1.5531999999501027,
+        1.3656999999561261,
+        0.0
+      ],
+      [
+        2.308318999925844,
+        -0.7551189999757414,
+        0.0
+      ],
+      [
+        -0.7551189999757414,
+        -0.7551189999757414,
+        0.0
+      ],
+      [
+        -0.7551189999757414,
+        2.1208189999318674,
+        0.0
+      ],
+      [
+        2.308318999925844,
+        2.1208189999318674,
+        0.0
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        2.935122616674454,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.5807989683185046,
+        0.0
+      ],
+      [
+        2.935122616674454,
+        2.5807989683185046,
+        0.0
+      ],
+      [
+        4.362090718129899,
+        -1.426968101455445,
+        0.0
+      ],
+      [
+        -1.426968101455445,
+        -1.426968101455445,
+        0.0
+      ],
+      [
+        -1.426968101455445,
+        4.00776706977395,
+        0.0
+      ],
+      [
+        4.362090718129899,
+        4.00776706977395,
+        0.0
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "H",
+      "H",
+      "H",
+      "H"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/cyclobutadiene_ceo/hamiltonian.npz",
+    "sha256": "a49e064674a8968f6075c1127bc25199dc34b1d75d6fb2f391d2cfe299b04438"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/cyclobutadiene_ceo/inputs/source_integrals.npz",
+    "sha256": "6555db67448a2033ae48eadc22b9c91b8f21bba0e6ecf2e7a94a3b58bec53d78"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb_corrected_active_space_dt0p05/ae485c01a500fed77cbfd2ceafbd62994bcd63222507ad81e2550ff98699f5da.npz",
+    "source_cache_reference_energy_hartree": -153.72228958245736,
+    "source_cache_sha256": "31faab046ade8af89770854364c30fd9df3f2c2d2c2fd4df0bbb5587b3b468f4",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/cyclobutadiene_ceo.json",
+    "source_json_sha256": "453031b05a7bb4bd0eb6d90d4c4146d8cc83282abc6933189139b11ffa117032",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -153.72228958245736,
+  "reference_results": {
+    "casci_energy_hartree": -153.72228958245736,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 1.934845493351637,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "cyclobutadiene_ceo"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [
+      11,
+      13,
+      14,
+      19
+    ],
+    "active_orbital_selection_method": "pyscf_canonical_rohf_mo_indices",
+    "effective_active_electrons": 4,
+    "source_casscf_converged": true,
+    "source_casscf_energy_hartree": -153.72228958240802,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "cyclobutadiene_ceo"
+}

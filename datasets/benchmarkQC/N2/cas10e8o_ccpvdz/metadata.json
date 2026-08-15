@@ -24,7 +24,7 @@
     "integral_coefficient_cutoff": 1e-14,
     "energy_unit": "Hartree",
     "geometry_unit": "Angstrom",
-    "legacy_npz_keys": ["labels", "Hs", "casci_energies"],
+    "historical_npz_keys": ["labels", "Hs", "casci_energies"],
     "trusted_source_warning": "Hs contains pickled PennyLane operator objects; load with allow_pickle=True only from a trusted source"
   },
   "geometries": [

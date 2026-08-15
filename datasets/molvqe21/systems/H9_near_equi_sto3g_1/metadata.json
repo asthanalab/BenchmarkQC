@@ -1,0 +1,168 @@
+{
+  "active_space": {
+    "active_electrons": 9,
+    "active_spatial_orbitals": 9,
+    "qubits": 18,
+    "spin_2S": 1
+  },
+  "active_space_variant": null,
+  "basis": "sto-3g",
+  "charge": 0,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        -3.999999999871498,
+        0.0,
+        0.0
+      ],
+      [
+        -2.9999999999036233,
+        0.0,
+        0.0
+      ],
+      [
+        -1.999999999935749,
+        0.0,
+        0.0
+      ],
+      [
+        -0.9999999999678745,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.9999999999678745,
+        0.0,
+        0.0
+      ],
+      [
+        1.999999999935749,
+        0.0,
+        0.0
+      ],
+      [
+        2.9999999999036233,
+        0.0,
+        0.0
+      ],
+      [
+        3.999999999871498,
+        0.0,
+        0.0
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        -7.558904498260247,
+        0.0,
+        0.0
+      ],
+      [
+        -5.6691783736951855,
+        0.0,
+        0.0
+      ],
+      [
+        -3.7794522491301237,
+        0.0,
+        0.0
+      ],
+      [
+        -1.8897261245650618,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.8897261245650618,
+        0.0,
+        0.0
+      ],
+      [
+        3.7794522491301237,
+        0.0,
+        0.0
+      ],
+      [
+        5.6691783736951855,
+        0.0,
+        0.0
+      ],
+      [
+        7.558904498260247,
+        0.0,
+        0.0
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/H9_near_equi_sto3g_1/hamiltonian.npz",
+    "sha256": "55645accd1a216cf781350c3d13135191220dad31fa0b9acc8c9755b762875c6"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/H9_near_equi_sto3g_1/inputs/source_integrals.npz",
+    "sha256": "0e329161204a366d3fdd6e33e9114bc99e029cfea0cb5bed00445b0d99ca042f"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb/00262abe9f01b7a883fe4118e5bd3e049a262f5dd9c9600afda7e602394ee7a8.npz",
+    "source_cache_reference_energy_hartree": -4.814010787328446,
+    "source_cache_sha256": "b1e5ee5f2306dedc6fff7f6b750fdff5605923d0ef01f0bdb2851d4d4bf72034",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/H9 near equi._sto3g_1.json",
+    "source_json_sha256": "6e44d6edbd802b66a5648e29031aa5ae8bf65cd241cca7981fd12ba55fce8c3c",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -4.814010787328446,
+  "reference_results": {
+    "casci_energy_hartree": -4.814010787328446,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 6.743826020542393,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "H9_near_equi_sto3g_1"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [],
+    "active_orbital_selection_method": "source cached CASSCF natural-orbital active space; global MO indices not exported",
+    "effective_active_electrons": 9,
+    "source_casscf_converged": true,
+    "source_casscf_energy_hartree": -4.814010787321555,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "H9_near_equi_sto3g_1"
+}

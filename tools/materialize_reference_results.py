@@ -1,7 +1,7 @@
 """Materialize common scalar reference results for every BenchmarkQC point.
 
 The SI Table I rows are copied into the per-system metadata using the table's
-published values.  Legacy N2, FeS, and U2 points that are not represented in
+published values.  Historical N2, FeS, and U2 points that are not represented in
 that table are evaluated from their checked-in normalized integral archives.
 The latter values are explicitly marked as calculations in the recovered
 Jordan--Wigner-equivalent frame.
@@ -30,9 +30,9 @@ DEFAULT_TABLE = Path(
     "unified_benchmark_rows.json"
 )
 FE2S2_CONTROL_IDS = {
-    "fe2s2_chan30e20o_vi66_cas4e4o_legacy": "fe2s2_chan30e20o_historical_rhf_cas4e4o_point0",
-    "fe2s2_chan30e20o_vi66_cas6e6o_legacy": "fe2s2_chan30e20o_historical_rhf_cas6e6o_point0",
-    "fe2s2_chan30e20o_vi66_cas8e6o_legacy": "fe2s2_chan30e20o_historical_rhf_cas8e6o_point0",
+    "fe2s2_chan30e20o_vi66_cas4e4o_historical": "fe2s2_chan30e20o_historical_rhf_cas4e4o_point0",
+    "fe2s2_chan30e20o_vi66_cas6e6o_historical": "fe2s2_chan30e20o_historical_rhf_cas6e6o_point0",
+    "fe2s2_chan30e20o_vi66_cas8e6o_historical": "fe2s2_chan30e20o_historical_rhf_cas8e6o_point0",
     "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0",
 }
 
@@ -163,7 +163,7 @@ def _singlet_controls(archive, *, electrons: int) -> dict[str, Any]:
 
 
 def _high_spin_controls(archive, *, electrons: int, spin_2s: int) -> dict[str, Any]:
-    """Run unrestricted controls for the legacy FeS spin-4 scan."""
+    """Run unrestricted controls for the historical FeS spin-4 scan."""
 
     from pyscf import ao2mo, cc, ci, gto, scf
 
@@ -243,7 +243,7 @@ def _table_case_id(row: dict[str, Any]) -> str:
     geometry_suffix = geometry_id
     strip_geometry_role = (
         system_id.startswith("n2_ccpvdz_cas10e8o_")
-        or system_id.endswith("_legacy")
+        or system_id.endswith("_historical")
         or system_id == "c2_cas8e8o_augccpvtz"
     )
     if strip_geometry_role:
@@ -257,8 +257,8 @@ def _table_case_id(row: dict[str, Any]) -> str:
         return f"c2_augccpvtz_cas8e8o_casci_natural_orbitals_{geometry_suffix}"
     if system_id == "n2_ccpvdz_cas10e8o_casci_natural":
         system_id = "n2_ccpvdz_cas10e8o_casci_natural_orbitals"
-    elif system_id.endswith("_legacy") and not system_id.startswith("n2_sto6g_"):
-        system_id = system_id.removesuffix("_legacy")
+    elif system_id.endswith("_historical") and not system_id.startswith("n2_sto6g_"):
+        system_id = system_id.removesuffix("_historical")
     return f"{system_id}_{geometry_suffix}"
 
 
@@ -313,7 +313,7 @@ def _computed_record(entry: dict[str, Any]) -> dict[str, Any]:
         "source": {
             "kind": "computed from checked-in normalized integral archive",
             "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
-            "frame_note": "For legacy N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+            "frame_note": "For historical N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
             "reference_determinant_energy_hartree": controls.get("reference_determinant_energy_hartree"),
             "reference_occupied_virtual_gradient_norm": controls.get("reference_occupied_virtual_gradient_norm"),
         },

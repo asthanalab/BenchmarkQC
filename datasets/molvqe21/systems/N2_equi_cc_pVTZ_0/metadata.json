@@ -1,0 +1,91 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "cc-pVTZ",
+  "charge": 0,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.1999999999614492
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        2.267671349478074
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "N",
+      "N"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/N2_equi_cc_pVTZ_0/hamiltonian.npz",
+    "sha256": "72e50378d2781b6818c41d8f34b29ff7d7722efd587751e13505bf4f963c2a1b"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/N2_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+    "sha256": "203aa4d2ed94e454d5f3fd4c94bd452b1f1aec98957fe214a028d647bfd95d80"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb/56eab94e96a54cb31395cd5a3523a5c4e38a934d54e4b6d18b3fad6513cc447b.npz",
+    "source_cache_reference_energy_hartree": -109.10013116577147,
+    "source_cache_sha256": "782e0e961bb35b81c69b32b2758600ef46fe1b2613ca44153252eabd9de4772a",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/N2 equi._cc-pVTZ_0.json",
+    "source_json_sha256": "16db4923a91a794ea6405649c433ec2df6e69445ccfc66136fa6832b712cba0a",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -109.10013116577147,
+  "reference_results": {
+    "casci_energy_hartree": -109.10013116577147,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 3.44406881760021,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "N2_equi_cc_pVTZ_0"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [],
+    "active_orbital_selection_method": "source cached CASSCF natural-orbital active space; global MO indices not exported",
+    "effective_active_electrons": 6,
+    "source_casscf_converged": true,
+    "source_casscf_energy_hartree": -109.1001311657515,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "N2_equi_cc_pVTZ_0"
+}

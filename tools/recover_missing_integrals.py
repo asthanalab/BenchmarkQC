@@ -1,4 +1,4 @@
-"""Recover normalized spatial integrals for legacy Hamiltonian-only systems.
+"""Recover normalized spatial integrals for historical Hamiltonian-only systems.
 
 Some of the historical BenchmarkQC point archives retained only a pickled
 PennyLane Jordan--Wigner Hamiltonian.  This tool solves the inverse linear

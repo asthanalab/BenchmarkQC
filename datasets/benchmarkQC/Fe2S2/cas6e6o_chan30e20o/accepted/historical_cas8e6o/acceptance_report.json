@@ -27,7 +27,7 @@
     "active_space_spin_eigenvector": true,
     "historical_default_partition": true,
     "historical_default_rhf_replay_completed": true,
-    "legacy_source_checksum": true,
+    "historical_source_checksum": true,
     "parent_checksum": true,
     "published_active_space_energy": true,
     "target_active_space_sector": true
@@ -61,13 +61,13 @@
       10
     ],
     "historical_nonstationarity_note": "The supplied source used the default RHF cycle limit without a convergence check. This faithfully preserved frame is not a conventional stationary-RHF or ASF-selected frame.",
-    "legacy_source": {
-      "path": "provenance/vi66cycle_legacy_source.py",
+    "historical_source": {
+      "path": "provenance/vi66cycle_historical_source.py",
       "scope_note": "The recovered file explicitly contains CAS(6e,6o); the same default-partition construction defines the paper's CAS(4e,4o) and CAS(8e,6o) sibling models.",
-      "sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26"
+      "sha256": "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7"
     },
-    "name": "legacy nonstationary default-RHF/CASCI partition",
-    "orbital_frame_status": "legacy_nonstationary_default_rhf",
+    "name": "historical nonstationary default-RHF/CASCI partition",
+    "orbital_frame_status": "historical_nonstationary_default_rhf",
     "recipe": "shared checksum-bound default PySCF RHF replay on the Chan FCIDUMP, CASCI(8,6) default orbital partition, then direct_spin1 FCI",
     "rhf_converged": false,
     "rhf_energy_hartree": -116.13503262533489,

@@ -24,7 +24,7 @@ systems and 27 corrected MolVQE-21 point systems. Each bond distance and each
 active-space/orbital variant is represented as its own catalog entry:
 
 - `datasets/benchmarkQC/`: the C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2
-  benchmark families, including legacy compatibility archives and newer
+  benchmark families, including historical compatibility archives and newer
   numeric source archives.
 - `datasets/molvqe21/`: 27 MolVQE-21 cases imported from Mushir’s corrected
   caches in `asthanaa/benchmarkkrylov`. The two source records without
@@ -77,13 +77,13 @@ dataset-specific caveats, start with [the documentation index](docs/README.md).
 
 ## Scientific scope and caveats
 
-- The legacy `.npz` Hamiltonian contract stores PennyLane operators in an
+- The historical `.npz` Hamiltonian contract stores PennyLane operators in an
   object array. Load those files only from a trusted checkout and verify the
   catalog checksum first.
 - Numeric integral archives use `allow_pickle=False` and are the preferred
   input for reproducible Hamiltonian reconstruction.
 - Every catalog entry has a normalized spatial one-/two-electron integral
-  archive. The 27 legacy BenchmarkQC point archives that originally retained
+  archive. The 27 historical BenchmarkQC point archives that originally retained
   only JW operators now include a minimum-norm, real, chemist-symmetry
   reconstruction that regenerates the checked-in JW Hamiltonian. Those files
   are explicitly labeled as operator-equivalent frames; they do not claim to
@@ -97,7 +97,7 @@ dataset-specific caveats, start with [the documentation index](docs/README.md).
   available.
 - Scalar CASCI, CISD, CCSD, Rényi-0.25, and two-body-cumulant records are
   available under `reference_results` for all 51 BenchmarkQC point systems.
-  SI values are preserved as published; missing legacy controls are computed
+  SI values are preserved as published; missing historical controls are computed
   from the checked-in normalized archives and marked with their provenance.
   Application calculations remain ignored under `applications/`.
 

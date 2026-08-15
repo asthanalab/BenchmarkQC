@@ -1,0 +1,60 @@
+{
+  "active_space": {
+    "active_electrons": 8,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "inherited from checksum-pinned Li-Chan FCIDUMP; AO basis not encoded",
+  "charge": null,
+  "geometry": {
+    "point_index_in_source_archive": 0,
+    "point_label": 0.0
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/fe2s2_chan30e20o_historical_rhf_cas8e6o_point0/hamiltonian.npz",
+    "sha256": "d338d03ed1fa9b7dbd059fe0b91b41d141338a2b8497e8ed538b80561f4685fb"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/systems/fe2s2_chan30e20o_historical_rhf_cas8e6o_point0/inputs/source_integrals.npz",
+    "sha256": "e6836f05bf67fc7ba09de96a0b396987008bbc130171625b548c4e927326fd3f"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas8e6o/Fe2S2_H.npz",
+    "source_archive_sha256": "79056b1f19b9e1fff87ff52cad40c6ea96dcc905964a2de572cc608957355b15",
+    "source_catalog_id": "fe2s2_chan30e20o_historical_rhf_cas8e6o"
+  },
+  "reference_energy_hartree": -116.15857228045772,
+  "reference_results": {
+    "casci_energy_hartree": -116.15857228045772,
+    "ccsd_energy_hartree": -116.15856619743963,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -116.1585460355622,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.2702597782719671,
+    "renyi_0p25_nats": 2.856612621074474,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "archived_integral_frame",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "active_fcidump_sha256": "37b2d0adfb183ee0ee9e4f207cf4a3691f444d6e3543fef0929e4a924dd630cf",
+        "path": "validation/fe2s2_historical_all_spaces_20260812/Fe2S2_vi66_all_spaces_summary.json",
+        "reference_npz_sha256": "ed2aeedf333ebef25c49b1a13c97333ef7dd6594595deaef055ab58ed6e12dff",
+        "release_validation": "validated historical frame; nonstationary parent-RHF qualification",
+        "result_json_sha256": "a24bcdc8c24f60b6a7e0f709f43646ee18a433be66bf391497abac9bdee329a1",
+        "sha256": "c10bef377b4191f6bf3bbb0c22ca13ad461ef72239419ad9a3ccdbf5f1580ef3"
+      },
+      "system_id": "fe2s2_chan30e20o_vi66_cas8e6o_historical"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": null,
+  "source_metadata_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/metadata.json",
+  "system": "Fe2S2",
+  "system_id": "fe2s2_chan30e20o_historical_rhf_cas8e6o_point0"
+}

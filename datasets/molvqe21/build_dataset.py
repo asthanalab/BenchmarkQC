@@ -2,7 +2,7 @@
 
 The benchmarkkrylov repository stores the corrected MolVQE references as
 numeric active-space integral caches.  This script normalizes those caches to
-the Benchmark-QC integral contract and emits the legacy three-array Hamiltonian
+the Benchmark-QC integral contract and emits the historical three-array Hamiltonian
 NPZ contract used by the rest of this repository.
 
 The source checkout is passed explicitly so the generated files remain
@@ -59,6 +59,11 @@ def _scalar(array: np.ndarray) -> Any:
     return value.reshape(-1)[0]
 
 
+def _optional_float(row: dict[str, str], key: str) -> float | None:
+    value = row.get(key, "").strip()
+    return None if not value else float(value)
+
+
 def _source_case(source_root: Path, row: dict[str, str]) -> dict[str, Any]:
     source_path = source_root / row["source_json_path"]
     payload = json.loads(source_path.read_text(encoding="utf-8"))
@@ -86,6 +91,7 @@ def _source_case(source_root: Path, row: dict[str, str]) -> dict[str, Any]:
         "source_casscf_energy_hartree": float(casscf["energy"]),
         "source_casscf_converged": bool(casscf["converged"]),
         "source_casscf_natorb": bool(casscf["natorb"]),
+        "renyi_0p25_nats": _optional_float(row, "h0.25"),
     }
 
 
@@ -146,12 +152,11 @@ def _write_case(
         else str(override.get("selection_method", "pyscf_canonical_rohf_mo_indices"))
     )
 
-    integrals_dir = output_root / "integrals"
-    hamiltonians_dir = output_root / "hamiltonians"
-    integrals_path = integrals_dir / f"{case_id}.npz"
-    hamiltonian_path = hamiltonians_dir / f"{case_id}.npz"
+    system_dir = output_root / "systems" / case_id
+    integrals_dir = system_dir / "inputs"
+    integrals_path = integrals_dir / "source_integrals.npz"
+    hamiltonian_path = system_dir / "hamiltonian.npz"
     integrals_dir.mkdir(parents=True, exist_ok=True)
-    hamiltonians_dir.mkdir(parents=True, exist_ok=True)
 
     np.savez_compressed(
         integrals_path,
@@ -203,8 +208,94 @@ def _write_case(
         "integrals_sha256": _sha256(integrals_path),
         "hamiltonian_path": str(hamiltonian_path.relative_to(output_root)),
         "hamiltonian_sha256": _sha256(hamiltonian_path),
+        "metadata_path": str((system_dir / "metadata.json").relative_to(output_root)),
+        "pauli_term_count": len(terms),
         "qubits": 2 * ncas,
     }
+
+
+def _write_system_metadata(*, output_root: Path, record: dict[str, Any]) -> None:
+    """Write one system record using the shared Benchmark-QC metadata shape."""
+
+    case_id = record["case_id"]
+    system_dir = output_root / "systems" / case_id
+    relative_hamiltonian = record["hamiltonian_path"]
+    relative_integrals = record["integrals_path"]
+    renyi = record.get("renyi_0p25_nats")
+    metadata = {
+        "schema": "benchmark-qc.system-metadata.v1",
+        "system": "MolVQE21",
+        "system_id": case_id,
+        "active_space_variant": None,
+        "active_space": {
+            "active_electrons": record["active_electrons"],
+            "active_spatial_orbitals": record["active_orbitals"],
+            "qubits": record["qubits"],
+            "spin_2S": record["spin"],
+        },
+        "basis": record["basis"],
+        "charge": record["charge"],
+        "geometry": {
+            "coordinates_bohr": record["geometry_bohr"],
+            "coordinates_angstrom": record["geometry_angstrom"],
+            "point_label": 0.0,
+            "point_name": "reference",
+            "symbols": record["symbols"],
+        },
+        "hamiltonian": {
+            "format": "labels, Hs, casci_energies; one point",
+            "path": str(Path("datasets/molvqe21") / relative_hamiltonian),
+            "pauli_term_count": record["pauli_term_count"],
+            "sha256": record["hamiltonian_sha256"],
+        },
+        "integrals": {
+            "format": "pickle-free normalized spatial active-space archive",
+            "path": str(Path("datasets/molvqe21") / relative_integrals),
+            "sha256": record["integrals_sha256"],
+        },
+        "provenance": {
+            "source_repository": SOURCE_REPOSITORY,
+            "source_commit": SOURCE_COMMIT,
+            "source_json_path": record["source_json_path"],
+            "source_json_sha256": record["source_json_sha256"],
+            "source_cache_path": record["source_cache_path"],
+            "source_cache_sha256": record["source_cache_sha256"],
+            "source_cache_reference_energy_hartree": record[
+                "source_cache_reference_energy_hartree"
+            ],
+        },
+        "reference_energy_hartree": record["source_cache_reference_energy_hartree"],
+        "reference_results": {
+            "schema": "benchmark-qc.scalar-reference-results.v1",
+            "casci_energy_hartree": record["source_cache_reference_energy_hartree"],
+            "cisd_energy_hartree": None,
+            "cisd_status": "not-provided-by-source",
+            "ccsd_energy_hartree": None,
+            "ccsd_status": "not-provided-by-source",
+            "renyi_0p25_nats": renyi,
+            "cumulant_C2": None,
+            "source": {
+                "kind": "MolVQE-21 corrected cache",
+                "system_id": case_id,
+            },
+        },
+        "source_active_space": {
+            "active_orbital_indices": record["active_orbital_indices"],
+            "active_orbital_index_base": record["active_orbital_index_base"],
+            "active_orbital_selection_method": record[
+                "active_orbital_selection_method"
+            ],
+            "effective_active_electrons": record["effective_active_electrons"],
+            "source_casscf_converged": record["source_casscf_converged"],
+            "source_casscf_energy_hartree": record["source_casscf_energy_hartree"],
+            "source_casscf_natorb": record["source_casscf_natorb"],
+        },
+        "source_metadata_path": None,
+        "si_validation": None,
+    }
+    (system_dir / "metadata.json").write_text(
+        json.dumps(metadata, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
 
 
 def build(source_root: Path, output_root: Path) -> None:
@@ -237,6 +328,9 @@ def build(source_root: Path, output_root: Path) -> None:
             )
         )
 
+    for record in records:
+        _write_system_metadata(output_root=output_root, record=record)
+
     # Keep only the source-manifest rows that have corrected benchmark caches.
     # The two incomplete source records are intentionally omitted from this
     # package rather than carried as non-runnable catalog entries.
@@ -255,6 +349,8 @@ def build(source_root: Path, output_root: Path) -> None:
         "hamiltonian_sha256",
         "integrals_path",
         "integrals_sha256",
+        "metadata_path",
+        "pauli_term_count",
         "source_json_path",
         "source_cache_path",
         "source_cache_sha256",
@@ -283,7 +379,8 @@ def build(source_root: Path, output_root: Path) -> None:
             writer.writerow(row)
 
     metadata = {
-        "schema": "benchmark-qc.molvqe21.v1",
+        "schema": "benchmark-qc.dataset-metadata.v1",
+        "systems_root": "systems",
         "system": {
             "name": "MolVQE-21",
             "source_repository": SOURCE_REPOSITORY,

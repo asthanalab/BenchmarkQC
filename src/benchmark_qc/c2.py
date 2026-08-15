@@ -20,7 +20,7 @@ SOURCE_PATH = (
 
 
 def load_hamiltonian():
-    """Load the trusted legacy PennyLane-object C2 archive."""
+    """Load the trusted historical PennyLane-object C2 archive."""
 
     return load_hamiltonian_npz(str(HAMILTONIAN_PATH))
 

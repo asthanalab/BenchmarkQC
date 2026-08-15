@@ -1,0 +1,186 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 2
+  },
+  "active_space_variant": null,
+  "basis": "cc-pVTZ",
+  "charge": 0,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.9299670344283467,
+        0.10157344892398723,
+        5.1330189457591e-05
+      ],
+      [
+        0.8341801383055839,
+        1.4448469354471694,
+        -3.8100759185016e-05
+      ],
+      [
+        -0.3770154789711077,
+        0.8561589845832291,
+        5.29177210903e-05
+      ],
+      [
+        -1.397377622920327,
+        -0.07801712538064019,
+        0.00018309531497243798
+      ],
+      [
+        -0.7797733125438028,
+        -1.3506052367802435,
+        0.000144994555787422
+      ],
+      [
+        0.6311242589378847,
+        -1.2491725489943561,
+        0.000180449428917923
+      ],
+      [
+        1.370682749339114,
+        2.3740921721598447,
+        -0.000151344682318258
+      ],
+      [
+        -2.4516309213418284,
+        0.11389322357101997,
+        -0.00012171075850768999
+      ],
+      [
+        -1.3181063475498465,
+        -2.2830250075811254,
+        -0.000181507783339729
+      ],
+      [
+        1.3244490655997299,
+        -2.066229571109541,
+        -0.000120652404085884
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        1.757383,
+        0.191946,
+        9.7e-05
+      ],
+      [
+        1.576372,
+        2.730365,
+        -7.2e-05
+      ],
+      [
+        -0.712456,
+        1.617906,
+        0.0001
+      ],
+      [
+        -2.640661,
+        -0.147431,
+        0.000346
+      ],
+      [
+        -1.473558,
+        -2.552274,
+        0.000274
+      ],
+      [
+        1.192652,
+        -2.360594,
+        0.000341
+      ],
+      [
+        2.590215,
+        4.486384,
+        -0.000286
+      ],
+      [
+        -4.632911,
+        0.215227,
+        -0.00023
+      ],
+      [
+        -2.49086,
+        -4.314292,
+        -0.000343
+      ],
+      [
+        2.502846,
+        -3.904608,
+        -0.000228
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "H",
+      "H",
+      "H",
+      "H"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/m_Benzyne_equi_cc_pVTZ_2/hamiltonian.npz",
+    "sha256": "a84baa695b5efd7f58ba175134d9f411b66dda365b4e9f81bd557234e5a94b24"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/m_Benzyne_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+    "sha256": "5bc480a464e2380742b754c6c13eed801d59dfffac1cec6e9fcfe5587eb0f805"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb_corrected_active_space_dt0p05/70800fe593f9ca5005ea16c4b5db8df4c093273c1365ad993f560847223c2625.npz",
+    "source_cache_reference_energy_hartree": -229.36969501815025,
+    "source_cache_sha256": "2cb804c90748437c8d5381a623aba4cea3ce1790b450c1c84b4adbea0550a8b3",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/m-Benzyne equi._cc-pVTZ_2.json",
+    "source_json_sha256": "63de98800bebb4dabbfe8362bebc1d82c28a410de34f64f3cbf7ac48b8034df8",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -229.36969501815025,
+  "reference_results": {
+    "casci_energy_hartree": -229.36969501815025,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 3.4498820851981904,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "m_Benzyne_equi_cc_pVTZ_2"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [
+      16,
+      18,
+      19,
+      20,
+      24,
+      27
+    ],
+    "active_orbital_selection_method": "pyscf_canonical_rohf_mo_indices",
+    "effective_active_electrons": 6,
+    "source_casscf_converged": true,
+    "source_casscf_energy_hartree": -229.3696950180437,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "m_Benzyne_equi_cc_pVTZ_2"
+}

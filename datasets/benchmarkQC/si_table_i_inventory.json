@@ -56,7 +56,7 @@
     },
     {
       "table_number": 3,
-      "system_id": "n2_sto6g_cas4e4o_legacy",
+      "system_id": "n2_sto6g_cas4e4o_historical",
       "system": "N2",
       "active_space": "CAS(4e,4o)",
       "basis_and_relativistic_treatment": "STO-6G; nonrelativistic",
@@ -78,7 +78,7 @@
     },
     {
       "table_number": 4,
-      "system_id": "fes_anorccmb_cas6e6o_legacy",
+      "system_id": "fes_anorccmb_cas6e6o_historical",
       "system": "FeS",
       "active_space": "CAS(6e,6o)",
       "basis_and_relativistic_treatment": "ANO-RCC-MB; nonrelativistic",
@@ -100,7 +100,7 @@
     },
     {
       "table_number": 5,
-      "system_id": "u2_sfx2c_anorccmb_cas6e6o_legacy",
+      "system_id": "u2_sfx2c_anorccmb_cas6e6o_historical",
       "system": "U2",
       "active_space": "CAS(6e,6o)",
       "basis_and_relativistic_treatment": "ANO-RCC-MB; SF-X2C-1e",
@@ -133,7 +133,7 @@
           "bond_length_angstrom": 2.017,
           "status": "checked_in_payload",
           "result_record": "fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/results.json",
-          "source_archive": "datasets/benchmarkQC/FeS/systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/fes_cas14e10o_anorccvdzp_sfx2c/equilibrium_r2p0170/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -142,7 +142,7 @@
           "bond_length_angstrom": 3.0,
           "status": "checked_in_payload",
           "result_record": "fes_cas14e10o_anorccvdzp_sfx2c/stretched_r3p0000/results.json",
-          "source_archive": "datasets/benchmarkQC/FeS/systems/fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/fes_cas14e10o_anorccvdzp_sfx2c/stretched_r3p0000/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }
@@ -160,7 +160,7 @@
           "label": "published",
           "status": "checked_in_payload",
           "result_record": "validation/fe2s2_exact_reference_283930/results/published_geometry/results.json",
-          "source_archive": "datasets/benchmarkQC/Fe2S2/systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/fe2s2_exact_reference_283930/results/published_geometry/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -168,7 +168,7 @@
           "label": "stretched",
           "status": "checked_in_payload",
           "result_record": "validation/fe2s2_exact_reference_283930/results/bridge_stretched_1p10/results.json",
-          "source_archive": "datasets/benchmarkQC/Fe2S2/systems/fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/fe2s2_exact_reference_283930/results/bridge_stretched_1p10/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }
@@ -186,7 +186,7 @@
           "label": "equilibrium_r2p4300",
           "bond_length_angstrom": 2.43,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/U2/systems/u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300/hamiltonian.npz",
           "availability_note": "Reconstructed from a validated QCANT singlet certificate because the SI-side OneDrive Hamiltonian file was a dataless placeholder.",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/u2_partial_reference_desktop_20260804_88f8a4cc_8f7bda40_29e6d3f4/inputs/certificates/equilibrium_r2p4300_validated_lowest_singlet.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
@@ -195,7 +195,7 @@
           "label": "stretched_r2p8000",
           "bond_length_angstrom": 2.8,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/U2/systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/hamiltonian.npz",
           "availability_note": "Reconstructed from a validated QCANT singlet certificate because the SI-side OneDrive Hamiltonian file was a dataless placeholder.",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/validation/u2_partial_reference_desktop_20260804_88f8a4cc_8f7bda40_29e6d3f4/inputs/certificates/stretched_r2p8000_validated_lowest_singlet.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
@@ -214,7 +214,7 @@
           "label": "planar_0deg",
           "status": "checked_in_payload",
           "result_record": "c2h4_cas2e2o_augccpvdz/planar_0deg/results.json",
-          "source_archive": "datasets/benchmarkQC/C2H4/systems/c2h4_cas2e2o_augccpvdz_planar_0deg/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/c2h4_cas2e2o_augccpvdz_planar_0deg/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2h4_cas2e2o_augccpvdz/planar_0deg/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -222,7 +222,7 @@
           "label": "twisted_90deg",
           "status": "checked_in_payload",
           "result_record": "c2h4_cas2e2o_augccpvdz/twisted_90deg/results.json",
-          "source_archive": "datasets/benchmarkQC/C2H4/systems/c2h4_cas2e2o_augccpvdz_twisted_90deg/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/c2h4_cas2e2o_augccpvdz_twisted_90deg/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2h4_cas2e2o_augccpvdz/twisted_90deg/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }
@@ -240,7 +240,7 @@
           "label": "bent_102deg",
           "status": "checked_in_payload",
           "result_record": "ch2_cas6e6o_augccpvtz/bent_102deg/results.json",
-          "source_archive": "datasets/benchmarkQC/CH2/systems/ch2_cas6e6o_augccpvtz_bent_102deg/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/ch2_cas6e6o_augccpvtz_bent_102deg/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/bent_102deg/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -248,7 +248,7 @@
           "label": "open_140deg",
           "status": "checked_in_payload",
           "result_record": "ch2_cas6e6o_augccpvtz/open_140deg/results.json",
-          "source_archive": "datasets/benchmarkQC/CH2/systems/ch2_cas6e6o_augccpvtz_open_140deg/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/ch2_cas6e6o_augccpvtz_open_140deg/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/open_140deg/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }
@@ -267,7 +267,7 @@
           "bond_length_angstrom": 1.243,
           "status": "checked_in_payload",
           "result_record": "c2_cas8e8o_augccpvtz/equilibrium_r1p2430/results.json",
-          "source_archive": "datasets/benchmarkQC/C2/systems/c2_cas8e8o_augccpvtz_equilibrium_r1p2430/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/c2_cas8e8o_augccpvtz_equilibrium_r1p2430/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/c2_cas8e8o_augccpvtz/equilibrium_r1p2430/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -292,7 +292,7 @@
           "bond_length_angstrom": 1.2075,
           "status": "checked_in_payload",
           "result_record": "o2_cas12e8o_augccpvtz/equilibrium_r1p2075/results.json",
-          "source_archive": "datasets/benchmarkQC/O2/systems/o2_cas12e8o_augccpvtz_equilibrium_r1p2075/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/o2_cas12e8o_augccpvtz_equilibrium_r1p2075/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/o2_cas12e8o_augccpvtz/equilibrium_r1p2075/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -301,7 +301,7 @@
           "bond_length_angstrom": 2.0,
           "status": "checked_in_payload",
           "result_record": "o2_cas12e8o_augccpvtz/stretched_r2p0000/results.json",
-          "source_archive": "datasets/benchmarkQC/O2/systems/o2_cas12e8o_augccpvtz_stretched_r2p0000/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/o2_cas12e8o_augccpvtz_stretched_r2p0000/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/o2_cas12e8o_augccpvtz/stretched_r2p0000/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }
@@ -320,7 +320,7 @@
           "bond_length_angstrom": 1.568,
           "status": "checked_in_payload",
           "result_record": "feh_cas9e10o_augccpvtzdk_sfx2c/equilibrium_r1p5680/results.json",
-          "source_archive": "datasets/benchmarkQC/FeH/systems/feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/feh_cas9e10o_augccpvtzdk_sfx2c/equilibrium_r1p5680/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         },
@@ -329,7 +329,7 @@
           "bond_length_angstrom": 2.3,
           "status": "checked_in_payload",
           "result_record": "feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/results.json",
-          "source_archive": "datasets/benchmarkQC/FeH/systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/hamiltonian.npz",
+          "source_archive": "datasets/benchmarkQC/systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/hamiltonian.npz",
           "reconstruction_source": "QCANT/change3_benchmark10_reference/remote_results_final_talon/feh_cas9e10o_augccpvtzdk_sfx2c/stretched_r2p3000/inputs.npz",
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }

@@ -1,4 +1,4 @@
-"""Build legacy Benchmark-QC archives from portable spatial-integral data.
+"""Build historical Benchmark-QC archives from portable spatial-integral data.
 
 The repository's historical ``Hs`` arrays contain pickled PennyLane operator
 objects.  New datasets additionally retain numeric integral/orbital archives so
@@ -417,14 +417,14 @@ def max_pauli_coefficient_difference(
     )
 
 
-def write_legacy_hamiltonian_npz(
+def write_historical_hamiltonian_npz(
     output_path: str | Path,
     *,
     labels: Sequence[float],
     hamiltonian_terms: Sequence[np.ndarray],
     casci_energies: Sequence[float],
 ) -> None:
-    """Atomically write the repository's three-array legacy NPZ contract."""
+    """Atomically write the repository's three-array historical NPZ contract."""
 
     output = Path(output_path)
     if not (len(labels) == len(hamiltonian_terms) == len(casci_energies)):

@@ -70,21 +70,21 @@
     "qubit_mapping": "Jordan-Wigner",
     "spin_orbital_order": "interleaved alpha/beta",
     "integral_order": "PySCF chemist notation (pq|rs)",
-    "legacy_archive_label_semantics": "The sole label 0.0 is an archive point identifier, not a bond length, because the FCIDUMP has no coordinates"
+    "historical_archive_label_semantics": "The sole label 0.0 is an archive point identifier, not a bond length, because the FCIDUMP has no coordinates"
     }
   },
   "candidate_variants": {
     "historical_cas4e4o": {
       "status": "not yet accepted",
-      "definition": "Shared legacy default-RHF frame followed by the default CASCI(4,4) orbital partition and direct_spin1 FCI",
-      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "definition": "Shared historical default-RHF frame followed by the default CASCI(4,4) orbital partition and direct_spin1 FCI",
+      "orbital_frame_status": "historical nonstationary default-RHF frame",
       "stationary_rhf_claim": false,
       "active_space_finder_used": false,
       "claim_boundary": "This reproduces the paper Hamiltonian but is neither a converged conventional RHF frame nor an ASF-selected active space.",
-      "legacy_source_path": "provenance/vi66cycle_legacy_source.py",
-      "legacy_source_sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26",
+      "historical_source_path": "provenance/vi66cycle_historical_source.py",
+      "historical_source_sha256": "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7",
       "validated_desktop_reference": {
-        "status": "validated_legacy_frame",
+        "status": "validated_historical_frame",
         "pyscf": "2.4.0",
         "casci_energy_hartree": -116.15474998779426,
         "cisd_energy_hartree": -116.15474589468376,
@@ -102,14 +102,14 @@
     "historical_cas6e6o": {
       "status": "not yet accepted",
       "definition": "Checksum-bound reproduction of the supplied historical source: shared default PySCF RHF frame, default CASCI(6,6) orbital partition, then direct_spin1 FCI",
-      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "orbital_frame_status": "historical nonstationary default-RHF frame",
       "stationary_rhf_claim": false,
       "active_space_finder_used": false,
       "claim_boundary": "This reproduces the paper Hamiltonian but is neither a converged conventional RHF frame nor an ASF-selected active space.",
-      "legacy_source_path": "provenance/vi66cycle_legacy_source.py",
-      "legacy_source_sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26",
+      "historical_source_path": "provenance/vi66cycle_historical_source.py",
+      "historical_source_sha256": "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7",
       "validated_desktop_reference": {
-        "status": "validated_legacy_frame",
+        "status": "validated_historical_frame",
         "pyscf": "2.4.0",
         "casci_energy_hartree": -116.15625982795386,
         "cisd_energy_hartree": -116.1561849226785,
@@ -126,15 +126,15 @@
     },
     "historical_cas8e6o": {
       "status": "not yet accepted",
-      "definition": "Shared legacy default-RHF frame followed by the default CASCI(8,6) orbital partition and direct_spin1 FCI",
-      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "definition": "Shared historical default-RHF frame followed by the default CASCI(8,6) orbital partition and direct_spin1 FCI",
+      "orbital_frame_status": "historical nonstationary default-RHF frame",
       "stationary_rhf_claim": false,
       "active_space_finder_used": false,
       "claim_boundary": "This reproduces the paper Hamiltonian but is neither a converged conventional RHF frame nor an ASF-selected active space.",
-      "legacy_source_path": "provenance/vi66cycle_legacy_source.py",
-      "legacy_source_sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26",
+      "historical_source_path": "provenance/vi66cycle_historical_source.py",
+      "historical_source_sha256": "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7",
       "validated_desktop_reference": {
-        "status": "validated_legacy_frame",
+        "status": "validated_historical_frame",
         "pyscf": "2.4.0",
         "casci_energy_hartree": -116.15857228045772,
         "cisd_energy_hartree": -116.1585460355622,
@@ -151,8 +151,8 @@
     },
     "nested_cas8e8o": {
       "status": "not yet accepted",
-      "definition": "Current-project same-protocol nested CAS(8e,8o) extension of the shared legacy default-RHF frame",
-      "orbital_frame_status": "legacy nonstationary default-RHF frame",
+      "definition": "Current-project same-protocol nested CAS(8e,8o) extension of the shared historical default-RHF frame",
+      "orbital_frame_status": "historical nonstationary default-RHF frame",
       "stationary_rhf_claim": false,
       "active_space_finder_used": false,
       "historical_paper_space": false,
@@ -186,7 +186,7 @@
       "artifact SHA-256 checksums"
     ]
   },
-  "shared_legacy_frame_validation": {
+  "shared_historical_frame_validation": {
     "execution_site": "desktop",
     "hostname": "UNDMEDAASTHANAD",
     "pyscf_primary": "2.4.0",

@@ -1,0 +1,98 @@
+{
+  "active_space": {
+    "active_electrons": 10,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0
+  },
+  "active_space_variant": {
+    "casci_energies_hartree": [
+      -109.03438038143877,
+      -108.75697642204275
+    ],
+    "orbital_basis": "geometry-specific canonical RHF molecular orbitals",
+    "output": {
+      "path": "canonical/N2_PES_H.npz",
+      "sha256": "b9eefb9ead764e49effc8818a413ba0cbf3f9f537a1191d9cdc9ebd197bb3e3a"
+    },
+    "pauli_term_counts": [
+      1181,
+      1181
+    ],
+    "source_integral_archives": [
+      {
+        "geometry_id": "equilibrium_r1p0977",
+        "path": "canonical/inputs/equilibrium_r1p0977.npz",
+        "sha256": "ac539f022f151095f9631b0df4aaa6090de92e3ab4cf761400f6c628d2d396c6"
+      },
+      {
+        "geometry_id": "stretched_r2p0000",
+        "path": "canonical/inputs/stretched_r2p0000.npz",
+        "sha256": "486c9dd7e7896d8193c4d757ce0d75d5b81466d1c5e87cfd62853fe8b24e474e"
+      }
+    ]
+  },
+  "basis": "cc-pVDZ",
+  "charge": null,
+  "geometry": {
+    "bond_length_angstrom": 2.0,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "id": "stretched_r2p0000",
+    "point_index_in_source_archive": 1,
+    "point_label": 2.0,
+    "role": "stretched"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/n2_ccpvdz_cas10e8o_canonical_r2p0000/hamiltonian.npz",
+    "sha256": "cb910101909459b723d02cfb9ddfc461bd1a8c3ba2dd8c134357569973c63608"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/systems/n2_ccpvdz_cas10e8o_canonical_r2p0000/inputs/source_integrals.npz",
+    "sha256": "486c9dd7e7896d8193c4d757ce0d75d5b81466d1c5e87cfd62853fe8b24e474e"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz",
+    "source_archive_sha256": "b9eefb9ead764e49effc8818a413ba0cbf3f9f537a1191d9cdc9ebd197bb3e3a",
+    "source_catalog_id": "n2_ccpvdz_cas10e8o_canonical"
+  },
+  "reference_energy_hartree": -108.75697642204275,
+  "reference_results": {
+    "casci_energy_hartree": -108.75697642204231,
+    "ccsd_energy_hartree": -108.79797370400544,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -108.63932968514197,
+    "cisd_status": "table-value",
+    "cumulant_C2": 1.9597116828805363,
+    "renyi_0p25_nats": 5.064997494374635,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "stretched_r2p0000",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "cases/n2_ccpvdz_cas10e8o_canonical/stretched_r2p0000/results.json",
+        "release_validation": "passed",
+        "sha256": "f42c919f348a86905ff854c6609a7ce77cf5f46df31603b2d4261d46650f643a"
+      },
+      "system_id": "n2_ccpvdz_cas10e8o_canonical"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": null,
+  "source_metadata_path": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/metadata.json",
+  "system": "N2",
+  "system_id": "n2_ccpvdz_cas10e8o_canonical_r2p0000"
+}

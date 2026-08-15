@@ -7,13 +7,16 @@ checksum where applicable.
 
 ## Families
 
-- [`benchmarkQC/`](benchmarkQC/): the original BenchmarkQC system families
-  C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2, including the reconstructed
-  SI Table I geometry cases.
-- [`molvqe21/`](molvqe21/): 27 corrected MolVQE-21 cases in the same
+- [`benchmarkQC/`](benchmarkQC/): 51 BenchmarkQC system payloads, including
+  the reconstructed SI Table I geometry cases.
+- [`molvqe21/`](molvqe21/): 27 corrected MolVQE-21 system payloads in the same
   Hamiltonian and integral conventions.
+- Both families use the same per-system contract:
+  `systems/<case_id>/hamiltonian.npz`,
+  `systems/<case_id>/inputs/source_integrals.npz`, and
+  `systems/<case_id>/metadata.json`.
 - Every catalog entry has a `data_path` Hamiltonian and an
-  `integral_data_path` normalized spatial integral archive. Legacy
+  `integral_data_path` normalized spatial integral archive. Historical
   Hamiltonian-only BenchmarkQC cases use a documented JW-equivalent
   reconstruction when their original orbital coefficients were not retained.
 - [`benchmarkQC/si_table_i_inventory.json`](benchmarkQC/si_table_i_inventory.json):

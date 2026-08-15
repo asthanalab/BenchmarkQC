@@ -9,7 +9,7 @@ separate catalog row.
 | System and model | Geometry coverage | Status | Data |
 | --- | --- | --- | --- |
 | C2 aug-cc-pVTZ CAS(8e,8o), state-specific CASCI natural orbitals | 2.2000 Angstrom | Current | `datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz` |
-| N2 STO-6G CAS(4e,4o) | 11 points, 0.8-2.8 Angstrom | Legacy, preserved unchanged | `datasets/benchmarkQC/N2/N2_PES_H1.npz` |
+| N2 STO-6G CAS(4e,4o) | 11 points, 0.8-2.8 Angstrom | Historical, preserved unchanged | `datasets/benchmarkQC/N2/N2_PES_H1.npz` |
 | N2 cc-pVDZ CAS(10e,8o), canonical RHF | 1.0977 and 2.0000 Angstrom | Current control | `datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz` |
 | N2 cc-pVDZ CAS(10e,8o), CASCI natural orbitals | 1.0977 and 2.0000 Angstrom | Current final calculation | `datasets/benchmarkQC/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz` |
 | FeS ANO-RCC-MB CAS(6e,6o), quintet | 14 points | Existing | `datasets/benchmarkQC/FeS/FeS_PES_H.npz` |
@@ -19,7 +19,7 @@ separate catalog row.
 | Fe2S2 parent-frame CAS(8e,8o), singlet | 1 archived point; coordinates unavailable | Current; accepted constructed nested control | `datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/accepted/nested_cas8e8o/Fe2S2_H.npz` |
 | U2 SF-X2C-1e/ANO-RCC-MB CAS(6e,6o), singlet | 2.40 and 2.48 Angstrom | Existing partial grid | `datasets/benchmarkQC/U2/U2_PES_H.npz` |
 | SI Table I reconstructed rows | FeS, Fe₂S₂, U₂, C₂H₄, CH₂, C₂, O₂, and FeH; one catalog row per geometry | Validated reconstruction | `datasets/benchmarkQC/*/systems/` |
-| MolVQE-21 corrected CASSCF/natural-orbital reference cases | 27 one-point case archives | Current corrected-cache import | `datasets/molvqe21/hamiltonians/` |
+| MolVQE-21 corrected CASSCF/natural-orbital reference cases | 27 one-point case archives | Current corrected-cache import | `datasets/molvqe21/systems/` |
 
 The full SI Table I inventory is at
 [`datasets/benchmarkQC/si_table_i_inventory.json`](../datasets/benchmarkQC/si_table_i_inventory.json).
@@ -28,7 +28,7 @@ rows use the QCANT singlet certificate inputs because the SI-side OneDrive
 Hamiltonian files were dataless placeholders.
 
 Every catalog row includes a normalized numeric integral archive in addition to
-the legacy PennyLane-object representation. Where the original orbital frame
+the historical PennyLane-object representation. Where the original orbital frame
 was not retained, the archive is explicitly marked as a JW-equivalent
 reconstruction rather than presented as original AO/MO data. Scalar CASCI,
 CISD, CCSD, Rényi, and cumulant records for the 51 BenchmarkQC rows are in
@@ -63,7 +63,7 @@ and PySCF 2.11 cross-check, exact-state diagnostics, and cross-version
 certificate are retained under `accepted/nested_cas8e8o/`.  It is not a
 historical paper active space.
 
-The accepted records reproduce the paper's legacy default-RHF/CASCI partitions.
+The accepted records reproduce the paper's historical default-RHF/CASCI partitions.
 The shared RHF calculation stopped before orbital stationarity, so these models
 must not be described as conventional converged-RHF, natural-orbital, or
 Active Space Finder selections. The FCIDUMP does not contain coordinates or AO

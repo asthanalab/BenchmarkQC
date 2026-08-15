@@ -1,0 +1,64 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 4
+  },
+  "active_space_variant": null,
+  "basis": "ANO-RCC-MB",
+  "charge": null,
+  "geometry": {
+    "bond_length_angstrom": 4.5,
+    "point_index_in_source_archive": 12,
+    "point_label": 4.5
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/fes_anorccmb_cas6e6o_r4p5000/hamiltonian.npz",
+    "sha256": "ccd5849b5ef214bb7da83606974ceb9851858a9e42d7fabed0b3aa3e95ee2b97"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "frame_status": "Jordan-Wigner-equivalent; original orbital coefficient frame unavailable",
+    "path": "datasets/benchmarkQC/systems/fes_anorccmb_cas6e6o_r4p5000/inputs/source_integrals.npz",
+    "sha256": "72f162efcdbfebdf39eabfcf31379a0ecd7c1f526225ba56b3042942090cbf26"
+  },
+  "provenance": {
+    "integral_reconstruction": {
+      "linear_system_rank": 253,
+      "linear_system_smallest_retained_singular_value": 0.08831222028636301,
+      "method": "minimum-norm inverse Jordan-Wigner reconstruction over real spatial one-/two-body coefficients",
+      "operator_equivalence_max_pauli_error": 6.355452188827604e-13,
+      "tool": "tools/recover_missing_integrals.py",
+      "warning": "This archive reproduces the saved JW Hamiltonian but does not recover the original AO/MO orbital frame."
+    },
+    "source_archive_path": "datasets/benchmarkQC/FeS/FeS_PES_H.npz",
+    "source_archive_sha256": "82eb7b758c921d2b93e049ba8399597c8b2aa2849d7571bbd683d86483bdb7d0",
+    "source_catalog_id": "fes_anorccmb_cas6e6o"
+  },
+  "reference_energy_hartree": -1655.4310596350235,
+  "reference_results": {
+    "casci_energy_hartree": -1655.4310596350235,
+    "ccsd_energy_hartree": -1654.9069776145982,
+    "ccsd_status": "computed-not-converged",
+    "cisd_energy_hartree": -1655.4310584633151,
+    "cisd_status": "computed-not-converged",
+    "cumulant_C2": 0.9953703703703722,
+    "renyi_0p25_nats": 1.7917594692280552,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "frame_note": "For historical N2, FeS, and U2 cases the integral archive is JW-equivalent; the values are frame-dependent controls, not claims about the unavailable original orbital frame.",
+      "kind": "computed from checked-in normalized integral archive",
+      "method": "PySCF direct-spin1 CASCI/FCI plus CISD and CCSD controls",
+      "reference_determinant_energy_hartree": -1654.9080227278566,
+      "reference_occupied_virtual_gradient_norm": null
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": null,
+  "source_metadata_path": null,
+  "system": "FeS",
+  "system_id": "fes_anorccmb_cas6e6o_r4p5000"
+}

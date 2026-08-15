@@ -16,9 +16,9 @@ an archive and `jordan_wigner_terms_from_integrals` to regenerate its qubit
 Hamiltonian. Spin orbitals are interleaved: even wires are alpha and odd wires
 are beta.
 
-## Legacy JW-equivalent archives
+## Historical JW-equivalent archives
 
-The original legacy N2, FeS, and U2 scans retained a PennyLane JW operator but
+The original historical N2, FeS, and U2 scans retained a PennyLane JW operator but
 not the numeric active-space integral/orbital frame. For those 27 point-level
 records, `tools/recover_missing_integrals.py` solves the inverse JW linear map
 over real spatial one-/two-body coefficients and writes a normalized archive.

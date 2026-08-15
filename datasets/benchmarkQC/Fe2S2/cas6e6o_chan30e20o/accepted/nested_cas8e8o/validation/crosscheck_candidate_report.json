@@ -31,11 +31,11 @@
     "adds_one_lower_and_one_upper_parent_orbital": true,
     "historical_cas6_control_energy": true,
     "historical_cas6_control_state": true,
-    "legacy_default_rhf_remains_nonconverged": true,
-    "legacy_rhf_energy_fingerprint": true,
-    "legacy_rhf_gradient_fingerprint": true,
-    "legacy_rhf_mo_fingerprint_policy": true,
-    "legacy_source_checksum": true,
+    "historical_default_rhf_remains_nonconverged": true,
+    "historical_rhf_energy_fingerprint": true,
+    "historical_rhf_gradient_fingerprint": true,
+    "historical_rhf_mo_fingerprint_policy": true,
+    "historical_source_checksum": true,
     "nested_default_partition": true,
     "parent_checksum": true,
     "registered_runtime_version": true,
@@ -81,12 +81,12 @@
     ],
     "historical_nonstationarity_note": "The source used the default RHF cycle limit without a convergence check. The same faithfully replayed, nonstationary frame is retained for comparability.",
     "historical_paper_space": false,
-    "legacy_source": {
-      "path": "provenance/vi66cycle_legacy_source.py",
+    "historical_source": {
+      "path": "provenance/vi66cycle_historical_source.py",
       "scope_note": "The source explicitly defines CAS(6e,6o). CAS(8e,8o) is a new nested extension constructed by the same default-partition rule; it is not a historical paper row.",
-      "sha256": "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26"
+      "sha256": "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7"
     },
-    "name": "nested extension of legacy default-RHF/CASCI partition",
+    "name": "nested extension of historical default-RHF/CASCI partition",
     "nested_parent_space": {
       "added_indices_zero_based": [
         11,
@@ -101,7 +101,7 @@
         17
       ]
     },
-    "orbital_frame_status": "legacy_nonstationary_default_rhf",
+    "orbital_frame_status": "historical_nonstationary_default_rhf",
     "recipe": "checksum-bound default PySCF RHF replay on the parent FCIDUMP, CASCI(8e,8o) default orbital partition, then singlet-adapted direct_spin0 FCI, followed by independent direct_spin1 physical-Hamiltonian and S^2 residual checks",
     "rhf_converged": false,
     "rhf_energy_hartree": -116.13503262533933,

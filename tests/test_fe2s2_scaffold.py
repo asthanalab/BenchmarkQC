@@ -10,8 +10,8 @@ import pytest
 
 from benchmark_qc.fe2s2 import (
     CandidateNotAcceptedError,
-    LEGACY_SOURCE_PATH,
-    LEGACY_SOURCE_SHA256,
+    HISTORICAL_SOURCE_PATH,
+    HISTORICAL_SOURCE_SHA256,
     PARENT_FCIDUMP_PATH,
     PARENT_FCIDUMP_SHA256,
     PUBLISHED_CAS6_ENERGY_HARTREE,
@@ -48,7 +48,7 @@ def accepted_report() -> dict:
 
 def test_parent_and_historical_source_are_checksum_pinned() -> None:
     assert sha256_file(PARENT_FCIDUMP_PATH) == PARENT_FCIDUMP_SHA256
-    assert sha256_file(LEGACY_SOURCE_PATH) == LEGACY_SOURCE_SHA256
+    assert sha256_file(HISTORICAL_SOURCE_PATH) == HISTORICAL_SOURCE_SHA256
     first_line = PARENT_FCIDUMP_PATH.read_text(encoding="utf-8").splitlines()[0]
     assert "NORB=  20" in first_line
     assert "NELEC=30" in first_line
@@ -122,7 +122,7 @@ def test_nested_cas8e8o_extension_has_exact_parent_span_and_no_paper_fit() -> No
     assert "--runtime-role" in text
     assert "primary_pyscf2p4" in text
     assert "crosscheck_pyscf2p11" in text
-    assert "legacy_rhf_mo_fingerprint_policy" in text
+    assert "historical_rhf_mo_fingerprint_policy" in text
     assert "require_exact_mo_coefficients_sha256" in text
     assert "historical_cas6_control_energy" in text
     assert "execution-site" in text

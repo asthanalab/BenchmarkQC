@@ -1,0 +1,189 @@
+{
+  "active_space": {
+    "active_electrons": 10,
+    "active_spatial_orbitals": 10,
+    "qubits": 20,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "Fe ANO-RCC-VDZ; S,C,H ANO-RCC-MB; nonrelativistic",
+  "charge": null,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        1.312783
+      ],
+      [
+        0.0,
+        0.0,
+        -1.312783
+      ],
+      [
+        0.757448,
+        -1.576802,
+        0.0
+      ],
+      [
+        -0.757448,
+        1.576802,
+        0.0
+      ],
+      [
+        1.583457,
+        0.881621,
+        2.761494
+      ],
+      [
+        -1.583457,
+        -0.881621,
+        2.761494
+      ],
+      [
+        -1.583457,
+        -0.881621,
+        -2.761494
+      ],
+      [
+        1.583457,
+        0.881621,
+        -2.761494
+      ],
+      [
+        -2.006854,
+        0.653551,
+        3.669027
+      ],
+      [
+        2.006854,
+        -0.653551,
+        3.669027
+      ],
+      [
+        2.006854,
+        -0.653551,
+        -3.669027
+      ],
+      [
+        -2.006854,
+        0.653551,
+        -3.669027
+      ],
+      [
+        -2.501125,
+        1.369319,
+        2.995471
+      ],
+      [
+        2.501125,
+        -1.369319,
+        2.995471
+      ],
+      [
+        2.501125,
+        -1.369319,
+        -2.995471
+      ],
+      [
+        -2.501125,
+        1.369319,
+        -2.995471
+      ],
+      [
+        -2.683553,
+        0.421356,
+        4.50861
+      ],
+      [
+        2.683553,
+        -0.421356,
+        4.50861
+      ],
+      [
+        2.683553,
+        -0.421356,
+        -4.50861
+      ],
+      [
+        -2.683553,
+        0.421356,
+        -4.50861
+      ],
+      [
+        -1.086873,
+        1.121991,
+        4.050762
+      ],
+      [
+        1.086873,
+        -1.121991,
+        4.050762
+      ],
+      [
+        1.086873,
+        -1.121991,
+        -4.050762
+      ],
+      [
+        -1.086873,
+        1.121991,
+        -4.050762
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "published"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/hamiltonian.npz",
+    "pauli_term_count": 13123,
+    "sha256": "b1ff6c37037ec261c75316f1517ba90c6eb0dbe736985f2e796b61b9011d54fb"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/inputs/source_integrals.npz",
+    "sha256": "ef22e995fcc2215e1710348014a4827668c8ff880ce62018a1ef3fdc216b72e8"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/validation/fe2s2_exact_reference_283930/results/published_geometry/inputs.npz",
+    "source_input_sha256": "967613aa3b53fce3e12062c7a9bb65341832a743d7f603ffea26141c51f012d6",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/validation/fe2s2_exact_reference_283930/results/published_geometry/reference_results.npz",
+    "source_reference_sha256": "bc22f7a19ebfcf8c5dcd4836f1d738be9e75bbe51d4c4413d773d44ba432eba3"
+  },
+  "reference_energy_hartree": -5058.275918325761,
+  "reference_results": {
+    "casci_energy_hartree": -5058.275918325761,
+    "ccsd_energy_hartree": -5058.052529449834,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -5057.904416103547,
+    "cisd_status": "table-value",
+    "cumulant_C2": 6.241200674300581,
+    "renyi_0p25_nats": 8.13363913071443,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "published_geometry",
+      "kind": "SI Table I scalar record",
+      "result_source": null,
+      "system_id": "fe2s2_cas10e10o_anorccvdz_mb"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 9.094947017729282e-13,
+    "absolute_error_vs_source_reference_hartree": 9.094947017729282e-13,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -5058.27591832576,
+    "source_reference_energy_hartree": -5058.275918325761,
+    "target_energy_hartree": -5058.275918325761,
+    "target_energy_rounded_to_table_hartree": -5058.276,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "source_active_space": null,
+  "source_metadata_path": null,
+  "system": "Fe2S2",
+  "system_id": "fe2s2_cas10e10o_anorccvdz_mb_published_geometry"
+}

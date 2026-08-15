@@ -1,0 +1,88 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "aug-cc-pVTZ; nonrelativistic",
+  "charge": null,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.8548605576026681,
+        0.0,
+        0.6922524301548213
+      ],
+      [
+        -0.8548605576026681,
+        0.0,
+        0.6922524301548213
+      ]
+    ],
+    "point_label": 102.0,
+    "point_name": "bent_102deg"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/ch2_cas6e6o_augccpvtz_bent_102deg/hamiltonian.npz",
+    "pauli_term_count": 555,
+    "sha256": "49e60c8b52b74fb41a04910ce6c1317685d087ee0c5058310a2f874e49c0b245"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/systems/ch2_cas6e6o_augccpvtz_bent_102deg/inputs/source_integrals.npz",
+    "sha256": "d89251419b0ef468b6e6b004cebb43affa17f5298f30dd312397a306ac7694ab"
+  },
+  "provenance": {
+    "reconstruction_tool": "tools/reconstruct_si_table_i.py",
+    "source_input_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/bent_102deg/inputs.npz",
+    "source_input_sha256": "d89251419b0ef468b6e6b004cebb43affa17f5298f30dd312397a306ac7694ab",
+    "source_provider": "QCANT/change3_benchmark10_reference",
+    "source_reference_path": "QCANT/change3_benchmark10_reference/remote_results_final_talon/ch2_cas6e6o_augccpvtz/bent_102deg/reference_results.npz",
+    "source_reference_sha256": "beceb60f0789e275258a12ca4555d986ef8c3835a94aaf354e7b98b9ed18cc20"
+  },
+  "reference_energy_hartree": -38.92873176648936,
+  "reference_results": {
+    "casci_energy_hartree": -38.92873176648936,
+    "ccsd_energy_hartree": -38.92830082958296,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -38.92657348114583,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.1418119794849291,
+    "renyi_0p25_nats": 2.9346095867857174,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "bent_102deg",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "ch2_cas6e6o_augccpvtz/bent_102deg/results.json",
+        "release_validation": "passed",
+        "sha256": "0ce51f8d81e6f1f19ba9e9622a24fcf5945d0c4ade51df49e3c58f8d8bd7dd48"
+      },
+      "system_id": "ch2_cas6e6o_augccpvtz"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "absolute_error_vs_si_hartree": 1.4210854715202004e-14,
+    "absolute_error_vs_source_reference_hartree": 1.4210854715202004e-14,
+    "passed": true,
+    "recomputed_casci_energy_hartree": -38.92873176648935,
+    "source_reference_energy_hartree": -38.92873176648936,
+    "target_energy_hartree": -38.92873176648936,
+    "target_energy_rounded_to_table_hartree": -38.929,
+    "target_source": "U2response/DD-ART-06-2026-000368/05_supporting_data/unified_benchmark_rows.json",
+    "tolerance_hartree": 1e-08
+  },
+  "source_active_space": null,
+  "source_metadata_path": null,
+  "system": "CH2",
+  "system_id": "ch2_cas6e6o_augccpvtz_bent_102deg"
+}

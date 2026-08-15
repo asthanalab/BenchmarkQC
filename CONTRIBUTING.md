@@ -9,6 +9,6 @@ python -m pip install -e . --no-deps
 pytest -q
 ```
 
-Keep scientific-data changes focused. Preserve legacy archives, document model
+Keep scientific-data changes focused. Preserve historical archives, document model
 changes as new variants, include checksums and provenance, and never commit
 credentials or machine-specific paths.

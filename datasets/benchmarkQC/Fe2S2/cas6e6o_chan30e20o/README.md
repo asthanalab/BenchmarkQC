@@ -14,15 +14,15 @@ labels. Those fields remain explicitly unavailable rather than being guessed.
 ## Which construction produced the paper energy?
 
 The recovered source is preserved byte-for-byte at
-`provenance/vi66cycle_legacy_source.py` (SHA-256
-`bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26`).
+`provenance/vi66cycle_historical_source.py` (SHA-256
+`388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7`).
 It shows that the historical CAS(6e,6o) Hamiltonian was not selected by Active
 Space Finder. It ran PySCF's default RHF on the Chan integrals and then used a
 default CASCI orbital partition. The same replayed RHF frame and default
 partition rule define the paper's CAS(4e,4o), CAS(6e,6o), and CAS(8e,6o)
 sibling models, with respective paper targets `-116.154749`, `-116.156259`, and
 `-116.158572` Ha. These are independent reductions and are not labeled as a
-nested convergence sequence. The RHF calculation stopped at the legacy
+nested convergence sequence. The RHF calculation stopped at the historical
 RHF cycle limit, so the accepted record must disclose the nonstationary parent
 frame. Replaying it gives `-116.15625982795386` Ha with PySCF 2.4; the reported
 `-116.156259` Ha is the value truncated to six decimal places. The independent

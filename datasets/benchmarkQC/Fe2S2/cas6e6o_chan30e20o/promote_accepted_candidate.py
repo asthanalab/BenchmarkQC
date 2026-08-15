@@ -89,7 +89,7 @@ def catalog_entry(report: dict, hamiltonian_path: Path) -> dict:
     if report["variant"].startswith("historical_"):
         entry.update(
             {
-                "orbital_frame_status": "legacy-nonstationary-default-RHF",
+                "orbital_frame_status": "historical-nonstationary-default-RHF",
                 "active_space_finder_used": False,
                 "claim_boundary": (
                     "Faithful paper-Hamiltonian reproduction; not a conventional "
@@ -100,7 +100,7 @@ def catalog_entry(report: dict, hamiltonian_path: Path) -> dict:
     elif report["variant"] == "nested_cas8e8o":
         entry.update(
             {
-                "orbital_frame_status": "legacy-nonstationary-default-RHF",
+                "orbital_frame_status": "historical-nonstationary-default-RHF",
                 "active_space_finder_used": False,
                 "historical_paper_space": False,
                 "claim_boundary": (
@@ -264,9 +264,9 @@ def main() -> int:
             "status": "accepted",
             "definition": (
                 "Current-project same-protocol nested CAS(8e,8o) extension "
-                "of the shared legacy default-RHF frame"
+                "of the shared historical default-RHF frame"
             ),
-            "orbital_frame_status": "legacy nonstationary default-RHF frame",
+            "orbital_frame_status": "historical nonstationary default-RHF frame",
             "stationary_rhf_claim": False,
             "active_space_finder_used": False,
             "historical_paper_space": False,

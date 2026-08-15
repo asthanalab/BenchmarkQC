@@ -70,7 +70,7 @@ load these files only from a trusted source and verify their SHA-256 values
 against `datasets/catalog.json`.
 
 The current numeric system archives include pickle-free spatial-integral input
-alongside the legacy Hamiltonian representation. These store the available
+alongside the historical Hamiltonian representation. These store the available
 geometry information, spatial one- and two-electron integrals, core constant,
 orbital information, active-orbital indices or explicit active-frame
 provenance, and the reference determinant, and can be loaded with

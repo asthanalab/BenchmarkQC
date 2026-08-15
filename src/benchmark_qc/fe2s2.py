@@ -29,9 +29,9 @@ PARENT_FCIDUMP_PATH = (
 PARENT_FCIDUMP_SHA256 = (
     "95d8786af06eeea2107e19ffd98c66a6ca97fc8c9864175a4f6d64512b6f2df9"
 )
-LEGACY_SOURCE_PATH = DATASET_ROOT / "provenance" / "vi66cycle_legacy_source.py"
-LEGACY_SOURCE_SHA256 = (
-    "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26"
+HISTORICAL_SOURCE_PATH = DATASET_ROOT / "provenance" / "vi66cycle_historical_source.py"
+HISTORICAL_SOURCE_SHA256 = (
+    "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7"
 )
 PUBLISHED_HISTORICAL_ENERGIES_HARTREE = {
     "historical_cas4e4o": -116.154749,
@@ -137,10 +137,10 @@ def require_accepted_report(report: Mapping[str, Any]) -> None:
             "active_space_rdm_energy",
             "historical_cas6_control_energy",
             "historical_cas6_control_state",
-            "legacy_default_rhf_remains_nonconverged",
-            "legacy_rhf_energy_fingerprint",
-            "legacy_rhf_gradient_fingerprint",
-            "legacy_rhf_mo_fingerprint_policy",
+            "historical_default_rhf_remains_nonconverged",
+            "historical_rhf_energy_fingerprint",
+            "historical_rhf_gradient_fingerprint",
+            "historical_rhf_mo_fingerprint_policy",
             "nested_default_partition",
             "strictly_contains_historical_cas6_span",
             "variational_nesting_energy",
@@ -521,7 +521,7 @@ def _accepted_root(variant: str) -> Path:
 
 
 def load_hamiltonian(variant: str = "historical_cas6e6o"):
-    """Load one promoted legacy PennyLane Hamiltonian archive."""
+    """Load one promoted historical PennyLane Hamiltonian archive."""
 
     return load_hamiltonian_npz(str(_accepted_root(variant) / "Fe2S2_H.npz"))
 

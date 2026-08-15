@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
+import json
 from pathlib import Path
 
 from .hamiltonian_test import NPZData, load_hamiltonian_npz
@@ -22,6 +23,7 @@ class MolVQE21Case:
     case_id: str
     hamiltonian_path: Path
     integrals_path: Path
+    metadata_path: Path
     active_electrons: int
     active_orbitals: int
     qubits: int
@@ -40,6 +42,7 @@ def _load_cases() -> dict[str, MolVQE21Case]:
             case_id=row["case_id"],
             hamiltonian_path=ROOT / row["hamiltonian_path"],
             integrals_path=ROOT / row["integrals_path"],
+            metadata_path=ROOT / row["metadata_path"],
             active_electrons=int(row["active_electrons"]),
             active_orbitals=int(row["active_orbitals"]),
             qubits=int(row["qubits"]),
@@ -80,3 +83,10 @@ def load_source_integrals(case_id: str) -> SpatialIntegralArchive:
 
     case = get_case(case_id)
     return load_spatial_integral_archive(case.integrals_path)
+
+
+def load_metadata(case_id: str) -> dict[str, object]:
+    """Load the shared per-system metadata record for one case."""
+
+    case = get_case(case_id)
+    return json.loads(case.metadata_path.read_text(encoding="utf-8"))

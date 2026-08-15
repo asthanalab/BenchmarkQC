@@ -23,7 +23,7 @@ from benchmark_qc.integral_dataset import (  # noqa: E402
     load_spatial_integral_archive,
     max_pauli_coefficient_difference,
     sha256_file,
-    write_legacy_hamiltonian_npz,
+    write_historical_hamiltonian_npz,
 )
 
 
@@ -62,7 +62,7 @@ def generate(*, output_root: Path, force: bool) -> None:
         raise FileExistsError(
             f"Refusing to overwrite {output}; choose a new --output-root or pass --force"
         )
-    write_legacy_hamiltonian_npz(
+    write_historical_hamiltonian_npz(
         output,
         labels=labels,
         hamiltonian_terms=hamiltonians,

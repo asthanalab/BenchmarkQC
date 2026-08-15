@@ -6,17 +6,25 @@ from Mushir’s `asthanaa/benchmarkkrylov` checkout at commit
 benchmark-ready Hamiltonian caches and applies explicit canonical-MO active
 orbital corrections to cyclobutadiene and the two m-benzyne cases.
 
-Each benchmark-ready case has two files:
+Each benchmark-ready case uses the same per-system layout as BenchmarkQC:
 
-- `hamiltonians/<case_id>.npz`: the standard Benchmark-QC `labels`, `Hs`, and
-  `casci_energies` archive, with one point labeled `0.0`.
-- `integrals/<case_id>.npz`: a normalized, pickle-free numeric integral archive
-  that can regenerate the Jordan–Wigner terms.
+- `systems/<case_id>/hamiltonian.npz`: the standard Benchmark-QC `labels`,
+  `Hs`, and `casci_energies` archive, with one point labeled `0.0`.
+- `systems/<case_id>/inputs/source_integrals.npz`: a normalized, pickle-free
+  numeric integral archive that can regenerate the Jordan–Wigner terms.
+- `systems/<case_id>/metadata.json`: the shared per-system metadata and
+  reference-result record.
 
-`manifest.csv` records checksums, system metadata, source cache provenance, and
+`manifest.csv` records checksums, system metadata, source-cache provenance, and
 the active-orbital selection status. The package manifest is deliberately
 filtered to the 27 corrected-cache cases; the two incomplete source records
-are excluded from both the folder and the benchmark catalog.
+are excluded from both the folder and the benchmark catalog. The existing
+corrected Hamiltonian and integral archives were moved and indexed; no new
+electronic-structure calculation was needed for this layout normalization.
+
+The two scalar reference fields not published by the MolVQE-21 source are
+represented as `null` with status `not-provided-by-source`; this preserves the
+source boundary instead of inventing CISD or CCSD values.
 
 The package loader is available as:
 

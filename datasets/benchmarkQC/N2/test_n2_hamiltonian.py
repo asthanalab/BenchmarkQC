@@ -68,7 +68,7 @@ def main() -> int:
         "--nelec",
         type=int,
         default=4,
-        help="Active-space electrons (default: 4 for the legacy STO-6G archive)",
+        help="Active-space electrons (default: 4 for the historical STO-6G archive)",
     )
     parser.add_argument(
         "--spin",

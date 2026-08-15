@@ -27,7 +27,7 @@ from benchmark_qc.integral_dataset import (
     jordan_wigner_terms_from_integrals,
     load_spatial_integral_archive,
     sha256_file,
-    write_legacy_hamiltonian_npz,
+    write_historical_hamiltonian_npz,
 )
 
 
@@ -559,7 +559,7 @@ def main() -> None:
 
         terms = jordan_wigner_terms_from_integrals(archive)
         if not args.check_only:
-            write_legacy_hamiltonian_npz(
+            write_historical_hamiltonian_npz(
                 hamiltonian_path,
                 labels=[spec.label],
                 hamiltonian_terms=[terms],

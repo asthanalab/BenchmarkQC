@@ -36,7 +36,7 @@ Utilities used by all `test_*.py` scripts.
 - `jordan_wigner_terms_from_integrals(archive, *, cutoff=1e-14) -> np.ndarray`
   - Converts PySCF chemist-ordered spatial integrals to PennyLane
     Jordan-Wigner terms using the repository's interleaved spin order.
-- `write_legacy_hamiltonian_npz(...)`
+- `write_historical_hamiltonian_npz(...)`
   - Writes the backward-compatible three-array dataset contract atomically.
 - `max_pauli_coefficient_difference(left, right) -> float`
   - Compares two Hamiltonians coefficient-by-coefficient after canonicalizing

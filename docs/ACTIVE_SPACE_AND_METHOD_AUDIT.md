@@ -31,10 +31,10 @@ spaces for every property or geometry.
 - C₂H₄ CAS(2e,2o) is intentionally a π/π* torsion model, not a full-valence
   space. It is appropriate for the planar-to-90° torsion benchmark but not a
   general ethylene excited-state or dissociation space.
-- The legacy N₂ CAS(4e,4o), FeS CAS(6e,6o), U₂ CAS(6e,6o), and the historical
+- The historical N₂ CAS(4e,4o), FeS CAS(6e,6o), U₂ CAS(6e,6o), and the historical
   Fe₂S₂ reductions are archive-compatible stress tests. They should not be
   presented as independently optimized, universally adequate chemical active
-  spaces. The legacy FeS and U₂ records also lack complete final MO
+  spaces. The historical FeS and U₂ records also lack complete final MO
   coefficient/atom-shell labeling.
 - The CASCI-natural-orbital C₂ and N₂ records rotate a fixed parent active
   subspace. They are separate benchmark variants because orbital-frame
@@ -57,12 +57,12 @@ as a complete valence description.
 | Fe₂S₂, CAS(10e,10o), two SI geometries | Ten singly occupied Fe 3d orbitals | Strong, chemically recognizable minimal space for Fe-centered spin coupling and low-energy spectra. It omits Fe double-shell and bridging-S correlation; larger CAS(10,20), CAS(22,16), or CAS(22,26) spaces are needed when those effects are part of the question. | SI/source definition; the Fe₂S₂ literature compares exactly these active-space enlargements. [4] |
 | Fe₂S₂ historical CAS(4e,4o), CAS(6e,6o), CAS(8e,6o), and nested CAS(8e,8o) | Historical/default-RHF parent-frame reductions | Valid controlled orbital-space comparisons and archived reproductions. They are not claims that the reduced spaces are chemically complete. The nested CAS(8e,8o) is explicitly a present-work control, not a historical paper row. | Checksum-pinned source and acceptance reports; historical nonstationary default-RHF frame is recorded in metadata. |
 | FeH, CAS(9e,10o), equilibrium and stretched | Fe 3d, 4s, 4p plus H 1s | Well motivated for the X ⁴Δ and nearby valence states in the reported diatomic problem. FeH is difficult even for high-order coupled cluster, so this should be treated as a targeted multireference benchmark rather than a universal FeH active space. | SI/source definition; FeH literature reports CASSCF calculations with CAS(9,10) and emphasizes the state sensitivity. [5] |
-| FeS legacy, CAS(6e,6o), 14-point scan | Six archived historical orbitals | Valid as a historical high-spin scan and reproducibility target. It is not independently auditable as a chemically complete Fe/S valence space because the archive lacks the final MO coefficient and atom/shell labels. | Source notebook and OneDrive/SI record; catalog preserves this limitation. |
-| FeS expanded, CAS(14e,10o), equilibrium and stretched | Fe 3d/4s plus S 3s/3p | The chemically completed space recorded by the source is substantially better justified for the stated X ⁵Δ problem than the legacy CAS(6,6) scan. It remains a targeted space and should be enlarged for ligand charge-transfer or broader spectroscopy. | SI/source definition and validated CASCI reconstruction; current benchmark preprint describes FeS as a chemically challenging active-space problem. [6] |
-| N₂ legacy, CAS(4e,4o), STO-6G, 11 points | N 2p π/π* selector span | Appropriate only as a deliberately reduced π/π* model. It omits the complete N 2s/2p valence span, so it should not be interpreted as the full dissociation benchmark. | Historical notebook/SI definition; no independent full-valence claim. |
+| FeS historical, CAS(6e,6o), 14-point scan | Six archived historical orbitals | Valid as a historical high-spin scan and reproducibility target. It is not independently auditable as a chemically complete Fe/S valence space because the archive lacks the final MO coefficient and atom/shell labels. | Source notebook and OneDrive/SI record; catalog preserves this limitation. |
+| FeS expanded, CAS(14e,10o), equilibrium and stretched | Fe 3d/4s plus S 3s/3p | The chemically completed space recorded by the source is substantially better justified for the stated X ⁵Δ problem than the historical CAS(6,6) scan. It remains a targeted space and should be enlarged for ligand charge-transfer or broader spectroscopy. | SI/source definition and validated CASCI reconstruction; current benchmark preprint describes FeS as a chemically challenging active-space problem. [6] |
+| N₂ historical, CAS(4e,4o), STO-6G, 11 points | N 2p π/π* selector span | Appropriate only as a deliberately reduced π/π* model. It omits the complete N 2s/2p valence span, so it should not be interpreted as the full dissociation benchmark. | Historical notebook/SI definition; no independent full-valence claim. |
 | N₂, CAS(10e,8o), cc-pVDZ, canonical and CASCI-natural variants | Full N 2s/2p valence span | Strong full-valence choice for N₂ bond breaking in the stated basis. The CASCI-natural row is an orbital-frame control, not a different chemical active subspace. | SI/source definition; N₂ benchmark studies use CAS(10,8) for the cc-pVDZ dissociation problem. [7] |
 | O₂, CAS(12e,8o), triplet, equilibrium and stretched | O 2s/2p valence span | Strong full-valence choice for the triplet ground-state dissociation problem. It is not intended to cover Rydberg states, charge transfer, or all spin-orbit spectroscopy. | SI/source definition; independent O₂ CASSCF work describes CAS(12,8) as the complete valence space. [8] |
-| U₂ legacy, CAS(6e,6o), SF-X2C-1e/ANO-RCC-MB | Fixed singlet-CASSCF orbitals optimized at 2.50 Å and projected to 2.40/2.48 Å | Useful historical fixed-orbital stress test, but too small to represent the full U₂ valence manifold. The archive also omits complete final MO coefficient/atom-shell labels. | SI/source definition; U₂ is known to be highly sensitive to active-space size and relativistic treatment. [6, 9] |
+| U₂ historical, CAS(6e,6o), SF-X2C-1e/ANO-RCC-MB | Fixed singlet-CASSCF orbitals optimized at 2.50 Å and projected to 2.40/2.48 Å | Useful historical fixed-orbital stress test, but too small to represent the full U₂ valence manifold. The archive also omits complete final MO coefficient/atom-shell labels. | SI/source definition; U₂ is known to be highly sensitive to active-space size and relativistic treatment. [6, 9] |
 | U₂ expanded, CAS(6e,10o), SF-X2C-1e/ANO-RCC-VDZP | U 5f/6d parent span, with source ASF/CASSCF refinement | Good targeted space for the released U₂ singlet benchmark and its 2.43/2.80 Å comparison. It should not be advertised as a converged universal U₂ space: larger relativistic CASSCF spaces are used in the literature, and the source itself records strong sensitivity. | SI/source definition and validated singlet certificates; literature and the current benchmark preprint support the 5f/6d focus while warning about active-space sensitivity. [6, 9] |
 
 ## Method-data availability
@@ -81,10 +81,10 @@ present rather than implying that every method has been run for every row.
 | CISD scalar energy | 51/51 | `reference_results` in each system metadata |
 | Exact-CI/CASCI coefficient data | 6/51 | Four Fe₂S₂ historical/control records and two expanded U₂ certificate records |
 | RDM data | 9/51 | C₂/N₂ natural-orbital, Fe₂S₂ accepted, and expanded U₂ records |
-| Rényi entropy scalar | 51/51 | `reference_results` in each system metadata; SI values are imported and missing legacy points are computed from CASCI vectors |
+| Rényi entropy scalar | 51/51 | `reference_results` in each system metadata; SI values are imported and missing historical points are computed from CASCI vectors |
 | Two-body cumulant data/scalars | 51/51 | `reference_results` in each system metadata; full RDM tensors remain available only for the source-certified records |
 
-The 27 legacy FeS, N₂, and U₂ point archives now have the same normalized
+The 27 historical FeS, N₂, and U₂ point archives now have the same normalized
 integral and scalar-result fields as the rest of BenchmarkQC. Their metadata
 clearly distinguishes values imported from SI Table I from values computed in
 the recovered JW-equivalent frame. The recovered tensors reproduce the saved
@@ -110,7 +110,7 @@ the following release language:
   relabeling.
 
 The expanded SI spaces are the recommended starting point for new chemical
-benchmarks. The legacy records should be used when reproducing the original
+benchmarks. The historical records should be used when reproducing the original
 algorithmic study or when explicitly studying active-space/orbital-frame
 sensitivity.
 

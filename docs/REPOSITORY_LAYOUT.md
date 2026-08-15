@@ -7,8 +7,12 @@ local application work so a dataset commit remains reviewable.
 BenchmarkQC/
 ├── datasets/
 │   ├── catalog.json          # authoritative inventory and checksums
-│   ├── benchmarkQC/          # all BenchmarkQC and SI Table I families
-│   └── molvqe21/             # 27 corrected MolVQE-21 cases
+│   ├── benchmarkQC/
+│   │   ├── systems/<case_id>/ # Hamiltonian, inputs, and metadata
+│   │   └── source families/   # provenance, builders, and validation material
+│   └── molvqe21/
+│       ├── systems/<case_id>/ # Hamiltonian, inputs, and metadata
+│       └── source manifests/  # corrected-cache provenance and builders
 ├── src/benchmark_qc/         # installable Python package
 ├── tests/                    # repository-wide regression tests
 ├── docs/                     # user, format, API, and release documentation
@@ -32,3 +36,22 @@ dataset. Keep reusable application code outside those ignored output folders.
 
 The catalog is always interpreted relative to the repository root. This makes
 clones, CI runners, and different user workspaces portable.
+
+## Canonical system contract
+
+Every catalog entry in either family resolves to one directory with the same
+three checked-in files:
+
+```text
+datasets/<family>/systems/<case_id>/
+├── hamiltonian.npz
+├── inputs/source_integrals.npz
+└── metadata.json
+```
+
+The Hamiltonian archive contains the standard `labels`, `Hs`, and
+`casci_energies` arrays. The integral archive contains normalized numeric
+active-space data sufficient to regenerate the Jordan–Wigner Hamiltonian.
+Metadata records the active space, geometry, provenance, checksums, and scalar
+reference results. A source that does not publish a scalar is represented by
+an explicit `null` and status rather than a guessed or newly substituted value.

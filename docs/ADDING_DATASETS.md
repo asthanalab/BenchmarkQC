@@ -44,6 +44,6 @@ datasets/benchmarkQC/Molecule/
 ```
 
 The final variant level may be omitted when a model has only one orbital/method
-definition. Legacy folders may retain their original names. New contributions
+definition. Historical folders may retain their original names. New contributions
 should be self-contained, use relative paths, and leave existing datasets
 byte-for-byte unchanged unless a separate, documented correction is required.

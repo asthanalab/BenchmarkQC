@@ -55,6 +55,40 @@ def test_every_catalog_entry_has_required_field(catalog: dict, required_key: str
     assert all(required_key in entry for entry in catalog["datasets"])
 
 
+def test_benchmarkqc_and_molvqe21_use_the_same_system_layout(catalog: dict) -> None:
+    metadata_key_sets: set[tuple[str, ...]] = set()
+    required_files = {
+        "hamiltonian.npz",
+        "inputs/source_integrals.npz",
+        "metadata.json",
+    }
+
+    for entry in catalog["datasets"]:
+        family = "molvqe21" if entry["system"] == "MolVQE21" else "benchmarkQC"
+        case_id = entry.get("source_case_id", entry["id"])
+        system_dir = ROOT / "datasets" / family / "systems" / case_id
+        assert system_dir.is_dir(), entry["id"]
+        assert (ROOT / entry["data_path"]) == system_dir / "hamiltonian.npz"
+        assert (ROOT / entry["integral_data_path"]) == system_dir / "inputs" / "source_integrals.npz"
+        assert (ROOT / entry["metadata_path"]) == system_dir / "metadata.json"
+
+        files = {
+            path.relative_to(system_dir).as_posix()
+            for path in system_dir.rglob("*")
+            if path.is_file()
+        }
+        assert files == required_files, entry["id"]
+
+        metadata = json.loads((system_dir / "metadata.json").read_text(encoding="utf-8"))
+        metadata_key_sets.add(tuple(sorted(metadata)))
+        assert metadata["schema"] == "benchmark-qc.system-metadata.v1"
+        assert metadata["system_id"] == case_id
+        assert metadata["hamiltonian"]["path"] == entry["data_path"]
+        assert metadata["integrals"]["path"] == entry["integral_data_path"]
+
+    assert len(metadata_key_sets) == 1
+
+
 def test_catalog_archives_have_exact_schema_and_checksums(catalog: dict) -> None:
     for entry in catalog["datasets"]:
         path = ROOT / entry["data_path"]
@@ -190,7 +224,7 @@ def test_c2_metadata_is_path_portable_and_marks_exact_orbital_information() -> N
     assert "OneDrive" not in text
 
 
-def test_fe2s2_metadata_is_portable_and_discloses_legacy_frame() -> None:
+def test_fe2s2_metadata_is_portable_and_discloses_historical_frame() -> None:
     path = ROOT / "datasets" / "benchmarkQC" / "Fe2S2" / "cas6e6o_chan30e20o" / "metadata.json"
     text = path.read_text(encoding="utf-8")
     metadata = json.loads(text)

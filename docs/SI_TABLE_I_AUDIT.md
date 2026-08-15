@@ -22,7 +22,7 @@ JSON, plots, checkpoints, and application logs are not benchmark inputs.
 
 The current repository has 51 checked-in BenchmarkQC point systems and 27
 corrected MolVQE-21 point systems. The 51 BenchmarkQC entries include the
-original legacy archives, accepted Fe₂S₂ historical/control variants, and the
+original historical archives, accepted Fe₂S₂ historical/control variants, and the
 15 reconstructed SI Table I rows.
 
 ## Reconstruction method
@@ -43,7 +43,7 @@ older active-HF partial archive.
 
 ## U₂-specific result
 
-There are new U₂ cases beyond the current legacy CAS(6e,6o) pair:
+There are new U₂ cases beyond the current historical CAS(6e,6o) pair:
 
 - `U2response/overleaf_supplementary_n2_gcim/figures/u2_table_s2/results/equilibrium_r2p4300/table_s2_hamiltonian.npz`
 - `U2response/overleaf_supplementary_n2_gcim/figures/u2_table_s2/results/stretched_r2p8000/table_s2_hamiltonian.npz`

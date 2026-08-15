@@ -21,9 +21,9 @@ This repo contains benchmark qubit Hamiltonians for:
 - U2 (folder: `datasets/benchmarkQC/U2/`)
 
 The system folders contain saved `.npz` Hamiltonians and validation metadata.
-Legacy systems retain their input notebooks; current datasets additionally
+Historical systems retain their input notebooks; current datasets additionally
 provide portable numeric source archives and model-level metadata. Every
-catalog record is a single geometry/active-space point, even when a legacy
+catalog record is a single geometry/active-space point, even when a historical
 multi-point compatibility archive is also retained.
 
 ## Quickstart (recommended)

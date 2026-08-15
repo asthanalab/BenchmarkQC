@@ -29,8 +29,8 @@ TARGET_NELEC_TUPLE = (3, 3)
 PARENT_SHA256 = (
     "95d8786af06eeea2107e19ffd98c66a6ca97fc8c9864175a4f6d64512b6f2df9"
 )
-LEGACY_SOURCE_SHA256 = (
-    "bddcf0a2f7cb1b6fd354e8418c6a580f1e59a85cb905e7b264fd44f91b621a26"
+HISTORICAL_SOURCE_SHA256 = (
+    "388897d39451399f506b8d293c6e2465db9882deec61aa5da1e70075dec612b7"
 )
 PUBLISHED_CAS6_ENERGY_HARTREE = -116.156259
 PUBLISHED_PARENT_DMRG_ENERGY_HARTREE = -116.6056091
@@ -620,7 +620,7 @@ def write_candidate_artifacts(
     from benchmark_qc.integral_dataset import (
         SpatialIntegralArchive,
         jordan_wigner_terms_from_integrals,
-        write_legacy_hamiltonian_npz,
+        write_historical_hamiltonian_npz,
     )
 
     source_path = output_directory / "source_integrals.npz"
@@ -656,7 +656,7 @@ def write_candidate_artifacts(
     hamiltonian_path = output_directory / "Fe2S2_H.npz"
     # The parent FCIDUMP does not encode coordinates.  Label 0.0 is therefore
     # an archive point identifier, not a bond length.
-    write_legacy_hamiltonian_npz(
+    write_historical_hamiltonian_npz(
         hamiltonian_path,
         labels=[0.0],
         hamiltonian_terms=[terms],

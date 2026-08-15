@@ -1,0 +1,168 @@
+{
+  "active_space": {
+    "active_electrons": 10,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "def2-TZVP",
+  "charge": -1,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0004868255711828002,
+        0.0,
+        0.19996928976934925
+      ],
+      [
+        0.0003260975185608102,
+        0.0,
+        1.8602964335354037
+      ],
+      [
+        -0.0001287689241467142,
+        0.0,
+        3.0557176078324795
+      ],
+      [
+        1.5867654920597634,
+        0.0,
+        -0.5974713760300009
+      ],
+      [
+        2.646414315720151,
+        0.0,
+        -1.1038557401608107
+      ],
+      [
+        -0.7932361094372089,
+        -1.3733197251077518,
+        -0.5975893306886656
+      ],
+      [
+        -0.7932361094372089,
+        1.3733197251077518,
+        -0.5975893306886656
+      ],
+      [
+        -1.3236963713434224,
+        -2.2905021873776414,
+        -1.10421577698897
+      ],
+      [
+        -1.3236963713434224,
+        2.2905021873776414,
+        -1.10421577698897
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        0.000919967,
+        0.0,
+        0.377887191
+      ],
+      [
+        0.000616235,
+        0.0,
+        3.51545077
+      ],
+      [
+        -0.000243338,
+        0.0,
+        5.774469393
+      ],
+      [
+        2.998552204,
+        0.0,
+        -1.129057268
+      ],
+      [
+        5.000998269,
+        0.0,
+        -2.08598503
+      ],
+      [
+        -1.498998999,
+        -2.595198162,
+        -1.12928017
+      ],
+      [
+        -1.498998999,
+        2.595198162,
+        -1.12928017
+      ],
+      [
+        -2.501423614,
+        -4.328421822,
+        -2.086665401
+      ],
+      [
+        -2.501423614,
+        4.328421822,
+        -2.086665401
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "Fe",
+      "N",
+      "O",
+      "C",
+      "O",
+      "C",
+      "C",
+      "O",
+      "O"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/fenoco3_minus/hamiltonian.npz",
+    "sha256": "542bf40374f81a9b1bc3b798592ce0841723d895ef1953128708746b1bf4c22f"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/fenoco3_minus/inputs/source_integrals.npz",
+    "sha256": "af554b57c8d244d07da5b625560d4cc24c60eb942b550c48f51fee747024a874"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb_sfx2c1erohf_unconverged/81f2960da3054aab56acfd4abb301379881f27d14d1a107c8652ad4b849df461.npz",
+    "source_cache_reference_energy_hartree": -1737.702356361711,
+    "source_cache_sha256": "d6128ee40eea379532bae47a24d97271d2e1d380383d59adb76b56977a905ddc",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/fenoco3_minus.json",
+    "source_json_sha256": "dd6bd6041267c945ea71033a280b0aac5d3f9a82a982d185ecb0eda313082afc",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -1737.702356361711,
+  "reference_results": {
+    "casci_energy_hartree": -1737.702356361711,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 5.19675874877606,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "fenoco3_minus"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [],
+    "active_orbital_selection_method": "source cached CASSCF natural-orbital active space; global MO indices not exported",
+    "effective_active_electrons": 10,
+    "source_casscf_converged": false,
+    "source_casscf_energy_hartree": -1737.7023563618047,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "fenoco3_minus"
+}

@@ -2,7 +2,7 @@
 """Reproduce all historical reduced-space Fe2S2 constructions faithfully.
 
 This is a clean-room, checksum-bound implementation of the Hamiltonian setup
-in ``provenance/vi66cycle_legacy_source.py``.  It deliberately preserves the
+in ``provenance/vi66cycle_historical_source.py``.  It deliberately preserves the
 original default-RHF route for CAS(4e,4o), CAS(6e,6o), and CAS(8e,6o): no
 Active Space Finder call is made here.  The ASF calculation is the separate
 ``generate_asf_cas6e6o.py`` workflow.
@@ -35,7 +35,7 @@ if str(HERE) not in sys.path:
 
 from workflow_common import (  # noqa: E402
     DEFAULT_CAS6_TOLERANCE_HARTREE,
-    LEGACY_SOURCE_SHA256,
+    HISTORICAL_SOURCE_SHA256,
     atomic_json,
     candidate_gates,
     correlation_descriptors,
@@ -54,7 +54,7 @@ from workflow_common import (  # noqa: E402
 
 
 DEFAULT_PARENT = HERE / "parent" / "chan_fe2s2_cas30e20o.FCIDUMP"
-LEGACY_SOURCE = HERE / "provenance" / "vi66cycle_legacy_source.py"
+HISTORICAL_SOURCE = HERE / "provenance" / "vi66cycle_historical_source.py"
 HISTORICAL_SPACES = {
     "cas4e4o": {
         "variant": "historical_cas4e4o",
@@ -125,14 +125,14 @@ def main() -> int:
         args.parent_fcidump
     )
 
-    legacy_hash = sha256_file(LEGACY_SOURCE)
-    if legacy_hash != LEGACY_SOURCE_SHA256:
+    historical_hash = sha256_file(HISTORICAL_SOURCE)
+    if historical_hash != HISTORICAL_SOURCE_SHA256:
         raise RuntimeError(
             "historical source checksum mismatch: "
-            f"expected {LEGACY_SOURCE_SHA256}, got {legacy_hash}"
+            f"expected {HISTORICAL_SOURCE_SHA256}, got {historical_hash}"
         )
 
-    # Replay the shared legacy frame exactly once. Each paper model then uses
+    # Replay the shared historical frame exactly once. Each paper model then uses
     # PySCF's default CASCI partition for its own (electrons, orbitals) pair.
     mean_field = make_integral_mean_field(
         h1_parent, eri_parent, parent_ecore, run_rhf=True
@@ -213,7 +213,7 @@ def main() -> int:
             rdm_checks=rdm_checks,
             rdm_energy_error=rdm_energy_error,
             additional={
-                "legacy_source_checksum": legacy_hash == LEGACY_SOURCE_SHA256,
+                "historical_source_checksum": historical_hash == HISTORICAL_SOURCE_SHA256,
                 "historical_default_rhf_replay_completed": bool(
                     np.isfinite(float(mean_field.e_tot))
                 ),
@@ -239,8 +239,8 @@ def main() -> int:
                 "spin_2S": 0,
             },
             "method": {
-                "name": "legacy nonstationary default-RHF/CASCI partition",
-                "orbital_frame_status": "legacy_nonstationary_default_rhf",
+                "name": "historical nonstationary default-RHF/CASCI partition",
+                "orbital_frame_status": "historical_nonstationary_default_rhf",
                 "stationary_rhf_claim": False,
                 "active_space_finder_used": False,
                 "recipe": (
@@ -248,9 +248,9 @@ def main() -> int:
                     f"FCIDUMP, CASCI({active_electrons},{active_orbitals}) default "
                     "orbital partition, then direct_spin1 FCI"
                 ),
-                "legacy_source": {
-                    "path": "provenance/vi66cycle_legacy_source.py",
-                    "sha256": legacy_hash,
+                "historical_source": {
+                    "path": "provenance/vi66cycle_historical_source.py",
+                    "sha256": historical_hash,
                     "scope_note": (
                         "The recovered file explicitly contains CAS(6e,6o); the "
                         "same default-partition construction defines the paper's "

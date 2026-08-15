@@ -1,0 +1,67 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "ANO-RCC-MB",
+  "charge": null,
+  "geometry": {
+    "bond_length_angstrom": 2.48,
+    "point_index_in_source_archive": 1,
+    "point_label": 2.48
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/u2_sfx2c_anorccmb_cas6e6o_r2p4800/hamiltonian.npz",
+    "sha256": "5bd81c36f0639e42cde132ae3f200a26b18ba1e16fa09ec9e028e50896215679"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "frame_status": "Jordan-Wigner-equivalent; original orbital coefficient frame unavailable",
+    "path": "datasets/benchmarkQC/systems/u2_sfx2c_anorccmb_cas6e6o_r2p4800/inputs/source_integrals.npz",
+    "sha256": "2f3cb9db9cd8d0c73aef091fa47006db57452172972683dcb2419e8bde992496"
+  },
+  "provenance": {
+    "integral_reconstruction": {
+      "linear_system_rank": 253,
+      "linear_system_smallest_retained_singular_value": 0.08831222028636301,
+      "method": "minimum-norm inverse Jordan-Wigner reconstruction over real spatial one-/two-body coefficients",
+      "operator_equivalence_max_pauli_error": 2.9103830456733704e-11,
+      "tool": "tools/recover_missing_integrals.py",
+      "warning": "This archive reproduces the saved JW Hamiltonian but does not recover the original AO/MO orbital frame."
+    },
+    "source_archive_path": "datasets/benchmarkQC/U2/U2_PES_H.npz",
+    "source_archive_sha256": "47fc60711817e88ef3a5f2e5b0f693140efe87083947b7021420484d45cea419",
+    "source_catalog_id": "u2_sfx2c_anorccmb_cas6e6o"
+  },
+  "reference_energy_hartree": -55985.66282390914,
+  "reference_results": {
+    "casci_energy_hartree": -55985.662823909115,
+    "ccsd_energy_hartree": -55985.661709005515,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -55985.64497966624,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.38558940321955865,
+    "renyi_0p25_nats": 4.800281053840303,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "r2p4800",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "path": "cases/u2_sfx2c_anorccmb_cas6e6o_historical/r2p4800/results.json",
+        "release_validation": "passed",
+        "sha256": "1ff183f1e0b1ffef1ca8903b0a71267ca977538d0f89f6425e80449d226c9d89"
+      },
+      "system_id": "u2_sfx2c_anorccmb_cas6e6o_historical"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": null,
+  "source_metadata_path": null,
+  "system": "U2",
+  "system_id": "u2_sfx2c_anorccmb_cas6e6o_r2p4800"
+}

@@ -10,7 +10,7 @@ contains the historical CAS(6e,6o) span, MOs 12--17.
 CAS(8e,8o) was not one of the three active spaces reported in the paper.  The
 output is therefore labeled a reconstructed nested extension and is never
 validated by fitting a published energy.  Acceptance instead requires the
-pinned parent and legacy source, the exact nested orbital identity, a physical
+pinned parent and historical source, the exact nested orbital identity, a physical
 singlet FCI residual, consistent RDMs, and a checksum-complete artifact set.
 """
 
@@ -37,7 +37,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 from workflow_common import (  # noqa: E402
-    LEGACY_SOURCE_SHA256,
+    HISTORICAL_SOURCE_SHA256,
     atomic_json,
     correlation_descriptors,
     load_parent_fcidump,
@@ -56,7 +56,7 @@ from workflow_common import (  # noqa: E402
 
 
 DEFAULT_PARENT = HERE / "parent" / "chan_fe2s2_cas30e20o.FCIDUMP"
-LEGACY_SOURCE = HERE / "provenance" / "vi66cycle_legacy_source.py"
+HISTORICAL_SOURCE = HERE / "provenance" / "vi66cycle_historical_source.py"
 DATASET_ID = "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o"
 VARIANT = "nested_cas8e8o"
 ACTIVE_ELECTRONS = 8
@@ -118,11 +118,11 @@ def main() -> int:
         args.parent_fcidump
     )
 
-    legacy_hash = sha256_file(LEGACY_SOURCE)
-    if legacy_hash != LEGACY_SOURCE_SHA256:
+    historical_hash = sha256_file(HISTORICAL_SOURCE)
+    if historical_hash != HISTORICAL_SOURCE_SHA256:
         raise RuntimeError(
             "historical source checksum mismatch: "
-            f"expected {LEGACY_SOURCE_SHA256}, got {legacy_hash}"
+            f"expected {HISTORICAL_SOURCE_SHA256}, got {historical_hash}"
         )
 
     mean_field = make_integral_mean_field(
@@ -229,25 +229,25 @@ def main() -> int:
         rdm_checks=rdm_checks,
         rdm_energy_error=rdm_energy_error,
         additional={
-            "legacy_source_checksum": legacy_hash == LEGACY_SOURCE_SHA256,
+            "historical_source_checksum": historical_hash == HISTORICAL_SOURCE_SHA256,
             "registered_runtime_version": bool(
                 pyscf.__version__ == expected_frame["pyscf_version"]
             ),
-            "legacy_default_rhf_remains_nonconverged": bool(
+            "historical_default_rhf_remains_nonconverged": bool(
                 not mean_field.converged
             ),
-            "legacy_rhf_energy_fingerprint": bool(
+            "historical_rhf_energy_fingerprint": bool(
                 abs(
                     float(mean_field.e_tot)
                     - float(expected_frame["rhf_energy_hartree"])
                 )
                 <= 1.0e-10
             ),
-            "legacy_rhf_gradient_fingerprint": bool(
+            "historical_rhf_gradient_fingerprint": bool(
                 abs(parent_gradient - float(expected_frame["rhf_gradient_norm"]))
                 <= 1.0e-10
             ),
-            "legacy_rhf_mo_fingerprint_policy": bool(
+            "historical_rhf_mo_fingerprint_policy": bool(
                 not expected_frame["require_exact_mo_coefficients_sha256"]
                 or parent_mo_hash == expected_frame["mo_coefficients_sha256"]
             ),
@@ -294,8 +294,8 @@ def main() -> int:
             "spin_2S": 0,
         },
         "method": {
-            "name": "nested extension of legacy default-RHF/CASCI partition",
-            "orbital_frame_status": "legacy_nonstationary_default_rhf",
+            "name": "nested extension of historical default-RHF/CASCI partition",
+            "orbital_frame_status": "historical_nonstationary_default_rhf",
             "stationary_rhf_claim": False,
             "active_space_finder_used": False,
             "historical_paper_space": False,
@@ -306,9 +306,9 @@ def main() -> int:
                 "singlet-adapted direct_spin0 FCI, followed by independent "
                 "direct_spin1 physical-Hamiltonian and S^2 residual checks"
             ),
-            "legacy_source": {
-                "path": "provenance/vi66cycle_legacy_source.py",
-                "sha256": legacy_hash,
+            "historical_source": {
+                "path": "provenance/vi66cycle_historical_source.py",
+                "sha256": historical_hash,
                 "scope_note": (
                     "The source explicitly defines CAS(6e,6o). CAS(8e,8o) is "
                     "a new nested extension constructed by the same default-"

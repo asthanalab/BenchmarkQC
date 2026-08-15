@@ -1,0 +1,102 @@
+{
+  "active_space": {
+    "active_electrons": 8,
+    "active_spatial_orbitals": 9,
+    "qubits": 18,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "def2-TZVP",
+  "charge": -1,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0,
+        1.4479944799534823,
+        0.0
+      ],
+      [
+        -1.2539999999597147,
+        -0.7239972399767411,
+        0.0
+      ],
+      [
+        1.2539999999597147,
+        -0.7239972399767411,
+        0.0
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        0.0,
+        2.7363129970820017,
+        0.0
+      ],
+      [
+        -2.3697165602045875,
+        -1.3681564985410009,
+        0.0
+      ],
+      [
+        2.3697165602045875,
+        -1.3681564985410009,
+        0.0
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "Al",
+      "Al",
+      "Al"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/Al3_minus/hamiltonian.npz",
+    "sha256": "285dd8cb56001980cf40069b3475e372f9e1198ab5fe04b6bba515624a5930a5"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/Al3_minus/inputs/source_integrals.npz",
+    "sha256": "96e97a242f757cb33831875b37538e572b13c0424652b3a5687bdf9411e4ee3e"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb/3c14c0647ea9fac54c78e3e9cc3138fa9025b9272f3ea3275482f2037259b951.npz",
+    "source_cache_reference_energy_hartree": -725.7922881364854,
+    "source_cache_sha256": "54ada4c0329de01f807889e1c050548e735667e32c60d1d656c18a9ef58467e8",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/Al3_minus.json",
+    "source_json_sha256": "19a53bb8d56d326caff65657a220f64be6f601815df8641fca8493e82bb3f080",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -725.7922881364854,
+  "reference_results": {
+    "casci_energy_hartree": -725.7922881364854,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 6.428074004502384,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "Al3_minus"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [],
+    "active_orbital_selection_method": "source cached CASSCF natural-orbital active space; global MO indices not exported",
+    "effective_active_electrons": 8,
+    "source_casscf_converged": true,
+    "source_casscf_energy_hartree": -725.7921857752825,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "Al3_minus"
+}

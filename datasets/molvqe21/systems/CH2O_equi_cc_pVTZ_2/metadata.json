@@ -1,0 +1,113 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 2
+  },
+  "active_space_variant": null,
+  "basis": "cc-pVTZ",
+  "charge": 0,
+  "geometry": {
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.203119999961349
+      ],
+      [
+        0.936917409969901,
+        0.0,
+        -0.5770042299814635
+      ],
+      [
+        -0.936917409969901,
+        0.0,
+        -0.5770042299814635
+      ]
+    ],
+    "coordinates_bohr": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        2.273567294986717
+      ],
+      [
+        1.7705173062368351,
+        0.0,
+        -1.0903799674155477
+      ],
+      [
+        -1.7705173062368351,
+        0.0,
+        -1.0903799674155477
+      ]
+    ],
+    "point_label": 0.0,
+    "point_name": "reference",
+    "symbols": [
+      "C",
+      "O",
+      "H",
+      "H"
+    ]
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/molvqe21/systems/CH2O_equi_cc_pVTZ_2/hamiltonian.npz",
+    "sha256": "da8fcc4bd38c3458a69e8979c1736b896828f02a58b0dfdc0003f8d5419b149c"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/molvqe21/systems/CH2O_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+    "sha256": "2369d0aec7abc105a13aa0a53e03e19a4a89d92a309f157d47076602942ef2c1"
+  },
+  "provenance": {
+    "source_cache_path": "hamiltonian_cache/casscf_natorb/23426eefcbbbe10b66c8e6417905437684610fee641f9812fff28f59cf10a00e.npz",
+    "source_cache_reference_energy_hartree": -113.82914720544098,
+    "source_cache_sha256": "c6821234d6286a9b3b829dfcf857b2d47eb6e1783e3172b00666b1fc627d742f",
+    "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
+    "source_json_path": "dataset/zenodo_19051536/extracted/data_repository/MolVQE-21/CH2O equi._cc-pVTZ_2.json",
+    "source_json_sha256": "d57dd0c288274ac6512bc45261ae4c98b948d21194bf0e14002c6c2b02a7336c",
+    "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
+  },
+  "reference_energy_hartree": -113.82914720544098,
+  "reference_results": {
+    "casci_energy_hartree": -113.82914720544098,
+    "ccsd_energy_hartree": null,
+    "ccsd_status": "not-provided-by-source",
+    "cisd_energy_hartree": null,
+    "cisd_status": "not-provided-by-source",
+    "cumulant_C2": null,
+    "renyi_0p25_nats": 1.994618284788223,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "kind": "MolVQE-21 corrected cache",
+      "system_id": "CH2O_equi_cc_pVTZ_2"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": {
+    "active_orbital_index_base": 0,
+    "active_orbital_indices": [],
+    "active_orbital_selection_method": "source cached CASSCF natural-orbital active space; global MO indices not exported",
+    "effective_active_electrons": 6,
+    "source_casscf_converged": true,
+    "source_casscf_energy_hartree": -113.8291472051797,
+    "source_casscf_natorb": true
+  },
+  "source_metadata_path": null,
+  "system": "MolVQE21",
+  "system_id": "CH2O_equi_cc_pVTZ_2"
+}

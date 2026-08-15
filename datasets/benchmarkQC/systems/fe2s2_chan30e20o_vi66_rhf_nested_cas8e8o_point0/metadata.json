@@ -1,0 +1,64 @@
+{
+  "active_space": {
+    "active_electrons": 8,
+    "active_spatial_orbitals": 8,
+    "qubits": 16,
+    "spin_2S": 0
+  },
+  "active_space_variant": null,
+  "basis": "inherited from checksum-pinned Li-Chan FCIDUMP; AO basis not encoded",
+  "charge": null,
+  "geometry": {
+    "point_index_in_source_archive": 0,
+    "point_label": 0.0
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0/hamiltonian.npz",
+    "sha256": "c4e5e32a8377111af3f8b50ea16c832ce6295d0caeb2457196559792c73f6411"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/systems/fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0/inputs/source_integrals.npz",
+    "sha256": "6671351f0546e50c859a0151763c01c9b13f186fc71a4e327eb7594124da2db0"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/accepted/nested_cas8e8o/Fe2S2_H.npz",
+    "source_archive_sha256": "712b208acef6314c7ab7cbafe96d0c740ed9909836ffc40a0308c2235350facf",
+    "source_catalog_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o"
+  },
+  "reference_energy_hartree": -116.16151636450809,
+  "reference_results": {
+    "casci_energy_hartree": -116.16151636450809,
+    "ccsd_energy_hartree": -116.16118628087456,
+    "ccsd_status": "computed",
+    "cisd_energy_hartree": -116.16112026246387,
+    "cisd_status": "table-value",
+    "cumulant_C2": 0.2606372888864521,
+    "renyi_0p25_nats": 4.889532973316796,
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "source": {
+      "geometry_id": "archived_integral_frame",
+      "kind": "SI Table I scalar record",
+      "result_source": {
+        "benchmarkqc_accepted_variant": "Fe2S2/cas6e6o_chan30e20o/accepted/nested_cas8e8o",
+        "cross_version_certificate": {
+          "path": "validation/fe2s2_nested_cas8e8o_desktop_20260812/cross_version_certificate_v7.json",
+          "sha256": "09475213578baa4b02921a83958681876ffe5f890009b3cadc3147d17c1432a5"
+        },
+        "hamiltonian_sha256": "712b208acef6314c7ab7cbafe96d0c740ed9909836ffc40a0308c2235350facf",
+        "path": "validation/fe2s2_nested_cas8e8o_desktop_20260812/primary_pyscf2p4/candidate_report.json",
+        "release_validation": "accepted nested extension with independent PySCF 2.4/2.11 agreement; nonstationary parent-RHF qualification",
+        "sha256": "443286c9ded92d80e802bdce0ceb44be1bd29dcf0dfcfa77d0dfe2b4f8b7579f",
+        "source_integrals_sha256": "6671351f0546e50c859a0151763c01c9b13f186fc71a4e327eb7594124da2db0"
+      },
+      "system_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o"
+    }
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": null,
+  "source_active_space": null,
+  "source_metadata_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/metadata.json",
+  "system": "Fe2S2",
+  "system_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0"
+}
