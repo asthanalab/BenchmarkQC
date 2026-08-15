@@ -61,7 +61,7 @@ def H_gen(
 ):
     """Generate a qubit Hamiltonian H and CASCI energy for U2.
 
-    Mirrors the original `datasets/benchmarkQC/U2/U2_ham1.py` implementation.
+    Mirrors the original `datasets/benchmarkQC/source/molecules/U2/U2_ham1.py` implementation.
     """
 
     mol = gto.Mole()

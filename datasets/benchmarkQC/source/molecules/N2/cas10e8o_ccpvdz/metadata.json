@@ -107,8 +107,8 @@
       "pennylane": "0.44.0"
     },
     "archive_generator": "generate_hamiltonians.py",
-    "archive_generation_command": "python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --write --output-root <output-directory>",
-    "archive_verification_command": "python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check"
+    "archive_generation_command": "python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --write --output-root <output-directory>",
+    "archive_verification_command": "python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check"
   },
   "validation": {
     "source_campaign_validation_passed": true,

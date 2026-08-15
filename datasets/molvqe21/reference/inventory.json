@@ -1,0 +1,223 @@
+{
+  "case_count": 27,
+  "cases": [
+    {
+      "case_id": "Al3_minus",
+      "hamiltonian_path": "systems/Al3_minus/hamiltonian.npz",
+      "integral_data_path": "systems/Al3_minus/inputs/source_integrals.npz",
+      "metadata_path": "systems/Al3_minus/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "BeH2_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/BeH2_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/BeH2_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/BeH2_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "BeH2_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/BeH2_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/BeH2_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/BeH2_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "CH2O_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/CH2O_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/CH2O_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/CH2O_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "CH2O_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/CH2O_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/CH2O_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/CH2O_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "CO_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/CO_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/CO_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/CO_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "CO_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/CO_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/CO_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/CO_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "cyclobutadiene_ceo",
+      "hamiltonian_path": "systems/cyclobutadiene_ceo/hamiltonian.npz",
+      "integral_data_path": "systems/cyclobutadiene_ceo/inputs/source_integrals.npz",
+      "metadata_path": "systems/cyclobutadiene_ceo/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "feno_2plus",
+      "hamiltonian_path": "systems/feno_2plus/hamiltonian.npz",
+      "integral_data_path": "systems/feno_2plus/inputs/source_integrals.npz",
+      "metadata_path": "systems/feno_2plus/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "fenoco3_minus",
+      "hamiltonian_path": "systems/fenoco3_minus/hamiltonian.npz",
+      "integral_data_path": "systems/fenoco3_minus/inputs/source_integrals.npz",
+      "metadata_path": "systems/fenoco3_minus/metadata.json",
+      "status": "current-cache-unconverged-reference",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "FeO",
+      "hamiltonian_path": "systems/FeO/hamiltonian.npz",
+      "integral_data_path": "systems/FeO/inputs/source_integrals.npz",
+      "metadata_path": "systems/FeO/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H10_near_equi_sto3g_0",
+      "hamiltonian_path": "systems/H10_near_equi_sto3g_0/hamiltonian.npz",
+      "integral_data_path": "systems/H10_near_equi_sto3g_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/H10_near_equi_sto3g_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H4_near_equi_sto3g_0",
+      "hamiltonian_path": "systems/H4_near_equi_sto3g_0/hamiltonian.npz",
+      "integral_data_path": "systems/H4_near_equi_sto3g_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/H4_near_equi_sto3g_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H5_near_equi_sto3g_1",
+      "hamiltonian_path": "systems/H5_near_equi_sto3g_1/hamiltonian.npz",
+      "integral_data_path": "systems/H5_near_equi_sto3g_1/inputs/source_integrals.npz",
+      "metadata_path": "systems/H5_near_equi_sto3g_1/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H6_near_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/H6_near_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/H6_near_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/H6_near_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H6_near_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/H6_near_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/H6_near_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/H6_near_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H6_near_equi_sto3g_0",
+      "hamiltonian_path": "systems/H6_near_equi_sto3g_0/hamiltonian.npz",
+      "integral_data_path": "systems/H6_near_equi_sto3g_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/H6_near_equi_sto3g_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H7_near_equi_sto3g_1",
+      "hamiltonian_path": "systems/H7_near_equi_sto3g_1/hamiltonian.npz",
+      "integral_data_path": "systems/H7_near_equi_sto3g_1/inputs/source_integrals.npz",
+      "metadata_path": "systems/H7_near_equi_sto3g_1/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H8_near_equi_sto3g_0",
+      "hamiltonian_path": "systems/H8_near_equi_sto3g_0/hamiltonian.npz",
+      "integral_data_path": "systems/H8_near_equi_sto3g_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/H8_near_equi_sto3g_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "H9_near_equi_sto3g_1",
+      "hamiltonian_path": "systems/H9_near_equi_sto3g_1/hamiltonian.npz",
+      "integral_data_path": "systems/H9_near_equi_sto3g_1/inputs/source_integrals.npz",
+      "metadata_path": "systems/H9_near_equi_sto3g_1/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "hexatriene_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/hexatriene_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/hexatriene_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/hexatriene_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "hexatriene_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/hexatriene_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/hexatriene_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/hexatriene_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "m_Benzyne_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/m_Benzyne_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/m_Benzyne_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/m_Benzyne_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "m_Benzyne_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/m_Benzyne_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/m_Benzyne_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/m_Benzyne_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "magnesium_porphyrin_ceo",
+      "hamiltonian_path": "systems/magnesium_porphyrin_ceo/hamiltonian.npz",
+      "integral_data_path": "systems/magnesium_porphyrin_ceo/inputs/source_integrals.npz",
+      "metadata_path": "systems/magnesium_porphyrin_ceo/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "N2_equi_cc_pVTZ_0",
+      "hamiltonian_path": "systems/N2_equi_cc_pVTZ_0/hamiltonian.npz",
+      "integral_data_path": "systems/N2_equi_cc_pVTZ_0/inputs/source_integrals.npz",
+      "metadata_path": "systems/N2_equi_cc_pVTZ_0/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    },
+    {
+      "case_id": "N2_equi_cc_pVTZ_2",
+      "hamiltonian_path": "systems/N2_equi_cc_pVTZ_2/hamiltonian.npz",
+      "integral_data_path": "systems/N2_equi_cc_pVTZ_2/inputs/source_integrals.npz",
+      "metadata_path": "systems/N2_equi_cc_pVTZ_2/metadata.json",
+      "status": "current-molvqe21-corrected",
+      "system": "MolVQE21"
+    }
+  ],
+  "dataset": "MolVQE21",
+  "schema": "benchmark-qc.inventory.v1"
+}

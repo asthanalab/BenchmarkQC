@@ -93,6 +93,6 @@ corrected benchmark caches: `Ferrocene_ceo` and `feo4_2minus_ceo`.
 
 These files exist so your existing notebooks keep working without changes:
 
-- `datasets/benchmarkQC/N2/ham_pyscf.py`
-- `datasets/benchmarkQC/FeS/FeS_pyscf.py`
-- `datasets/benchmarkQC/U2/U2_ham1.py`
+- `datasets/benchmarkQC/source/molecules/N2/ham_pyscf.py`
+- `datasets/benchmarkQC/source/molecules/FeS/FeS_pyscf.py`
+- `datasets/benchmarkQC/source/molecules/U2/U2_ham1.py`

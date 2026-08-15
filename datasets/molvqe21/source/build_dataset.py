@@ -27,7 +27,7 @@ try:
         load_spatial_integral_archive,
     )
 except ModuleNotFoundError:  # Allow direct execution from the dataset directory.
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "src"))
     from benchmark_qc.integral_dataset import (
         jordan_wigner_terms_from_integrals,
         load_spatial_integral_archive,
@@ -308,7 +308,11 @@ def build(source_root: Path, output_root: Path) -> None:
     overrides = json.loads(overrides_path.read_text(encoding="utf-8"))
 
     output_root.mkdir(parents=True, exist_ok=True)
-    (output_root / "active_orbital_overrides.json").write_text(
+    source_dir = output_root / "source"
+    reference_dir = output_root / "reference"
+    source_dir.mkdir(parents=True, exist_ok=True)
+    reference_dir.mkdir(parents=True, exist_ok=True)
+    (source_dir / "active_orbital_overrides.json").write_text(
         json.dumps(overrides, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
 
@@ -328,15 +332,20 @@ def build(source_root: Path, output_root: Path) -> None:
             )
         )
 
+    reference_cases: dict[str, dict[str, Any]] = {}
     for record in records:
         _write_system_metadata(output_root=output_root, record=record)
+        system_metadata = json.loads(
+            (output_root / record["metadata_path"]).read_text(encoding="utf-8")
+        )
+        reference_cases[record["case_id"]] = system_metadata["reference_results"]
 
     # Keep only the source-manifest rows that have corrected benchmark caches.
     # The two incomplete source records are intentionally omitted from this
     # package rather than carried as non-runnable catalog entries.
     ready_case_ids = {record["case_id"] for record in records}
     filtered_source_rows = [row for row in source_rows if row["case_id"] in ready_case_ids]
-    with (output_root / "source_manifest.csv").open(
+    with (source_dir / "source_manifest.csv").open(
         "w", newline="", encoding="utf-8"
     ) as handle:
         writer = csv.DictWriter(handle, fieldnames=list(source_rows[0]))
@@ -367,7 +376,9 @@ def build(source_root: Path, output_root: Path) -> None:
         "active_orbital_indices",
         "active_orbital_selection_method",
     ]
-    with (output_root / "manifest.csv").open("w", newline="", encoding="utf-8") as handle:
+    with (source_dir / "corrected_cache_manifest.csv").open(
+        "w", newline="", encoding="utf-8"
+    ) as handle:
         writer = csv.DictWriter(handle, fieldnames=manifest_fields)
         writer.writeheader()
         for record in records:
@@ -378,6 +389,96 @@ def build(source_root: Path, output_root: Path) -> None:
             )
             writer.writerow(row)
 
+    generic_manifest_fields = [
+        "case_id",
+        "system",
+        "status",
+        "hamiltonian_path",
+        "integral_data_path",
+        "metadata_path",
+        "hamiltonian_sha256",
+        "integral_sha256",
+        "point_count",
+        "qubits",
+        "active_electrons",
+        "active_spatial_orbitals",
+        "charge",
+        "spin",
+        "basis",
+        "reference_energy_hartree",
+        "reference_converged",
+        "source_case_id",
+    ]
+    with (source_dir / "manifest.csv").open(
+        "w", newline="", encoding="utf-8"
+    ) as handle:
+        writer = csv.DictWriter(handle, fieldnames=generic_manifest_fields)
+        writer.writeheader()
+        for record in records:
+            writer.writerow(
+                {
+                    "case_id": record["case_id"],
+                    "system": "MolVQE21",
+                    "status": "current-molvqe21-corrected",
+                    "hamiltonian_path": record["hamiltonian_path"],
+                    "integral_data_path": record["integrals_path"],
+                    "metadata_path": record["metadata_path"],
+                    "hamiltonian_sha256": record["hamiltonian_sha256"],
+                    "integral_sha256": record["integrals_sha256"],
+                    "point_count": 1,
+                    "qubits": record["qubits"],
+                    "active_electrons": record["active_electrons"],
+                    "active_spatial_orbitals": record["active_orbitals"],
+                    "charge": record["charge"],
+                    "spin": record["spin"],
+                    "basis": record["basis"],
+                    "reference_energy_hartree": record[
+                        "source_cache_reference_energy_hartree"
+                    ],
+                    "reference_converged": str(record["reference_converged"]),
+                    "source_case_id": record["case_id"],
+                }
+            )
+
+    (reference_dir / "reference_results.json").write_text(
+        json.dumps(
+            {
+                "schema": "benchmark-qc.reference-results.v1",
+                "description": "Scalar reference records published by or available from the corrected MolVQE-21 source caches.",
+                "case_count": len(reference_cases),
+                "cases": reference_cases,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    (reference_dir / "inventory.json").write_text(
+        json.dumps(
+            {
+                "schema": "benchmark-qc.inventory.v1",
+                "dataset": "MolVQE21",
+                "case_count": len(records),
+                "cases": [
+                    {
+                        "case_id": record["case_id"],
+                        "system": "MolVQE21",
+                        "status": "current-molvqe21-corrected",
+                        "hamiltonian_path": record["hamiltonian_path"],
+                        "integral_data_path": record["integrals_path"],
+                        "metadata_path": record["metadata_path"],
+                    }
+                    for record in records
+                ],
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
     metadata = {
         "schema": "benchmark-qc.dataset-metadata.v1",
         "systems_root": "systems",
@@ -385,10 +486,13 @@ def build(source_root: Path, output_root: Path) -> None:
             "name": "MolVQE-21",
             "source_repository": SOURCE_REPOSITORY,
             "source_commit": SOURCE_COMMIT,
-            "source_manifest": "source_manifest.csv",
-            "corrected_cache_manifest": "manifest.csv",
-            "active_orbital_overrides": "active_orbital_overrides.json",
+            "source_manifest": "source/source_manifest.csv",
+            "corrected_cache_manifest": "source/corrected_cache_manifest.csv",
+            "active_orbital_overrides": "source/active_orbital_overrides.json",
         },
+        "manifest_path": "source/manifest.csv",
+        "reference_results_path": "reference/reference_results.json",
+        "inventory_path": "reference/inventory.json",
         "source_case_count": len(filtered_source_rows),
         "benchmark_ready_case_count": len(records),
         "cases": {
@@ -408,7 +512,9 @@ def build(source_root: Path, output_root: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, required=True)
-    parser.add_argument("--output-root", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument(
+        "--output-root", type=Path, default=Path(__file__).resolve().parents[1]
+    )
     args = parser.parse_args()
     build(args.source_root.resolve(), args.output_root.resolve())
 

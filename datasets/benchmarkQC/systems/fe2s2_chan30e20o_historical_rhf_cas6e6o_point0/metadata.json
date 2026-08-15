@@ -23,7 +23,7 @@
     "sha256": "9ae76b6745e91cf6d1c68ee1572fbd47674936dd674892fa5fff3cd73bc22205"
   },
   "provenance": {
-    "source_archive_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas6e6o/Fe2S2_H.npz",
+    "source_archive_path": "datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas6e6o/Fe2S2_H.npz",
     "source_archive_sha256": "1e2e197df0916bffc7c31d068ec0962ddeecc2e2fa6fff6b27610cbd5ca07e74",
     "source_catalog_id": "fe2s2_chan30e20o_historical_rhf_cas6e6o"
   },
@@ -54,7 +54,7 @@
   "schema": "benchmark-qc.system-metadata.v1",
   "si_validation": null,
   "source_active_space": null,
-  "source_metadata_path": "datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/metadata.json",
+  "source_metadata_path": "datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/metadata.json",
   "system": "Fe2S2",
   "system_id": "fe2s2_chan30e20o_historical_rhf_cas6e6o_point0"
 }

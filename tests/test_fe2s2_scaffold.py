@@ -30,7 +30,7 @@ from benchmark_qc.integral_dataset import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MODEL = ROOT / "datasets" / "benchmarkQC" / "Fe2S2" / "cas6e6o_chan30e20o"
+MODEL = ROOT / "datasets" / "benchmarkQC" / "source" / "molecules" / "Fe2S2" / "cas6e6o_chan30e20o"
 
 
 def accepted_report() -> dict:

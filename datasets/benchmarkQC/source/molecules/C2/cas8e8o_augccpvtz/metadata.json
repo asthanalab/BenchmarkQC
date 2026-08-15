@@ -86,9 +86,9 @@
     },
     "source_archive_builder": "build_source_archive.py",
     "hamiltonian_generator": "generate_hamiltonian.py",
-    "archive_generation_command": "python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --write --output-root <output-directory>",
-    "archive_verification_command": "python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check",
-    "target_state_verification_command": "python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/test_hamiltonian.py"
+    "archive_generation_command": "python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --write --output-root <output-directory>",
+    "archive_verification_command": "python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check",
+    "target_state_verification_command": "python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/test_hamiltonian.py"
   },
   "validation": {
     "source_campaign_validation_passed": true,

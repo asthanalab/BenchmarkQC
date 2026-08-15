@@ -33,7 +33,7 @@
       "tool": "tools/recover_missing_integrals.py",
       "warning": "This archive reproduces the saved JW Hamiltonian but does not recover the original AO/MO orbital frame."
     },
-    "source_archive_path": "datasets/benchmarkQC/U2/U2_PES_H.npz",
+    "source_archive_path": "datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz",
     "source_archive_sha256": "47fc60711817e88ef3a5f2e5b0f693140efe87083947b7021420484d45cea419",
     "source_catalog_id": "u2_sfx2c_anorccmb_cas6e6o"
   },

@@ -9,7 +9,7 @@ from .integral_dataset import load_spatial_integral_archive
 from .paths import BENCHMARKQC_ROOT
 
 
-DATASET_ROOT = BENCHMARKQC_ROOT / "C2" / "cas8e8o_augccpvtz"
+DATASET_ROOT = BENCHMARKQC_ROOT / "source" / "molecules" / "C2" / "cas8e8o_augccpvtz"
 HAMILTONIAN_PATH = DATASET_ROOT / "casci_natural_orbitals" / "C2_PES_H.npz"
 SOURCE_PATH = (
     DATASET_ROOT

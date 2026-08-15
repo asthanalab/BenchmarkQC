@@ -41,7 +41,7 @@ def H_gen(
 ):
     """Generate a qubit Hamiltonian H, CASCI energy, and an operator pool for FeS.
 
-    This mirrors the original `datasets/benchmarkQC/FeS/FeS_pyscf.py` implementation.
+    This mirrors the original `datasets/benchmarkQC/source/molecules/FeS/FeS_pyscf.py` implementation.
     """
 
     try:

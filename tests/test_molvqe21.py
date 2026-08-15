@@ -23,7 +23,7 @@ def test_molvqe21_has_27_corrected_cases() -> None:
 
 
 def test_molvqe21_archives_match_integral_metadata() -> None:
-    with (ROOT / "datasets" / "molvqe21" / "manifest.csv").open(
+    with (ROOT / "datasets" / "molvqe21" / "source" / "manifest.csv").open(
         "r", newline="", encoding="utf-8"
     ) as handle:
         rows = list(csv.DictReader(handle))
@@ -35,7 +35,7 @@ def test_molvqe21_archives_match_integral_metadata() -> None:
         assert np.isfinite(hamiltonian.ref_energies[0])
 
         archive = load_source_integrals(row["case_id"])
-        assert archive.n_spatial_orbitals == int(row["active_orbitals"])
+        assert archive.n_spatial_orbitals == int(row["active_spatial_orbitals"])
         assert archive.n_qubits == int(row["qubits"])
         assert archive.reference_determinant.shape == (int(row["qubits"]),)
 

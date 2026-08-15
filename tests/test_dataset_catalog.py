@@ -89,6 +89,35 @@ def test_benchmarkqc_and_molvqe21_use_the_same_system_layout(catalog: dict) -> N
     assert len(metadata_key_sets) == 1
 
 
+def test_benchmarkqc_and_molvqe21_have_the_same_family_root_layout() -> None:
+    expected_directories = {"systems", "reference", "source"}
+    expected_files = {"README.md", "metadata.json"}
+    expected_reference_files = {"reference_results.json", "inventory.json"}
+
+    manifests = []
+    for family in ("benchmarkQC", "molvqe21"):
+        family_root = ROOT / "datasets" / family
+        assert {path.name for path in family_root.iterdir() if path.is_dir()} == expected_directories
+        assert expected_files == {
+            path.name for path in family_root.iterdir() if path.is_file()
+        }
+        assert {
+            path.name for path in (family_root / "reference").iterdir() if path.is_file()
+        } == expected_reference_files
+        assert (family_root / "source" / "manifest.csv").is_file()
+        manifests.append(
+            (family_root / "source" / "manifest.csv").read_text(encoding="utf-8").splitlines()[0]
+        )
+
+        metadata = json.loads((family_root / "metadata.json").read_text(encoding="utf-8"))
+        assert metadata["systems_root"] == "systems"
+        assert metadata["manifest_path"] == "source/manifest.csv"
+        assert metadata["reference_results_path"] == "reference/reference_results.json"
+        assert metadata["inventory_path"] == "reference/inventory.json"
+
+    assert manifests[0] == manifests[1]
+
+
 def test_catalog_archives_have_exact_schema_and_checksums(catalog: dict) -> None:
     for entry in catalog["datasets"]:
         path = ROOT / entry["data_path"]
@@ -134,7 +163,7 @@ def test_every_catalog_entry_has_a_validated_normalized_integral_archive(catalog
 
 
 def test_every_benchmarkqc_point_has_common_scalar_reference_results(catalog: dict) -> None:
-    results_path = ROOT / "datasets" / "benchmarkQC" / "reference_results.json"
+    results_path = ROOT / "datasets" / "benchmarkQC" / "reference" / "reference_results.json"
     results = json.loads(results_path.read_text(encoding="utf-8"))
     assert results["schema"] == "benchmark-qc.reference-results.v1"
     benchmark_entries = [entry for entry in catalog["datasets"] if entry["system"] != "MolVQE21"]
@@ -161,7 +190,7 @@ def test_every_benchmarkqc_point_has_common_scalar_reference_results(catalog: di
 
 def test_si_table_i_inventory_covers_all_rows_after_reconstruction() -> None:
     inventory = json.loads(
-        (ROOT / "datasets" / "benchmarkQC" / "si_table_i_inventory.json").read_text(
+        (ROOT / "datasets" / "benchmarkQC" / "source" / "si_table_i_inventory.json").read_text(
             encoding="utf-8"
         )
     )
@@ -188,7 +217,7 @@ def test_si_table_i_inventory_covers_all_rows_after_reconstruction() -> None:
 
 def test_reconstructed_si_metadata_records_passed_validation() -> None:
     inventory = json.loads(
-        (ROOT / "datasets" / "benchmarkQC" / "si_table_i_inventory.json").read_text(
+        (ROOT / "datasets" / "benchmarkQC" / "source" / "si_table_i_inventory.json").read_text(
             encoding="utf-8"
         )
     )
@@ -204,7 +233,7 @@ def test_reconstructed_si_metadata_records_passed_validation() -> None:
 
 
 def test_new_n2_metadata_is_path_portable() -> None:
-    path = ROOT / "datasets" / "benchmarkQC" / "N2" / "cas10e8o_ccpvdz" / "metadata.json"
+    path = ROOT / "datasets" / "benchmarkQC" / "source" / "molecules" / "N2" / "cas10e8o_ccpvdz" / "metadata.json"
     text = path.read_text(encoding="utf-8")
     metadata = json.loads(text)
     assert metadata["system"]["formula"] == "N2"
@@ -214,7 +243,7 @@ def test_new_n2_metadata_is_path_portable() -> None:
 
 
 def test_c2_metadata_is_path_portable_and_marks_exact_orbital_information() -> None:
-    path = ROOT / "datasets" / "benchmarkQC" / "C2" / "cas8e8o_augccpvtz" / "metadata.json"
+    path = ROOT / "datasets" / "benchmarkQC" / "source" / "molecules" / "C2" / "cas8e8o_augccpvtz" / "metadata.json"
     text = path.read_text(encoding="utf-8")
     metadata = json.loads(text)
     variant = metadata["variants"]["casci_natural_orbitals"]
@@ -225,7 +254,7 @@ def test_c2_metadata_is_path_portable_and_marks_exact_orbital_information() -> N
 
 
 def test_fe2s2_metadata_is_portable_and_discloses_historical_frame() -> None:
-    path = ROOT / "datasets" / "benchmarkQC" / "Fe2S2" / "cas6e6o_chan30e20o" / "metadata.json"
+    path = ROOT / "datasets" / "benchmarkQC" / "source" / "molecules" / "Fe2S2" / "cas6e6o_chan30e20o" / "metadata.json"
     text = path.read_text(encoding="utf-8")
     metadata = json.loads(text)
     assert set(metadata["accepted_variants"]) == {
@@ -263,7 +292,7 @@ def test_molvqe21_metadata_is_portable_and_excludes_incomplete_source_cases() ->
     assert "OneDrive" not in text
 
     overrides = json.loads(
-        (ROOT / "datasets" / "molvqe21" / "active_orbital_overrides.json").read_text(
+        (ROOT / "datasets" / "molvqe21" / "source" / "active_orbital_overrides.json").read_text(
             encoding="utf-8"
         )
     )
@@ -273,7 +302,7 @@ def test_molvqe21_metadata_is_portable_and_excludes_incomplete_source_cases() ->
 
 
 def test_molvqe21_source_manifest_contains_only_corrected_cache_cases() -> None:
-    path = ROOT / "datasets" / "molvqe21" / "source_manifest.csv"
+    path = ROOT / "datasets" / "molvqe21" / "source" / "source_manifest.csv"
     with path.open("r", newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     case_ids = {row["case_id"] for row in rows}

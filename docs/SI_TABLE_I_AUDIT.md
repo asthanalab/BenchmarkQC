@@ -7,7 +7,7 @@ working notes:
 - `code/qcomputing/Benchmark-QC`
 
 The authoritative row inventory is
-[`datasets/benchmarkQC/si_table_i_inventory.json`](../datasets/benchmarkQC/si_table_i_inventory.json).
+[`datasets/benchmarkQC/reference/inventory.json`](../datasets/benchmarkQC/reference/inventory.json).
 It covers all 13 SI Table I molecule/active-space variants and all 26 geometry
 rows. Every row now has a validated, portable Hamiltonian payload. SI result
 JSON, plots, checkpoints, and application logs are not benchmark inputs.

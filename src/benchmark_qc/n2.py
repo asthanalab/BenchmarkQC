@@ -41,7 +41,7 @@ def H_gen(
 ):
     """Generate a qubit Hamiltonian H and CASCI energy for N2 (active-space selected by ASF).
 
-    This mirrors the original `datasets/benchmarkQC/N2/ham_pyscf.py` implementation.
+    This mirrors the original `datasets/benchmarkQC/source/molecules/N2/ham_pyscf.py` implementation.
     """
 
     # Imports that are optional for just importing the package.

@@ -16,7 +16,7 @@ from benchmark_qc.integral_dataset import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATASET_ROOT = ROOT / "datasets" / "benchmarkQC" / "N2" / "cas10e8o_ccpvdz"
+DATASET_ROOT = ROOT / "datasets" / "benchmarkQC" / "source" / "molecules" / "N2" / "cas10e8o_ccpvdz"
 METADATA = json.loads((DATASET_ROOT / "metadata.json").read_text(encoding="utf-8"))
 GEOMETRY_IDS = ("equilibrium_r1p0977", "stretched_r2p0000")
 

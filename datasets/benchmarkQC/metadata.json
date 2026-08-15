@@ -1,11 +1,15 @@
 {
   "benchmark_ready_case_count": 51,
+  "catalog_path": "../catalog.json",
+  "inventory_path": "reference/inventory.json",
+  "manifest_path": "source/manifest.csv",
+  "reference_results_path": "reference/reference_results.json",
   "schema": "benchmark-qc.dataset-metadata.v1",
   "system": {
     "catalog_path": "datasets/catalog.json",
     "name": "BenchmarkQC",
-    "reference_results_path": "datasets/benchmarkQC/reference_results.json",
-    "si_table_i_inventory_path": "datasets/benchmarkQC/si_table_i_inventory.json"
+    "reference_results_path": "reference/reference_results.json",
+    "si_table_i_inventory_path": "source/si_table_i_inventory.json"
   },
   "system_ids": [
     "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000",

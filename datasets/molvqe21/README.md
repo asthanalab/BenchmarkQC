@@ -15,12 +15,16 @@ Each benchmark-ready case uses the same per-system layout as BenchmarkQC:
 - `systems/<case_id>/metadata.json`: the shared per-system metadata and
   reference-result record.
 
-`manifest.csv` records checksums, system metadata, source-cache provenance, and
-the active-orbital selection status. The package manifest is deliberately
+`source/manifest.csv` is the common family manifest. The corrected-cache
+manifest, filtered source manifest, active-orbital overrides, and builder are
+kept alongside it under `source/`. The package manifest is deliberately
 filtered to the 27 corrected-cache cases; the two incomplete source records
 are excluded from both the folder and the benchmark catalog. The existing
 corrected Hamiltonian and integral archives were moved and indexed; no new
 electronic-structure calculation was needed for this layout normalization.
+
+The family-level reference indexes use the same names as BenchmarkQC:
+`reference/reference_results.json` and `reference/inventory.json`.
 
 The two scalar reference fields not published by the MolVQE-21 source are
 represented as `null` with status `not-provided-by-source`; this preserves the
@@ -37,4 +41,4 @@ integrals = load_source_integrals(case.case_id)
 ```
 
 To regenerate this folder from a fresh `benchmarkkrylov` checkout, run
-`build_dataset.py` with `--source-root` pointing to that checkout.
+`source/build_dataset.py` with `--source-root` pointing to that checkout.

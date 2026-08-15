@@ -9,10 +9,10 @@ pip install benchmark-qc
 ```
 
 The Hamiltonian `.npz` files (e.g.
-`datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz`,
-`datasets/benchmarkQC/N2/N2_PES_H1.npz`, `datasets/benchmarkQC/FeS/FeS_PES_H.npz`,
-`datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas6e6o/Fe2S2_H.npz`,
-and `datasets/benchmarkQC/U2/U2_PES_H.npz`) share the same format.
+`datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz`,
+`datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz`, `datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz`,
+`datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas6e6o/Fe2S2_H.npz`,
+and `datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz`) share the same format.
 
 They contain three arrays:
 
@@ -55,7 +55,7 @@ Reference energies (Hartree) computed alongside the Hamiltonian generation.
 ## Notes on diagonalization
 
 - For small Hamiltonians (e.g. N2: 8 qubits → 256×256), tests can diagonalize densely.
-- For larger ones (e.g. datasets/benchmarkQC/FeS/U2: 12 qubits → 4096×4096), tests use sparse eigen-solvers.
+- For larger ones (e.g. datasets/benchmarkQC/source/molecules/FeS/U2: 12 qubits → 4096×4096), tests use sparse eigen-solvers.
 - For open-shell/high-spin systems (FeS), you must compare in the same `(N_alpha, N_beta)` sector.
   The FeS test does this using `--nelec` and `--spin`.
 - Closed-shell active-space references must also be checked in the stated

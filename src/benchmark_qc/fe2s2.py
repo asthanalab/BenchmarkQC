@@ -1,7 +1,7 @@
 """Access and acceptance helpers for the Fe2S2 benchmark.
 
 The Fe2S2 workflow is intentionally acceptance-first.  Candidate calculations
-live below ``datasets/benchmarkQC/Fe2S2/cas6e6o_chan30e20o/candidates`` and are not exposed by the
+live below ``datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/candidates`` and are not exposed by the
 package or root catalog.  Only the promotion script may place a validated
 variant below ``accepted`` and add its checksum-pinned entry to
 ``datasets/catalog.json``.
@@ -22,7 +22,7 @@ from .integral_dataset import load_spatial_integral_archive
 from .paths import BENCHMARKQC_ROOT
 
 
-DATASET_ROOT = BENCHMARKQC_ROOT / "Fe2S2" / "cas6e6o_chan30e20o"
+DATASET_ROOT = BENCHMARKQC_ROOT / "source" / "molecules" / "Fe2S2" / "cas6e6o_chan30e20o"
 PARENT_FCIDUMP_PATH = (
     DATASET_ROOT / "parent" / "chan_fe2s2_cas30e20o.FCIDUMP"
 )

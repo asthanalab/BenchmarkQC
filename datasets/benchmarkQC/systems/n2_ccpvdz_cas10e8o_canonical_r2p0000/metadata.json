@@ -64,7 +64,7 @@
     "sha256": "486c9dd7e7896d8193c4d757ce0d75d5b81466d1c5e87cfd62853fe8b24e474e"
   },
   "provenance": {
-    "source_archive_path": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz",
+    "source_archive_path": "datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz",
     "source_archive_sha256": "b9eefb9ead764e49effc8818a413ba0cbf3f9f537a1191d9cdc9ebd197bb3e3a",
     "source_catalog_id": "n2_ccpvdz_cas10e8o_canonical"
   },
@@ -92,7 +92,7 @@
   "schema": "benchmark-qc.system-metadata.v1",
   "si_validation": null,
   "source_active_space": null,
-  "source_metadata_path": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/metadata.json",
+  "source_metadata_path": "datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/metadata.json",
   "system": "N2",
   "system_id": "n2_ccpvdz_cas10e8o_canonical_r2p0000"
 }

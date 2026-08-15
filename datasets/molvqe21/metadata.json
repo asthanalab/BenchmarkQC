@@ -1051,14 +1051,18 @@
       ]
     }
   },
+  "catalog_path": "../catalog.json",
+  "inventory_path": "reference/inventory.json",
+  "manifest_path": "source/manifest.csv",
+  "reference_results_path": "reference/reference_results.json",
   "schema": "benchmark-qc.dataset-metadata.v1",
   "source_case_count": 27,
   "system": {
-    "active_orbital_overrides": "active_orbital_overrides.json",
-    "corrected_cache_manifest": "manifest.csv",
+    "active_orbital_overrides": "source/active_orbital_overrides.json",
+    "corrected_cache_manifest": "source/corrected_cache_manifest.csv",
     "name": "MolVQE-21",
     "source_commit": "2f1faef5589dd276393be4cb93860524f4ff790a",
-    "source_manifest": "source_manifest.csv",
+    "source_manifest": "source/source_manifest.csv",
     "source_repository": "https://github.com/asthanaa/benchmarkkrylov"
   },
   "systems_root": "systems"

@@ -1,24 +1,23 @@
-"""Beginner-friendly sanity check for the saved FeS Hamiltonian.
+"""Beginner-friendly sanity check for the saved N2 Hamiltonian.
 
-This folder contains a saved PES file with:
-- `labels`: the scanned geometry parameter(s) (often the bond length)
-- `Hs`: the corresponding *qubit Hamiltonians* (PennyLane operators)
-- `casci_energies`: reference energies from the same active-space CASCI/FCI
+This repo stores, for each bond length, a *qubit Hamiltonian* (PennyLane operator)
+and a reference energy. This script verifies that the stored Hamiltonian produces
+the same ground-state energy when we diagonalize it exactly.
 
-This script verifies (for one chosen point) that:
-- If we diagonalize the saved qubit Hamiltonian, its ground-state energy matches
-  the stored reference energy (within a tolerance).
+What this script does (mirrors the notebook):
+1) Load the npz file (contains: labels, Hs, casci_energies)
+2) Choose one point by index OR by bond length (nearest match)
+3) Project the stored Pauli-term representation into the requested electron/spin sector
+4) Compute the sector ground-state energy by exact diagonalization
+5) Compare to the stored reference energy
 
 Run examples:
-  python datasets/benchmarkQC/FeS/test_fes_hamiltonian.py --index 0
-  python datasets/benchmarkQC/FeS/test_fes_hamiltonian.py --bond 2.4
+  python datasets/benchmarkQC/source/molecules/N2/test_n2_hamiltonian.py --index 0
+  python datasets/benchmarkQC/source/molecules/N2/test_n2_hamiltonian.py --bond 1.4
 
-Notes:
-- For FeS here the Hamiltonian is 12 qubits (dimension 4096), so we use a sparse
-  eigensolver by default to avoid building a 4096x4096 dense matrix.
-- FeS is an open-shell high-spin state. To compare apples-to-apples against the
-    stored CASCI energy, we must diagonalize *within the same (N, M_S) sector*.
-    This script does that using `--nelec` and `--spin` (PySCF convention: spin = 2S).
+Interpretation:
+- The diagonalization energy is the *exact* sector ground energy of the saved qubit Hamiltonian.
+- The stored `casci_energies[i]` should match within numerical tolerance.
 
 Docs:
 - docs/USAGE.md
@@ -49,8 +48,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--npz",
-        default="datasets/benchmarkQC/FeS/FeS_PES_H.npz",
-        help="Path to the saved PES npz (default: datasets/benchmarkQC/FeS/FeS_PES_H.npz)",
+        default="datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz",
+        help="Path to the saved PES npz (default: datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz)",
     )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--index", type=int, help="Point index in labels/Hs arrays")
@@ -68,34 +67,40 @@ def main() -> int:
     parser.add_argument(
         "--nelec",
         type=int,
-        default=6,
-        help="Active-space electrons for the comparison sector (default: 6, from FeS-in.ipynb)",
+        default=4,
+        help="Active-space electrons (default: 4 for the historical STO-6G archive)",
     )
     parser.add_argument(
         "--spin",
         type=int,
-        default=4,
-        help="PySCF spin (2S) for the comparison sector (default: 4, from FeS-in.ipynb)",
+        default=0,
+        help="PySCF spin=2S for the comparison sector (default: 0)",
     )
 
     args = parser.parse_args()
 
-    # Load exactly like the notebooks do
+    # -------------------- Load the file (same as notebook) --------------------
     data = load_hamiltonian_npz(args.npz)
 
+    # -------------------- Choose which geometry point ------------------------
     i = pick_point_index(data.labels, index=args.index, bond=args.bond)
     chosen_label = float(data.labels[i])
 
+    # -------------------- Pull out the saved Hamiltonian ---------------------
+    # `hs[i]` is an array of PennyLane terms (object dtype).
     terms = data.hs[i]
-    # IMPORTANT for open-shell systems: compare in the same (nelec, spin) sector.
+
+    # -------------------- Diagonalize (exact for this saved qubit Hamiltonian) ------
     e0, method = ground_energy_from_terms(terms, nelec=args.nelec, spin=args.spin)
 
+    # -------------------- Compare to stored reference energy -----------------
     e_ref = float(data.ref_energies[i])
     abs_diff = abs(e0 - e_ref)
 
+    # -------------------- Pretty output --------------------------------------
     print(f"NPZ: {args.npz}")
     print(f"Chosen point index:         {i}")
-    print(f"Point label:                {chosen_label}")
+    print(f"Point label (bond length):  {chosen_label}")
     print(f"Diagonalization method:     {method}")
     print(f"Stored CASCI energy (Ha):   {e_ref:.12f}")
     print(f"Diag ground energy (Ha):    {e0:.12f}")

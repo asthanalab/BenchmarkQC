@@ -33,10 +33,10 @@ active-space/orbital variant is represented as its own catalog entry:
   physics-aware validation helpers.
 - `datasets/catalog.json`: the machine-readable inventory with SHA-256 values,
   model metadata, and relative paths.
-- `datasets/benchmarkQC/reference_results.json`: common scalar CASCI, CISD,
+- `datasets/benchmarkQC/reference/reference_results.json`: common scalar CASCI, CISD,
   CCSD, Rényi-0.25, and cumulant records for all 51 BenchmarkQC points.
 - `docs/SI_TABLE_I_AUDIT.md` and
-  `datasets/benchmarkQC/si_table_i_inventory.json`: the complete audit of all
+  `datasets/benchmarkQC/reference/inventory.json`: the complete audit of all
   26 SI Table I geometry rows and their reconstruction provenance.
 - `docs/ACTIVE_SPACE_AND_METHOD_AUDIT.md`: active-space evidence, limitations,
   literature checks, and scalar-method data coverage for all 51 BenchmarkQC

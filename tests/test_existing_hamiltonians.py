@@ -13,9 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 @pytest.mark.parametrize(
     ("relative_path", "nelec", "spin"),
     (
-        ("datasets/benchmarkQC/N2/N2_PES_H1.npz", 4, 0),
-        ("datasets/benchmarkQC/FeS/FeS_PES_H.npz", 6, 4),
-        ("datasets/benchmarkQC/U2/U2_PES_H.npz", 6, 0),
+        ("datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz", 4, 0),
+        ("datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz", 6, 4),
+        ("datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz", 6, 0),
     ),
 )
 def test_existing_first_point_matches_reference(

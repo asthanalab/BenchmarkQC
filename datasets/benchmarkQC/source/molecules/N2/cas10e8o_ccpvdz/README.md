@@ -31,10 +31,10 @@ with the canonical dataset as the unpreconditioned control.
 From the repository root:
 
 ```sh
-python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --write --output-root /tmp/benchmarkqc-n2
-python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check
-python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant casci_natural_orbitals --index 0
-python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant casci_natural_orbitals --index 1
+python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --write --output-root /tmp/benchmarkqc-n2
+python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check
+python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant casci_natural_orbitals --index 0
+python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant casci_natural_orbitals --index 1
 ```
 
 The exact energy check is performed in the physical 10-electron singlet sector,

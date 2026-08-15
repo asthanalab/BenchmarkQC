@@ -1,0 +1,385 @@
+{
+  "case_count": 27,
+  "cases": {
+    "Al3_minus": {
+      "casci_energy_hartree": -725.7922881364854,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 6.428074004502384,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "Al3_minus"
+      }
+    },
+    "BeH2_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -15.803244181147063,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 1.9953821822599993,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "BeH2_equi_cc_pVTZ_0"
+      }
+    },
+    "BeH2_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -15.577504296997867,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 1.7637455967891338,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "BeH2_equi_cc_pVTZ_2"
+      }
+    },
+    "CH2O_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -114.02162279867837,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 2.8150632006176095,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "CH2O_equi_cc_pVTZ_0"
+      }
+    },
+    "CH2O_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -113.82914720544098,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 1.994618284788223,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "CH2O_equi_cc_pVTZ_2"
+      }
+    },
+    "CO_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -112.89409377343564,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.6487535793870127,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "CO_equi_cc_pVTZ_0"
+      }
+    },
+    "CO_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -112.65639016965865,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 2.568678127993894,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "CO_equi_cc_pVTZ_2"
+      }
+    },
+    "FeO": {
+      "casci_energy_hartree": -1337.2890177158818,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.8687871848397837,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "FeO"
+      }
+    },
+    "H10_near_equi_sto3g_0": {
+      "casci_energy_hartree": -5.379954746006925,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 7.818083252632531,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H10_near_equi_sto3g_0"
+      }
+    },
+    "H4_near_equi_sto3g_0": {
+      "casci_energy_hartree": -2.1663874486420642,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 1.807519407015623,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H4_near_equi_sto3g_0"
+      }
+    },
+    "H5_near_equi_sto3g_1": {
+      "casci_energy_hartree": -2.654516968217046,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 2.7427255836126165,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H5_near_equi_sto3g_1"
+      }
+    },
+    "H6_near_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -3.3233897115681357,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.6163748590503406,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H6_near_equi_cc_pVTZ_0"
+      }
+    },
+    "H6_near_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -3.1849788446982403,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.3042107888407966,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H6_near_equi_cc_pVTZ_2"
+      }
+    },
+    "H6_near_equi_sto3g_0": {
+      "casci_energy_hartree": -3.2360662799002746,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.645659903694176,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H6_near_equi_sto3g_0"
+      }
+    },
+    "H7_near_equi_sto3g_1": {
+      "casci_energy_hartree": -3.735487532202722,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 4.681725426391032,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H7_near_equi_sto3g_1"
+      }
+    },
+    "H8_near_equi_sto3g_0": {
+      "casci_energy_hartree": -4.307571602002263,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 5.703579641582878,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H8_near_equi_sto3g_0"
+      }
+    },
+    "H9_near_equi_sto3g_1": {
+      "casci_energy_hartree": -4.814010787328446,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 6.743826020542393,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "H9_near_equi_sto3g_1"
+      }
+    },
+    "N2_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -109.10013116577147,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.44406881760021,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "N2_equi_cc_pVTZ_0"
+      }
+    },
+    "N2_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -108.87152580012282,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 2.4058499185074655,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "N2_equi_cc_pVTZ_2"
+      }
+    },
+    "cyclobutadiene_ceo": {
+      "casci_energy_hartree": -153.72228958245736,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 1.934845493351637,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "cyclobutadiene_ceo"
+      }
+    },
+    "feno_2plus": {
+      "casci_energy_hartree": -1398.4787643620946,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 5.49249098761899,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "feno_2plus"
+      }
+    },
+    "fenoco3_minus": {
+      "casci_energy_hartree": -1737.702356361711,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 5.19675874877606,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "fenoco3_minus"
+      }
+    },
+    "hexatriene_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -231.97262390092192,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.926060611953842,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "hexatriene_equi_cc_pVTZ_0"
+      }
+    },
+    "hexatriene_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -231.86563211268842,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.6327331004268526,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "hexatriene_equi_cc_pVTZ_2"
+      }
+    },
+    "m_Benzyne_equi_cc_pVTZ_0": {
+      "casci_energy_hartree": -229.51416071303908,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.743555647974066,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "m_Benzyne_equi_cc_pVTZ_0"
+      }
+    },
+    "m_Benzyne_equi_cc_pVTZ_2": {
+      "casci_energy_hartree": -229.36969501815025,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 3.4498820851981904,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "m_Benzyne_equi_cc_pVTZ_2"
+      }
+    },
+    "magnesium_porphyrin_ceo": {
+      "casci_energy_hartree": -1182.2389641303378,
+      "ccsd_energy_hartree": null,
+      "ccsd_status": "not-provided-by-source",
+      "cisd_energy_hartree": null,
+      "cisd_status": "not-provided-by-source",
+      "cumulant_C2": null,
+      "renyi_0p25_nats": 1.8512057888622708,
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "source": {
+        "kind": "MolVQE-21 corrected cache",
+        "system_id": "magnesium_porphyrin_ceo"
+      }
+    }
+  },
+  "description": "Scalar reference records published by or available from the corrected MolVQE-21 source caches.",
+  "schema": "benchmark-qc.reference-results.v1"
+}

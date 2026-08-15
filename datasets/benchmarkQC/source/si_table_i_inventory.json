@@ -22,13 +22,13 @@
           "label": "equilibrium_r1p0977",
           "bond_length_angstrom": 1.0977,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz"
         },
         {
           "label": "stretched_r2p0000",
           "bond_length_angstrom": 2.0,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz"
         }
       ]
     },
@@ -44,13 +44,13 @@
           "label": "equilibrium_r1p0977",
           "bond_length_angstrom": 1.0977,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz"
         },
         {
           "label": "stretched_r2p0000",
           "bond_length_angstrom": 2.0,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz"
         }
       ]
     },
@@ -66,13 +66,13 @@
           "label": "r1p2000",
           "bond_length_angstrom": 1.2,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/N2/N2_PES_H1.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz"
         },
         {
           "label": "r2p0000",
           "bond_length_angstrom": 2.0,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/N2/N2_PES_H1.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz"
         }
       ]
     },
@@ -88,13 +88,13 @@
           "label": "r2p4000",
           "bond_length_angstrom": 2.4,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/FeS/FeS_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz"
         },
         {
           "label": "r3p0000",
           "bond_length_angstrom": 3.0,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/FeS/FeS_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz"
         }
       ]
     },
@@ -110,13 +110,13 @@
           "label": "r2p4000",
           "bond_length_angstrom": 2.4,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/U2/U2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz"
         },
         {
           "label": "r2p4800",
           "bond_length_angstrom": 2.48,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/U2/U2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz"
         }
       ]
     },
@@ -275,7 +275,7 @@
           "label": "stretched_r2p2000",
           "bond_length_angstrom": 2.2,
           "status": "checked_in_payload",
-          "source_archive": "datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz"
+          "source_archive": "datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz"
         }
       ]
     },

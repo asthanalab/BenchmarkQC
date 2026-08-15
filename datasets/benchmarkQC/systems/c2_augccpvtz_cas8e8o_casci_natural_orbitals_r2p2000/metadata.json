@@ -77,7 +77,7 @@
     "sha256": "2fe9cecb00ec844a7479e78bb3c81b59686f700777ecc0c54f4c4e641c1bc10a"
   },
   "provenance": {
-    "source_archive_path": "datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz",
+    "source_archive_path": "datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz",
     "source_archive_sha256": "cfbb8aed1e37abd4e38c7655b1dc3c828f52eb5e95d9f8a839906666f7c33659",
     "source_catalog_id": "c2_augccpvtz_cas8e8o_casci_natural_orbitals"
   },
@@ -105,7 +105,7 @@
   "schema": "benchmark-qc.system-metadata.v1",
   "si_validation": null,
   "source_active_space": null,
-  "source_metadata_path": "datasets/benchmarkQC/C2/cas8e8o_augccpvtz/metadata.json",
+  "source_metadata_path": "datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/metadata.json",
   "system": "C2",
   "system_id": "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000"
 }

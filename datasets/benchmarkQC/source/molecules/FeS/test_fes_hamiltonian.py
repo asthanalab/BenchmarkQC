@@ -1,7 +1,7 @@
-"""Beginner-friendly sanity check for the saved U2 Hamiltonian.
+"""Beginner-friendly sanity check for the saved FeS Hamiltonian.
 
 This folder contains a saved PES file with:
-- `labels`: scanned geometry labels (e.g., bond length)
+- `labels`: the scanned geometry parameter(s) (often the bond length)
 - `Hs`: the corresponding *qubit Hamiltonians* (PennyLane operators)
 - `casci_energies`: reference energies from the same active-space CASCI/FCI
 
@@ -10,12 +10,15 @@ This script verifies (for one chosen point) that:
   the stored reference energy (within a tolerance).
 
 Run examples:
-  python datasets/benchmarkQC/U2/test_u2_hamiltonian.py --index 0
-  python datasets/benchmarkQC/U2/test_u2_hamiltonian.py --bond 2.48
+  python datasets/benchmarkQC/source/molecules/FeS/test_fes_hamiltonian.py --index 0
+  python datasets/benchmarkQC/source/molecules/FeS/test_fes_hamiltonian.py --bond 2.4
 
 Notes:
-- The reference is validated in the six-electron singlet sector. This avoids
-  comparing against an unphysical particle-number sector of the 12-qubit Hamiltonian.
+- For FeS here the Hamiltonian is 12 qubits (dimension 4096), so we use a sparse
+  eigensolver by default to avoid building a 4096x4096 dense matrix.
+- FeS is an open-shell high-spin state. To compare apples-to-apples against the
+    stored CASCI energy, we must diagonalize *within the same (N, M_S) sector*.
+    This script does that using `--nelec` and `--spin` (PySCF convention: spin = 2S).
 
 Docs:
 - docs/USAGE.md
@@ -46,8 +49,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--npz",
-        default="datasets/benchmarkQC/U2/U2_PES_H.npz",
-        help="Path to the saved PES npz (default: datasets/benchmarkQC/U2/U2_PES_H.npz)",
+        default="datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz",
+        help="Path to the saved PES npz (default: datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz)",
     )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--index", type=int, help="Point index in labels/Hs arrays")
@@ -66,23 +69,25 @@ def main() -> int:
         "--nelec",
         type=int,
         default=6,
-        help="Active-space electrons for the comparison sector (default: 6)",
+        help="Active-space electrons for the comparison sector (default: 6, from FeS-in.ipynb)",
     )
     parser.add_argument(
         "--spin",
         type=int,
-        default=0,
-        help="PySCF spin=2S for the comparison sector (default: 0)",
+        default=4,
+        help="PySCF spin (2S) for the comparison sector (default: 4, from FeS-in.ipynb)",
     )
 
     args = parser.parse_args()
 
+    # Load exactly like the notebooks do
     data = load_hamiltonian_npz(args.npz)
 
     i = pick_point_index(data.labels, index=args.index, bond=args.bond)
     chosen_label = float(data.labels[i])
 
     terms = data.hs[i]
+    # IMPORTANT for open-shell systems: compare in the same (nelec, spin) sector.
     e0, method = ground_energy_from_terms(terms, nelec=args.nelec, spin=args.spin)
 
     e_ref = float(data.ref_energies[i])

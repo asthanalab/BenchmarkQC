@@ -10,15 +10,15 @@ pip install benchmark-qc
 
 This repo contains benchmark qubit Hamiltonians for:
 
-- C2 (folder: `datasets/benchmarkQC/C2/`)
-- C2H4 (folder: `datasets/benchmarkQC/C2H4/`)
-- CH2 (folder: `datasets/benchmarkQC/CH2/`)
-- FeH (folder: `datasets/benchmarkQC/FeH/`)
-- N2 (folder: `datasets/benchmarkQC/N2/`)
-- O2 (folder: `datasets/benchmarkQC/O2/`)
-- FeS (folder: `datasets/benchmarkQC/FeS/`)
-- Fe2S2 (folder: `datasets/benchmarkQC/Fe2S2/`)
-- U2 (folder: `datasets/benchmarkQC/U2/`)
+- C2 (folder: `datasets/benchmarkQC/source/molecules/C2/`)
+- C2H4 (folder: `datasets/benchmarkQC/source/molecules/C2H4/`)
+- CH2 (folder: `datasets/benchmarkQC/source/molecules/CH2/`)
+- FeH (folder: `datasets/benchmarkQC/source/molecules/FeH/`)
+- N2 (folder: `datasets/benchmarkQC/source/molecules/N2/`)
+- O2 (folder: `datasets/benchmarkQC/source/molecules/O2/`)
+- FeS (folder: `datasets/benchmarkQC/source/molecules/FeS/`)
+- Fe2S2 (folder: `datasets/benchmarkQC/source/molecules/Fe2S2/`)
+- U2 (folder: `datasets/benchmarkQC/source/molecules/U2/`)
 
 The system folders contain saved `.npz` Hamiltonians and validation metadata.
 Historical systems retain their input notebooks; current datasets additionally
@@ -39,20 +39,20 @@ Create and use a dedicated conda environment:
 
 From the repo root:
 
-- `conda run -n bench python datasets/benchmarkQC/N2/test_n2_hamiltonian.py --index 0`
-- `conda run -n bench python datasets/benchmarkQC/FeS/test_fes_hamiltonian.py --index 0`
-- `conda run -n bench python datasets/benchmarkQC/U2/test_u2_hamiltonian.py --index 0`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/N2/test_n2_hamiltonian.py --index 0`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/FeS/test_fes_hamiltonian.py --index 0`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/U2/test_u2_hamiltonian.py --index 0`
 
 For the current N2 CAS(10e,8o)/cc-pVDZ calculation:
 
-- `conda run -n bench python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant canonical --index 0`
-- `conda run -n bench python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant casci_natural_orbitals --index 1`
-- `conda run -n bench python datasets/benchmarkQC/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant canonical --index 0`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/test_hamiltonians.py --variant casci_natural_orbitals --index 1`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/generate_hamiltonians.py --check`
 
 For the C2 CAS(8e,8o)/aug-cc-pVTZ natural-orbital calculation:
 
-- `conda run -n bench python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check`
-- `conda run -n bench python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/test_hamiltonian.py`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/test_hamiltonian.py`
 
 For an accepted Fe2S2 dataset, use the package loader with one of
 `historical_cas4e4o`, `historical_cas6e6o`, `historical_cas8e6o`, or the
@@ -67,9 +67,9 @@ source = fe2s2.load_source_integrals("historical_cas6e6o")
 
 You can also choose a point by bond length (nearest stored label):
 
-- `conda run -n bench python datasets/benchmarkQC/N2/test_n2_hamiltonian.py --bond 1.4`
-- `conda run -n bench python datasets/benchmarkQC/FeS/test_fes_hamiltonian.py --bond 2.4`
-- `conda run -n bench python datasets/benchmarkQC/U2/test_u2_hamiltonian.py --bond 2.48`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/N2/test_n2_hamiltonian.py --bond 1.4`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/FeS/test_fes_hamiltonian.py --bond 2.4`
+- `conda run -n bench python datasets/benchmarkQC/source/molecules/U2/test_u2_hamiltonian.py --bond 2.48`
 
 ## Stored geometry point labels
 
@@ -77,19 +77,19 @@ In each saved `.npz`, the `labels` array stores the geometry “point label” u
 generation time. For these diatomics, it is the bond length in **Angstrom** (PySCF
 default unit, since the generators do not override `mol.unit`).
 
-- **N2** (`datasets/benchmarkQC/N2/N2_PES_H1.npz`, 11 points):
+- **N2** (`datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz`, 11 points):
 	- $R$ (Å) = 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8
 - **N2 CAS(10e,8o)/cc-pVDZ**, canonical and CASCI-natural-orbital variants (2 points each):
 	- $R$ (Å) = 1.0977, 2.0000
 - **C2 CAS(8e,8o)/aug-cc-pVTZ**, state-specific CASCI natural orbitals (1 point):
 	- $R$ (Å) = 2.2000
-- **FeS** (`datasets/benchmarkQC/FeS/FeS_PES_H.npz`, 14 points):
+- **FeS** (`datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz`, 14 points):
 	- $R$ (Å) = 1.826, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2, 3.6, 3.7, 4.0, 4.2, 4.5, 4.8
 - **Fe2S2 historical CAS(4e,4o), CAS(6e,6o), and CAS(8e,6o)** (1 point each):
 	- label = 0.0 (archive point identifier, not a bond length; the parent FCIDUMP does not encode coordinates)
 - **Fe2S2 constructed nested CAS(8e,8o)** (1 point):
 	- label = 0.0 (the same archived point identifier; this control activates parent MOs 11--18 and is not a historical paper active space)
-- **U2** (`datasets/benchmarkQC/U2/U2_PES_H.npz`, 2 points):
+- **U2** (`datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz`, 2 points):
 	- $R$ (Å) = 2.4, 2.48
 - **SI Table I reconstructed cases**:
 	- C2H4: planar 0° and twisted 90° CAS(2e,2o)
@@ -126,9 +126,9 @@ will only match if the `.npz` was generated with that same choice.
 
 The Hamiltonian-generation functions are exposed for notebook compatibility:
 
-- `datasets/benchmarkQC/N2/ham_pyscf.py` exports `H_gen`
-- `datasets/benchmarkQC/FeS/FeS_pyscf.py` exports `H_gen`
-- `datasets/benchmarkQC/U2/U2_ham1.py` exports `build_u2_reference` and `H_gen`
+- `datasets/benchmarkQC/source/molecules/N2/ham_pyscf.py` exports `H_gen`
+- `datasets/benchmarkQC/source/molecules/FeS/FeS_pyscf.py` exports `H_gen`
+- `datasets/benchmarkQC/source/molecules/U2/U2_ham1.py` exports `build_u2_reference` and `H_gen`
 
 The actual implementations live in the package:
 - `benchmark_qc.n2.H_gen`

@@ -1,23 +1,21 @@
-"""Beginner-friendly sanity check for the saved N2 Hamiltonian.
+"""Beginner-friendly sanity check for the saved U2 Hamiltonian.
 
-This repo stores, for each bond length, a *qubit Hamiltonian* (PennyLane operator)
-and a reference energy. This script verifies that the stored Hamiltonian produces
-the same ground-state energy when we diagonalize it exactly.
+This folder contains a saved PES file with:
+- `labels`: scanned geometry labels (e.g., bond length)
+- `Hs`: the corresponding *qubit Hamiltonians* (PennyLane operators)
+- `casci_energies`: reference energies from the same active-space CASCI/FCI
 
-What this script does (mirrors the notebook):
-1) Load the npz file (contains: labels, Hs, casci_energies)
-2) Choose one point by index OR by bond length (nearest match)
-3) Project the stored Pauli-term representation into the requested electron/spin sector
-4) Compute the sector ground-state energy by exact diagonalization
-5) Compare to the stored reference energy
+This script verifies (for one chosen point) that:
+- If we diagonalize the saved qubit Hamiltonian, its ground-state energy matches
+  the stored reference energy (within a tolerance).
 
 Run examples:
-  python datasets/benchmarkQC/N2/test_n2_hamiltonian.py --index 0
-  python datasets/benchmarkQC/N2/test_n2_hamiltonian.py --bond 1.4
+  python datasets/benchmarkQC/source/molecules/U2/test_u2_hamiltonian.py --index 0
+  python datasets/benchmarkQC/source/molecules/U2/test_u2_hamiltonian.py --bond 2.48
 
-Interpretation:
-- The diagonalization energy is the *exact* sector ground energy of the saved qubit Hamiltonian.
-- The stored `casci_energies[i]` should match within numerical tolerance.
+Notes:
+- The reference is validated in the six-electron singlet sector. This avoids
+  comparing against an unphysical particle-number sector of the 12-qubit Hamiltonian.
 
 Docs:
 - docs/USAGE.md
@@ -48,8 +46,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--npz",
-        default="datasets/benchmarkQC/N2/N2_PES_H1.npz",
-        help="Path to the saved PES npz (default: datasets/benchmarkQC/N2/N2_PES_H1.npz)",
+        default="datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz",
+        help="Path to the saved PES npz (default: datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz)",
     )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--index", type=int, help="Point index in labels/Hs arrays")
@@ -67,8 +65,8 @@ def main() -> int:
     parser.add_argument(
         "--nelec",
         type=int,
-        default=4,
-        help="Active-space electrons (default: 4 for the historical STO-6G archive)",
+        default=6,
+        help="Active-space electrons for the comparison sector (default: 6)",
     )
     parser.add_argument(
         "--spin",
@@ -79,28 +77,20 @@ def main() -> int:
 
     args = parser.parse_args()
 
-    # -------------------- Load the file (same as notebook) --------------------
     data = load_hamiltonian_npz(args.npz)
 
-    # -------------------- Choose which geometry point ------------------------
     i = pick_point_index(data.labels, index=args.index, bond=args.bond)
     chosen_label = float(data.labels[i])
 
-    # -------------------- Pull out the saved Hamiltonian ---------------------
-    # `hs[i]` is an array of PennyLane terms (object dtype).
     terms = data.hs[i]
-
-    # -------------------- Diagonalize (exact for this saved qubit Hamiltonian) ------
     e0, method = ground_energy_from_terms(terms, nelec=args.nelec, spin=args.spin)
 
-    # -------------------- Compare to stored reference energy -----------------
     e_ref = float(data.ref_energies[i])
     abs_diff = abs(e0 - e_ref)
 
-    # -------------------- Pretty output --------------------------------------
     print(f"NPZ: {args.npz}")
     print(f"Chosen point index:         {i}")
-    print(f"Point label (bond length):  {chosen_label}")
+    print(f"Point label:                {chosen_label}")
     print(f"Diagonalization method:     {method}")
     print(f"Stored CASCI energy (Ha):   {e_ref:.12f}")
     print(f"Diag ground energy (Ha):    {e0:.12f}")

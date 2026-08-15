@@ -9,10 +9,12 @@ BenchmarkQC/
 │   ├── catalog.json          # authoritative inventory and checksums
 │   ├── benchmarkQC/
 │   │   ├── systems/<case_id>/ # Hamiltonian, inputs, and metadata
-│   │   └── source families/   # provenance, builders, and validation material
+│   │   ├── reference/         # scalar results and generic inventory
+│   │   └── source/            # common manifest and source materials
 │   └── molvqe21/
 │       ├── systems/<case_id>/ # Hamiltonian, inputs, and metadata
-│       └── source manifests/  # corrected-cache provenance and builders
+│       ├── reference/         # scalar results and generic inventory
+│       └── source/            # common manifest and source materials
 ├── src/benchmark_qc/         # installable Python package
 ├── tests/                    # repository-wide regression tests
 ├── docs/                     # user, format, API, and release documentation
@@ -55,3 +57,22 @@ active-space data sufficient to regenerate the Jordan–Wigner Hamiltonian.
 Metadata records the active space, geometry, provenance, checksums, and scalar
 reference results. A source that does not publish a scalar is represented by
 an explicit `null` and status rather than a guessed or newly substituted value.
+
+## Family-root contract
+
+The two dataset families intentionally expose the same root organization:
+
+```text
+<family>/
+├── systems/
+├── reference/
+│   ├── reference_results.json
+│   └── inventory.json
+├── source/
+│   └── manifest.csv
+├── metadata.json
+└── README.md
+```
+
+Family-specific provenance remains below `source/`; it does not create a
+second public dataset layout.

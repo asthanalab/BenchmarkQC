@@ -18,7 +18,7 @@ from benchmark_qc.integral_dataset import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATASET_ROOT = ROOT / "datasets" / "benchmarkQC" / "C2" / "cas8e8o_augccpvtz"
+DATASET_ROOT = ROOT / "datasets" / "benchmarkQC" / "source" / "molecules" / "C2" / "cas8e8o_augccpvtz"
 METADATA = json.loads((DATASET_ROOT / "metadata.json").read_text(encoding="utf-8"))
 VARIANT = METADATA["variants"]["casci_natural_orbitals"]
 

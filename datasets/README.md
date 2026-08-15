@@ -15,6 +15,9 @@ checksum where applicable.
   `systems/<case_id>/hamiltonian.npz`,
   `systems/<case_id>/inputs/source_integrals.npz`, and
   `systems/<case_id>/metadata.json`.
+- Both family roots also use the same public organization: `systems/` for
+  runnable cases, `reference/` for scalar results and inventory, and `source/`
+  for the common manifest and provenance materials.
 - Every catalog entry has a `data_path` Hamiltonian and an
   `integral_data_path` normalized spatial integral archive. Historical
   Hamiltonian-only BenchmarkQC cases use a documented JW-equivalent

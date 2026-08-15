@@ -1,0 +1,415 @@
+{
+  "case_count": 51,
+  "cases": [
+    {
+      "case_id": "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000",
+      "hamiltonian_path": "systems/c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000/hamiltonian.npz",
+      "integral_data_path": "systems/c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "c2_cas8e8o_augccpvtz_equilibrium_r1p2430",
+      "hamiltonian_path": "systems/c2_cas8e8o_augccpvtz_equilibrium_r1p2430/hamiltonian.npz",
+      "integral_data_path": "systems/c2_cas8e8o_augccpvtz_equilibrium_r1p2430/inputs/source_integrals.npz",
+      "metadata_path": "systems/c2_cas8e8o_augccpvtz_equilibrium_r1p2430/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "c2h4_cas2e2o_augccpvdz_planar_0deg",
+      "hamiltonian_path": "systems/c2h4_cas2e2o_augccpvdz_planar_0deg/hamiltonian.npz",
+      "integral_data_path": "systems/c2h4_cas2e2o_augccpvdz_planar_0deg/inputs/source_integrals.npz",
+      "metadata_path": "systems/c2h4_cas2e2o_augccpvdz_planar_0deg/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "c2h4_cas2e2o_augccpvdz_twisted_90deg",
+      "hamiltonian_path": "systems/c2h4_cas2e2o_augccpvdz_twisted_90deg/hamiltonian.npz",
+      "integral_data_path": "systems/c2h4_cas2e2o_augccpvdz_twisted_90deg/inputs/source_integrals.npz",
+      "metadata_path": "systems/c2h4_cas2e2o_augccpvdz_twisted_90deg/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "ch2_cas6e6o_augccpvtz_bent_102deg",
+      "hamiltonian_path": "systems/ch2_cas6e6o_augccpvtz_bent_102deg/hamiltonian.npz",
+      "integral_data_path": "systems/ch2_cas6e6o_augccpvtz_bent_102deg/inputs/source_integrals.npz",
+      "metadata_path": "systems/ch2_cas6e6o_augccpvtz_bent_102deg/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "ch2_cas6e6o_augccpvtz_open_140deg",
+      "hamiltonian_path": "systems/ch2_cas6e6o_augccpvtz_open_140deg/hamiltonian.npz",
+      "integral_data_path": "systems/ch2_cas6e6o_augccpvtz_open_140deg/inputs/source_integrals.npz",
+      "metadata_path": "systems/ch2_cas6e6o_augccpvtz_open_140deg/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10",
+      "hamiltonian_path": "systems/fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10/hamiltonian.npz",
+      "integral_data_path": "systems/fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10/inputs/source_integrals.npz",
+      "metadata_path": "systems/fe2s2_cas10e10o_anorccvdz_mb_bridge_stretched_1p10/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fe2s2_cas10e10o_anorccvdz_mb_published_geometry",
+      "hamiltonian_path": "systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/hamiltonian.npz",
+      "integral_data_path": "systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/inputs/source_integrals.npz",
+      "metadata_path": "systems/fe2s2_cas10e10o_anorccvdz_mb_published_geometry/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fe2s2_chan30e20o_historical_rhf_cas4e4o_point0",
+      "hamiltonian_path": "systems/fe2s2_chan30e20o_historical_rhf_cas4e4o_point0/hamiltonian.npz",
+      "integral_data_path": "systems/fe2s2_chan30e20o_historical_rhf_cas4e4o_point0/inputs/source_integrals.npz",
+      "metadata_path": "systems/fe2s2_chan30e20o_historical_rhf_cas4e4o_point0/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fe2s2_chan30e20o_historical_rhf_cas6e6o_point0",
+      "hamiltonian_path": "systems/fe2s2_chan30e20o_historical_rhf_cas6e6o_point0/hamiltonian.npz",
+      "integral_data_path": "systems/fe2s2_chan30e20o_historical_rhf_cas6e6o_point0/inputs/source_integrals.npz",
+      "metadata_path": "systems/fe2s2_chan30e20o_historical_rhf_cas6e6o_point0/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fe2s2_chan30e20o_historical_rhf_cas8e6o_point0",
+      "hamiltonian_path": "systems/fe2s2_chan30e20o_historical_rhf_cas8e6o_point0/hamiltonian.npz",
+      "integral_data_path": "systems/fe2s2_chan30e20o_historical_rhf_cas8e6o_point0/inputs/source_integrals.npz",
+      "metadata_path": "systems/fe2s2_chan30e20o_historical_rhf_cas8e6o_point0/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0",
+      "hamiltonian_path": "systems/fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0/hamiltonian.npz",
+      "integral_data_path": "systems/fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0/inputs/source_integrals.npz",
+      "metadata_path": "systems/fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680",
+      "hamiltonian_path": "systems/feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680/hamiltonian.npz",
+      "integral_data_path": "systems/feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680/inputs/source_integrals.npz",
+      "metadata_path": "systems/feh_cas9e10o_augccpvtzdk_sfx2c_equilibrium_r1p5680/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000",
+      "hamiltonian_path": "systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/hamiltonian.npz",
+      "integral_data_path": "systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/inputs/source_integrals.npz",
+      "metadata_path": "systems/feh_cas9e10o_augccpvtzdk_sfx2c_stretched_r2p3000/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r1p8260",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r1p8260/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r1p8260/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r1p8260/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r2p0000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r2p0000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r2p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r2p0000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r2p2000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r2p2000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r2p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r2p2000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r2p4000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r2p4000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r2p4000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r2p4000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r2p6000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r2p6000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r2p6000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r2p6000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r2p8000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r2p8000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r2p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r2p8000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r3p0000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r3p0000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r3p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r3p0000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r3p2000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r3p2000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r3p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r3p2000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r3p6000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r3p6000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r3p6000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r3p6000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r3p7000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r3p7000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r3p7000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r3p7000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r4p0000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r4p0000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r4p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r4p0000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r4p2000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r4p2000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r4p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r4p2000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r4p5000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r4p5000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r4p5000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r4p5000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_anorccmb_cas6e6o_r4p8000",
+      "hamiltonian_path": "systems/fes_anorccmb_cas6e6o_r4p8000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_anorccmb_cas6e6o_r4p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_anorccmb_cas6e6o_r4p8000/metadata.json",
+      "status": "existing",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170",
+      "hamiltonian_path": "systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/hamiltonian.npz",
+      "integral_data_path": "systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_cas14e10o_anorccvdzp_sfx2c_equilibrium_r2p0170/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000",
+      "hamiltonian_path": "systems/fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000/hamiltonian.npz",
+      "integral_data_path": "systems/fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/fes_cas14e10o_anorccvdzp_sfx2c_stretched_r3p0000/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas10e8o_canonical_r1p0977",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas10e8o_canonical_r1p0977/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas10e8o_canonical_r1p0977/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas10e8o_canonical_r1p0977/metadata.json",
+      "status": "current-control",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas10e8o_canonical_r2p0000",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas10e8o_canonical_r2p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas10e8o_canonical_r2p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas10e8o_canonical_r2p0000/metadata.json",
+      "status": "current-control",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r1p0977/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas10e8o_casci_natural_orbitals_r2p0000",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r2p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r2p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r2p0000/metadata.json",
+      "status": "current",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r0p8000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r0p8000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r0p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r0p8000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r1p0000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r1p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r1p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r1p0000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r1p2000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r1p2000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r1p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r1p2000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r1p4000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r1p4000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r1p4000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r1p4000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r1p6000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r1p6000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r1p6000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r1p6000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r1p8000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r1p8000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r1p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r1p8000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r2p0000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r2p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r2p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r2p0000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r2p2000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r2p2000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r2p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r2p2000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r2p4000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r2p4000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r2p4000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r2p4000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r2p6000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r2p6000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r2p6000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r2p6000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_sto6g_cas4e4o_historical_r2p8000",
+      "hamiltonian_path": "systems/n2_sto6g_cas4e4o_historical_r2p8000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_sto6g_cas4e4o_historical_r2p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_sto6g_cas4e4o_historical_r2p8000/metadata.json",
+      "status": "historical",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "o2_cas12e8o_augccpvtz_equilibrium_r1p2075",
+      "hamiltonian_path": "systems/o2_cas12e8o_augccpvtz_equilibrium_r1p2075/hamiltonian.npz",
+      "integral_data_path": "systems/o2_cas12e8o_augccpvtz_equilibrium_r1p2075/inputs/source_integrals.npz",
+      "metadata_path": "systems/o2_cas12e8o_augccpvtz_equilibrium_r1p2075/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "o2_cas12e8o_augccpvtz_stretched_r2p0000",
+      "hamiltonian_path": "systems/o2_cas12e8o_augccpvtz_stretched_r2p0000/hamiltonian.npz",
+      "integral_data_path": "systems/o2_cas12e8o_augccpvtz_stretched_r2p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/o2_cas12e8o_augccpvtz_stretched_r2p0000/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300",
+      "hamiltonian_path": "systems/u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300/hamiltonian.npz",
+      "integral_data_path": "systems/u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300/inputs/source_integrals.npz",
+      "metadata_path": "systems/u2_cas6e10o_anorccvdzp_sfx2c_equilibrium_r2p4300/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000",
+      "hamiltonian_path": "systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/hamiltonian.npz",
+      "integral_data_path": "systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/u2_cas6e10o_anorccvdzp_sfx2c_stretched_r2p8000/metadata.json",
+      "status": "reconstructed-si",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "u2_sfx2c_anorccmb_cas6e6o_r2p4000",
+      "hamiltonian_path": "systems/u2_sfx2c_anorccmb_cas6e6o_r2p4000/hamiltonian.npz",
+      "integral_data_path": "systems/u2_sfx2c_anorccmb_cas6e6o_r2p4000/inputs/source_integrals.npz",
+      "metadata_path": "systems/u2_sfx2c_anorccmb_cas6e6o_r2p4000/metadata.json",
+      "status": "existing-partial-grid",
+      "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "u2_sfx2c_anorccmb_cas6e6o_r2p4800",
+      "hamiltonian_path": "systems/u2_sfx2c_anorccmb_cas6e6o_r2p4800/hamiltonian.npz",
+      "integral_data_path": "systems/u2_sfx2c_anorccmb_cas6e6o_r2p4800/inputs/source_integrals.npz",
+      "metadata_path": "systems/u2_sfx2c_anorccmb_cas6e6o_r2p4800/metadata.json",
+      "status": "existing-partial-grid",
+      "system": "BenchmarkQC"
+    }
+  ],
+  "dataset": "BenchmarkQC",
+  "schema": "benchmark-qc.inventory.v1"
+}

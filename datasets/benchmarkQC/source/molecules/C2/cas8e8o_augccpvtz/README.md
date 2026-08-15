@@ -24,8 +24,8 @@ Files:
 From the repository root, verify reconstruction and the physical sector with:
 
 ```sh
-python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check
-python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/test_hamiltonian.py
+python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/generate_hamiltonian.py --check
+python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/test_hamiltonian.py
 ```
 
 At this stretched geometry, the lowest state in the unrestricted fixed-M_S=0
@@ -37,8 +37,8 @@ Rebuilding the portable input from the immutable QCANT artifacts requires both
 the natural-orbital input and its parent active-HF-frame input:
 
 ```sh
-python datasets/benchmarkQC/C2/cas8e8o_augccpvtz/build_source_archive.py \
+python datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/build_source_archive.py \
   --natural-input <qcant-natural-input.npz> \
   --parent-input <qcant-parent-input.npz> \
-  --output datasets/benchmarkQC/C2/cas8e8o_augccpvtz/casci_natural_orbitals/inputs/stretched_r2p2000.npz
+  --output datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/casci_natural_orbitals/inputs/stretched_r2p2000.npz
 ```

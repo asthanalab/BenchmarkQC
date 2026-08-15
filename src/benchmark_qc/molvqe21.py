@@ -13,7 +13,7 @@ from .paths import MOLVQE21_ROOT
 
 
 ROOT = MOLVQE21_ROOT
-MANIFEST_PATH = ROOT / "manifest.csv"
+MANIFEST_PATH = ROOT / "source" / "manifest.csv"
 
 
 @dataclass(frozen=True)
@@ -41,15 +41,15 @@ def _load_cases() -> dict[str, MolVQE21Case]:
         row["case_id"]: MolVQE21Case(
             case_id=row["case_id"],
             hamiltonian_path=ROOT / row["hamiltonian_path"],
-            integrals_path=ROOT / row["integrals_path"],
+            integrals_path=ROOT / row["integral_data_path"],
             metadata_path=ROOT / row["metadata_path"],
             active_electrons=int(row["active_electrons"]),
-            active_orbitals=int(row["active_orbitals"]),
+            active_orbitals=int(row["active_spatial_orbitals"]),
             qubits=int(row["qubits"]),
             charge=int(row["charge"]),
             spin=int(row["spin"]),
             basis=row["basis"],
-            reference_energy_hartree=float(row["source_cache_reference_energy_hartree"]),
+            reference_energy_hartree=float(row["reference_energy_hartree"]),
             reference_converged=row["reference_converged"].lower() == "true",
         )
         for row in rows
