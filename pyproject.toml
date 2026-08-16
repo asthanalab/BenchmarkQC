@@ -28,6 +28,7 @@ dependencies = [
   "numpy",
   "scipy",
   "pennylane",
+  "gast>=0.6,<1",
   "pyscf",
   "basis_set_exchange",
 ]
