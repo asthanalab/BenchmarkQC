@@ -27,7 +27,7 @@ Benchmark-QC is a versioned collection of molecular quantum-computing benchmark 
 | Collection | Entries | What it contains |
 | --- | ---: | --- |
 | **BenchmarkQC** | 51 | C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2 benchmark systems |
-| **Corrected MolVQE-21** | 27 | Corrected MolVQE-21 reference cases with Hamiltonians, integral archives, and shared metadata |
+| **Corrected MolVQE-21** | 27 | Al₃⁻, BeH₂, CH₂O, CO, cyclobutadiene, FeNO²⁺, Fe(NO)(CO)₃⁻, FeO, H₄–H₁₀ chains, hexatriene, m-benzyne, magnesium porphyrin, and N₂ |
 | **Total catalog** | **78** | Point-level entries with paths, metadata, and SHA-256 checksums |
 
 Each catalog entry has a runnable Hamiltonian archive, a normalized spatial integral archive, per-system metadata, and provenance links. The catalog is the authoritative index for the checked-in data.
