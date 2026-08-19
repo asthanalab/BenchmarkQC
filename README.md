@@ -20,14 +20,14 @@
   <a href="https://github.com/AsthanaLab/BenchmarkQC/issues">Report an issue</a>
 </p>
 
-Benchmark-QC is a versioned collection of molecular quantum-computing benchmark Hamiltonians and portable active-space integral archives. It brings the original BenchmarkQC systems and the corrected MolVQE-21 reference cases into one consistent, checksum-pinned repository.
+Benchmark-QC is a versioned collection of molecular quantum-computing benchmark Hamiltonians and portable active-space integral archives. It brings the original BenchmarkQC systems and the MolVQE-21 reference cases into one consistent, checksum-pinned repository.
 
 ## At a glance
 
 | Collection | Entries | What it contains |
 | --- | ---: | --- |
 | **BenchmarkQC** | 51 | C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2 benchmark systems |
-| **Corrected MolVQE-21** | 27 | Al₃⁻, BeH₂, CH₂O, CO, cyclobutadiene, FeNO²⁺, Fe(NO)(CO)₃⁻, FeO, H₄–H₁₀ chains, hexatriene, m-benzyne, magnesium porphyrin, and N₂ |
+| ** MolVQE-21** | 27 | Al₃⁻, BeH₂, CH₂O, CO, cyclobutadiene, FeNO²⁺, Fe(NO)(CO)₃⁻, FeO, H₄–H₁₀ chains, hexatriene, m-benzyne, magnesium porphyrin, and N₂ |
 | **Total catalog** | **78** | Point-level entries with paths, metadata, and SHA-256 checksums |
 
 Each catalog entry has a runnable Hamiltonian archive, a normalized spatial integral archive, per-system metadata, and provenance links. The catalog is the authoritative index for the checked-in data.
@@ -45,7 +45,7 @@ python -m pip install -e .
 python -m pytest -q
 ```
 
-Load a corrected MolVQE-21 case directly from the package:
+Load a MolVQE-21 case directly from the package:
 
 ```python
 from benchmark_qc.molvqe21 import list_cases, load_hamiltonian, load_source_integrals
@@ -76,7 +76,7 @@ BenchmarkQC/
 │   │   ├── reference/                # Scalar reference results and inventories
 │   │   └── source/                   # Shared manifest, provenance, and builders
 │   └── molvqe21/
-│       ├── systems/                  # 27 corrected MolVQE-21 point systems
+│       ├── systems/                  # 27  MolVQE-21 point systems
 │       ├── reference/                # Reference results and inventories
 │       └── source/                   # Manifests, overrides, and dataset builders
 ├── docs/                             # Usage, API, formats, audits, and validation
@@ -115,7 +115,7 @@ The GitHub Actions workflow runs the test suite on Python 3.11 and 3.12, checks 
 
 ## Citation
 
-If you use the BenchmarkQC collection, cite [*Chemically decisive benchmarks on the path to quantum utility*](https://ui.adsabs.harvard.edu/abs/2026arXiv260110813P/abstract). If you use the corrected MolVQE-21 collection, cite [*Exponential Scaling Barriers for Variational Quantum Eigensolvers*](https://arxiv.org/abs/2603.13073), which introduces the MolVQE-21 benchmark set.
+If you use the BenchmarkQC collection, cite [*Chemically decisive benchmarks on the path to quantum utility*](https://ui.adsabs.harvard.edu/abs/2026arXiv260110813P/abstract). If you use the MolVQE-21 collection, cite [*Exponential Scaling Barriers for Variational Quantum Eigensolvers*](https://arxiv.org/abs/2603.13073), which introduces the MolVQE-21 benchmark set.
 
 ```bibtex
 @misc{Sundar2026ChemicallyDecisiveBenchmarks,
