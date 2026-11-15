@@ -1,0 +1,277 @@
+{
+  "status": "passed",
+  "points": [
+    {
+      "geometry_id": "r0p8000",
+      "R": 0.8,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.47777445235887,
+      "qubit_sector_energy": -108.47777445235876,
+      "matrix_max_error": 2.5579538487363607e-13,
+      "energy_error": 1.1368683772161603e-13,
+      "ao_rebuild_errors": [
+        1.021405182655144e-14,
+        6.106226635438361e-16,
+        1.4210854715202004e-14
+      ],
+      "mo_orthogonality_error": 2.90878432451791e-14,
+      "spin_square": -3.3306690738754696e-15,
+      "pauli_terms": 451,
+      "sha256": {
+        "hamiltonian.npz": "cacac541f03827ee167d56eb1ff026edf2fa4620547e5ace9df366f9016150b6",
+        "source_integrals.npz": "915a7dbb7a794f67f2336c5f9c2fc81b6a37e00ab158d38bb528048114f09e30"
+      }
+    },
+    {
+      "geometry_id": "r1p0000",
+      "R": 1.0,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -109.03491063870848,
+      "qubit_sector_energy": -109.03491063870887,
+      "matrix_max_error": 3.836930773104541e-13,
+      "energy_error": 3.836930773104541e-13,
+      "ao_rebuild_errors": [
+        4.440892098500626e-15,
+        8.881784197001252e-16,
+        5.684341886080802e-14
+      ],
+      "mo_orthogonality_error": 1.3877787807814457e-14,
+      "spin_square": 1.9984014443252818e-15,
+      "pauli_terms": 447,
+      "sha256": {
+        "hamiltonian.npz": "79b2f340ef60dd9ecbb1174866f0fe56e1839f26247a83ae1c66aa6cb475644b",
+        "source_integrals.npz": "b401649a99f76c2f20ff6f2ba21bdad964947cc9e8dfda6296b8612fb3e09e97"
+      }
+    },
+    {
+      "geometry_id": "r1p2000",
+      "R": 1.2,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -109.06768078671348,
+      "qubit_sector_energy": -109.06768078671344,
+      "matrix_max_error": 1.4210854715202004e-13,
+      "energy_error": 4.263256414560601e-14,
+      "ao_rebuild_errors": [
+        1.7759185025900821e-15,
+        8.881784197001252e-16,
+        2.842170943040401e-14
+      ],
+      "mo_orthogonality_error": 2.220446049250313e-15,
+      "spin_square": -1.5543122344752192e-15,
+      "pauli_terms": 1811,
+      "sha256": {
+        "hamiltonian.npz": "fc2ad940acc22f432481d3289ef0489b64d6e5874dd7c05250067d93d4ffd071",
+        "source_integrals.npz": "52c081bd2e5f5591b38b67d4d941b82f1a3b844b42b7ad34fd9a6b9aec745830"
+      }
+    },
+    {
+      "geometry_id": "r1p4000",
+      "R": 1.4,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.975473954846,
+      "qubit_sector_energy": -108.97547395484618,
+      "matrix_max_error": 2.7000623958883807e-13,
+      "energy_error": 1.8474111129762605e-13,
+      "ao_rebuild_errors": [
+        1.3322676295501878e-15,
+        2.220446049250313e-16,
+        0.0
+      ],
+      "mo_orthogonality_error": 2.4424906541753444e-15,
+      "spin_square": -1.1102230246251565e-15,
+      "pauli_terms": 1691,
+      "sha256": {
+        "hamiltonian.npz": "71f66db0b9e0144c257133b1e725ada698dbe73be3671a714dd1ad28514d4906",
+        "source_integrals.npz": "93c0a621f1bbacf029b0b94e28c3c9e4ed7dad95a081acd216865a97888f682a"
+      }
+    },
+    {
+      "geometry_id": "r1p6000",
+      "R": 1.6,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.87972169042405,
+      "qubit_sector_energy": -108.8797216904239,
+      "matrix_max_error": 3.268496584496461e-13,
+      "energy_error": 1.4210854715202004e-13,
+      "ao_rebuild_errors": [
+        2.220446049250313e-15,
+        2.220446049250313e-16,
+        2.842170943040401e-14
+      ],
+      "mo_orthogonality_error": 2.55351295663786e-15,
+      "spin_square": 5.10702591327572e-15,
+      "pauli_terms": 1807,
+      "sha256": {
+        "hamiltonian.npz": "beedbcafdc6f1d99d9f1d1c20de8cc859bcb25c441b9cbd4401639ee7f3a3e6a",
+        "source_integrals.npz": "c253ab561c0651d6649fe9b7f6e24e94cf1f5a524688dc798159fc894bdf3c44"
+      }
+    },
+    {
+      "geometry_id": "r1p8000",
+      "R": 1.8,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.81742702474845,
+      "qubit_sector_energy": -108.81742702474851,
+      "matrix_max_error": 1.1368683772161603e-13,
+      "energy_error": 5.684341886080802e-14,
+      "ao_rebuild_errors": [
+        8.881784197001252e-16,
+        2.220446049250313e-16,
+        0.0
+      ],
+      "mo_orthogonality_error": 1.9984014443252818e-15,
+      "spin_square": -3.1086244689504383e-15,
+      "pauli_terms": 863,
+      "sha256": {
+        "hamiltonian.npz": "1b6e51cb34a1f60489b022eaa08bebfce3e500c3ef02e86b436cf086f444496d",
+        "source_integrals.npz": "9e4b8b0b128ea6ba4ba257e2575d95fe0c37dc5cf5b8540f7ad397067b35cbe2"
+      }
+    },
+    {
+      "geometry_id": "r2p0000",
+      "R": 2.0,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.78884275207731,
+      "qubit_sector_energy": -108.78884275207693,
+      "matrix_max_error": 5.115907697472721e-13,
+      "energy_error": 3.836930773104541e-13,
+      "ao_rebuild_errors": [
+        8.881784197001252e-16,
+        2.220446049250313e-16,
+        5.684341886080802e-14
+      ],
+      "mo_orthogonality_error": 2.55351295663786e-15,
+      "spin_square": -1.7763568394002505e-15,
+      "pauli_terms": 1627,
+      "sha256": {
+        "hamiltonian.npz": "f42353900a4b590008cee9abac2be432e8148816d755444a0dfd32b8c50d4069",
+        "source_integrals.npz": "bbfbe8548f9717146bf8472e0aadde29aa11edea610601e7338107ea2006580d"
+      }
+    },
+    {
+      "geometry_id": "r2p2000",
+      "R": 2.2,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.77984594433326,
+      "qubit_sector_energy": -108.77984594433306,
+      "matrix_max_error": 2.8421709430404007e-13,
+      "energy_error": 1.9895196601282805e-13,
+      "ao_rebuild_errors": [
+        8.881784197001252e-16,
+        1.4385668762988135e-16,
+        2.842170943040401e-14
+      ],
+      "mo_orthogonality_error": 2.3314683517128287e-15,
+      "spin_square": -4.218847493575595e-15,
+      "pauli_terms": 1807,
+      "sha256": {
+        "hamiltonian.npz": "37da29e56611cb9b560e828640c9b9267f7d58756d1a801f5d16d789f59699bf",
+        "source_integrals.npz": "430c8077863a0ca2600b292032a22348b4874c88983502e63d3e4e745af33e5a"
+      }
+    },
+    {
+      "geometry_id": "r2p4000",
+      "R": 2.4,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.77766098263982,
+      "qubit_sector_energy": -108.77766098264006,
+      "matrix_max_error": 2.7000623958883807e-13,
+      "energy_error": 2.4158453015843406e-13,
+      "ao_rebuild_errors": [
+        4.440892098500626e-16,
+        1.6653345369377348e-16,
+        2.842170943040401e-14
+      ],
+      "mo_orthogonality_error": 1.9984014443252818e-15,
+      "spin_square": 2.220446049250313e-16,
+      "pauli_terms": 851,
+      "sha256": {
+        "hamiltonian.npz": "0d81243c9c72cf4cf0be7e669c5a28d5ecf53802bd239416cec55070a38b075a",
+        "source_integrals.npz": "abf3015499d23d214b064a6109de1329656e330b9d6cc54c54c5c1eb37b7653f"
+      }
+    },
+    {
+      "geometry_id": "r2p5000",
+      "R": 2.5,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.7773348603862,
+      "qubit_sector_energy": -108.77733486038633,
+      "matrix_max_error": 2.2737367544323206e-13,
+      "energy_error": 1.2789769243681803e-13,
+      "ao_rebuild_errors": [
+        5.030203820039725e-16,
+        1.6653345369377348e-16,
+        2.842170943040401e-14
+      ],
+      "mo_orthogonality_error": 1.7763568394002505e-15,
+      "spin_square": -1.1102230246251565e-15,
+      "pauli_terms": 851,
+      "sha256": {
+        "hamiltonian.npz": "1be6ede08cbb5820f5a614b7a7858ff0fa555b96de07663f71ceb4af83117d68",
+        "source_integrals.npz": "66a6a098bf4cd673a206f87dc0d67520e79d503db6f538f72906f22b6c4b48cf"
+      }
+    },
+    {
+      "geometry_id": "r2p8000",
+      "R": 2.8,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.77705865269228,
+      "qubit_sector_energy": -108.77705865269242,
+      "matrix_max_error": 1.4210854715202004e-13,
+      "energy_error": 1.4210854715202004e-13,
+      "ao_rebuild_errors": [
+        4.853871482263933e-16,
+        1.1102230246251565e-16,
+        1.4210854715202004e-14
+      ],
+      "mo_orthogonality_error": 1.2988973166051674e-15,
+      "spin_square": 6.661338147750939e-16,
+      "pauli_terms": 1819,
+      "sha256": {
+        "hamiltonian.npz": "1f64a1019494c375b4ed413878a2ec071d215cb5769ca0bf00c6cc3ca370d44a",
+        "source_integrals.npz": "80bf8219aec6a447a9d6446661feec3a11dd064d0b3ab1d459f35d16dc1a5036"
+      }
+    },
+    {
+      "geometry_id": "r3p0000",
+      "R": 3.0,
+      "status": "passed",
+      "sector_dimension": 400,
+      "casci_energy": -108.77701107547368,
+      "qubit_sector_energy": -108.77701107547396,
+      "matrix_max_error": 2.984279490192421e-13,
+      "energy_error": 2.8421709430404007e-13,
+      "ao_rebuild_errors": [
+        6.279862779014494e-16,
+        1.6653345369377348e-16,
+        1.4210854715202004e-14
+      ],
+      "mo_orthogonality_error": 2.3314683517128287e-15,
+      "spin_square": -2.6645352591003757e-15,
+      "pauli_terms": 1819,
+      "sha256": {
+        "hamiltonian.npz": "10fcc0cf7cbe2861efa0b03fc8bfa958fee639137c4630e570d7463f85e00ba5",
+        "source_integrals.npz": "b8c8385ecce3576d2cb4b71b22ea93a107600ec9a842995c5269aea605401ae8"
+      }
+    }
+  ],
+  "software": {
+    "pennylane": "0.37.0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pyscf": "2.11.0"
+  },
+  "source_sha256": "cbb07e453e940b22a9dffd4f24fdd9e2f1eb66738f440dc24b44713cfc0dff09",
+  "interpretation": "Exact agreement of deposited integrals, Pauli representation and CASCI; not proof of identity with missing original Figure 1 archive."
+}

@@ -1,7 +1,7 @@
 {
   "schema": "benchmark-qc.reference-results.v1",
   "description": "Scalar CASCI, CISD, CCSD, R\u00e9nyi-0.25, and two-body-cumulant records for every BenchmarkQC point-level system.",
-  "case_count": 51,
+  "case_count": 63,
   "cases": {
     "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000": {
       "schema": "benchmark-qc.scalar-reference-results.v1",
@@ -959,6 +959,258 @@
           "sha256": "1ff183f1e0b1ffef1ca8903b0a71267ca977538d0f89f6425e80449d226c9d89"
         }
       }
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r0p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.47777445235887,
+      "cisd_energy_hartree": -108.47624071474281,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 2.8717501941572476,
+      "cumulant_C2": 0.059798493799072976,
+      "N92": 1,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r0p8000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -8.881784197001252e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -109.03491063870848,
+      "cisd_energy_hartree": -109.03003476474534,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 3.045616386821777,
+      "cumulant_C2": 0.10124781199768758,
+      "N92": 1,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r1p0000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": 8.881784197001252e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -109.06768078671348,
+      "cisd_energy_hartree": -109.05434005605052,
+      "ccsd_energy_hartree": -109.06464726295292,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 2.903460290852784,
+      "cumulant_C2": 0.20671516250326702,
+      "N92": 2,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r1p2000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -2.886579864025407e-15
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p4000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.975473954846,
+      "cisd_energy_hartree": -108.94555258891228,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 3.2019146095190436,
+      "cumulant_C2": 0.41359920726864535,
+      "N92": 4,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r1p4000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -6.661338147750939e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p6000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.87972169042405,
+      "cisd_energy_hartree": -108.82302852740493,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 3.9567623011284003,
+      "cumulant_C2": 0.8111502859692659,
+      "N92": 14,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r1p6000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -2.886579864025407e-15
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.81742702474845,
+      "cisd_energy_hartree": -108.73727463357778,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 4.605347201318416,
+      "cumulant_C2": 1.4615816263488282,
+      "N92": 33,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r1p8000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -4.440892098500626e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.78884275207731,
+      "cisd_energy_hartree": -108.6724598613091,
+      "ccsd_energy_hartree": -108.60940598752977,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "computed",
+      "renyi_0p25_nats": 4.445439719002555,
+      "cumulant_C2": 2.1380298947734344,
+      "N92": 31,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r2p0000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -8.881784197001252e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p2000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.77984594433326,
+      "cisd_energy_hartree": -108.62128899813155,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 4.1386017417205645,
+      "cumulant_C2": 2.5615513078503342,
+      "N92": 33,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r2p2000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": 8.881784197001252e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p4000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.77766098263982,
+      "cisd_energy_hartree": -108.5798509293949,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 4.063291646958212,
+      "cumulant_C2": 2.76770150071024,
+      "N92": 33,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r2p4000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": 8.881784197001252e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p5000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.7773348603862,
+      "cisd_energy_hartree": -108.5620134271639,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 4.029019652918614,
+      "cumulant_C2": 2.8247999823395444,
+      "N92": 32,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r2p5000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": 2.4424906541753444e-15
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p8000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.77705865269228,
+      "cisd_energy_hartree": -108.52116521671098,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 4.327416886498571,
+      "cumulant_C2": 2.910826842392057,
+      "N92": 38,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r2p8000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": 6.661338147750939e-16
+    },
+    "n2_ccpvdz_cas6e6o_fixed_size_asf_r3p0000": {
+      "schema": "benchmark-qc.scalar-reference-results.v1",
+      "casci_energy_hartree": -108.77701107547368,
+      "cisd_energy_hartree": -108.52371384796292,
+      "ccsd_energy_hartree": null,
+      "cisd_status": "computed; independent dense singlet CISD diagonalization",
+      "ccsd_status": "not evaluated; only the two SI geometries require CCSD",
+      "renyi_0p25_nats": 4.017346766435752,
+      "cumulant_C2": 2.9342113141800903,
+      "N92": 32,
+      "source": {
+        "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+        "geometry_id": "r3p0000",
+        "orbital_frame": "canonical stationary active-only RHF",
+        "result_source": {
+          "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+          "release_validation": "passed"
+        }
+      },
+      "cisd_spin_square": -1.5543122344752192e-15
     }
   }
 }

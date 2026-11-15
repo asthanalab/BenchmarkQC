@@ -1,0 +1,105 @@
+{
+  "active_space": {
+    "active_electrons": 6,
+    "active_spatial_orbitals": 6,
+    "qubits": 12,
+    "spin_2S": 0
+  },
+  "active_space_variant": {
+    "orbital_basis": "canonical stationary active-only RHF",
+    "molecular_uhf": {
+      "hf_energy": -108.76940574111919,
+      "hf_converged": true,
+      "hf_internal_stable": true,
+      "hf_spin_square": 2.7576423322041475,
+      "hf_gradient_norm": 7.189171426616977e-09
+    },
+    "mapping": "Jordan-Wigner; alpha even, beta odd",
+    "total_energy_convention": "Includes nuclear repulsion and inactive doubly occupied orbitals"
+  },
+  "basis": "cc-pVDZ",
+  "charge": 0,
+  "geometry": {
+    "id": "r2p0000",
+    "bond_length_angstrom": 2.0,
+    "coordinates_angstrom": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "point_index_in_source_archive": 6,
+    "point_label": 2.0,
+    "role": "SI representative"
+  },
+  "hamiltonian": {
+    "format": "labels, Hs, casci_energies; one point",
+    "path": "datasets/benchmarkQC/systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000/hamiltonian.npz",
+    "sha256": "f42353900a4b590008cee9abac2be432e8148816d755444a0dfd32b8c50d4069"
+  },
+  "integrals": {
+    "format": "pickle-free normalized spatial active-space archive",
+    "path": "datasets/benchmarkQC/systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000/inputs/source_integrals.npz",
+    "sha256": "bbfbe8548f9717146bf8472e0aadde29aa11edea610601e7338107ea2006580d"
+  },
+  "provenance": {
+    "source_archive_path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/N2_PES_H.npz",
+    "source_archive_sha256": "346b6f469a9849244cb02a98f955765df3680d28129c5580b46ca663abaeee4c",
+    "source_catalog_id": "n2_ccpvdz_cas6e6o_fixed_size_asf",
+    "original_figure1_hamiltonian_identity_established": false,
+    "status": "CASCI reconstruction consistent with Figure 1 at image resolution",
+    "gcim_error_curve_reproduced": false
+  },
+  "reference_energy_hartree": -108.78884275207731,
+  "reference_results": {
+    "schema": "benchmark-qc.scalar-reference-results.v1",
+    "casci_energy_hartree": -108.78884275207731,
+    "cisd_energy_hartree": -108.6724598613091,
+    "ccsd_energy_hartree": -108.60940598752977,
+    "cisd_status": "computed; independent dense singlet CISD diagonalization",
+    "ccsd_status": "computed",
+    "renyi_0p25_nats": 4.445439719002555,
+    "cumulant_C2": 2.1380298947734344,
+    "N92": 31,
+    "source": {
+      "kind": "N2 Figure 1 CASCI reconstruction; SI case 18",
+      "geometry_id": "r2p0000",
+      "orbital_frame": "canonical stationary active-only RHF",
+      "result_source": {
+        "path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/selection_and_reference_records.json",
+        "release_validation": "passed"
+      }
+    },
+    "cisd_spin_square": -8.881784197001252e-16
+  },
+  "schema": "benchmark-qc.system-metadata.v1",
+  "si_validation": {
+    "passed": true,
+    "table_case": 18,
+    "representative_geometry": true,
+    "qualification": "Reconstructed Hamiltonian; original numerical Figure 1 archive unavailable"
+  },
+  "source_active_space": {
+    "natural_indices_zero_based": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "inactive_doubly_occupied_orbitals": 4,
+    "selection": "ASF fixed six-electron, six-orbital selection",
+    "chemical_character": "N 2p sigma/sigma-star and pi/pi-star",
+    "unfiltered_selection_fallback": null
+  },
+  "source_metadata_path": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/metadata.json",
+  "system": "N2",
+  "system_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000"
+}

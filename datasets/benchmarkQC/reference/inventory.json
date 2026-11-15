@@ -1,5 +1,5 @@
 {
-  "case_count": 51,
+  "case_count": 63,
   "cases": [
     {
       "case_id": "c2_augccpvtz_cas8e8o_casci_natural_orbitals_r2p2000",
@@ -272,6 +272,102 @@
       "metadata_path": "systems/n2_ccpvdz_cas10e8o_casci_natural_orbitals_r2p0000/metadata.json",
       "status": "current",
       "system": "BenchmarkQC"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r0p8000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r0p8000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r0p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r0p8000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p0000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p0000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p2000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p2000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p2000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p4000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p4000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p4000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p4000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p6000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p6000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p6000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p6000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r1p8000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p8000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r1p8000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p0000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p2000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p2000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p2000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p2000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p4000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p4000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p4000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p4000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p5000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p5000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p5000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p5000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r2p8000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p8000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p8000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r2p8000/metadata.json"
+    },
+    {
+      "case_id": "n2_ccpvdz_cas6e6o_fixed_size_asf_r3p0000",
+      "system": "BenchmarkQC",
+      "status": "reconstructed-si",
+      "hamiltonian_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r3p0000/hamiltonian.npz",
+      "integral_data_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r3p0000/inputs/source_integrals.npz",
+      "metadata_path": "systems/n2_ccpvdz_cas6e6o_fixed_size_asf_r3p0000/metadata.json"
     },
     {
       "case_id": "n2_sto6g_cas4e4o_historical_r0p8000",

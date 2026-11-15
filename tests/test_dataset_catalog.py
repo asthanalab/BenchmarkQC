@@ -31,8 +31,8 @@ def catalog() -> dict:
 def test_catalog_is_unique_and_scoped_to_checked_in_systems(catalog: dict) -> None:
     entries = catalog["datasets"]
     assert catalog["schema"] == "benchmark-qc.catalog.v2"
-    assert len(entries) == 78
-    assert sum(entry["system"] != "MolVQE21" for entry in entries) == 51
+    assert len(entries) == 90
+    assert sum(entry["system"] != "MolVQE21" for entry in entries) == 63
     assert sum(entry["system"] == "MolVQE21" for entry in entries) == 27
     ids = [entry["id"] for entry in entries]
     assert len(ids) == len(set(ids))
@@ -145,7 +145,7 @@ def test_every_catalog_entry_has_a_validated_normalized_integral_archive(catalog
     """Every point-level system must expose the same numeric input contract."""
 
     entries = catalog["datasets"]
-    assert len(entries) == 78
+    assert len(entries) == 90
     for entry in entries:
         integral_path = entry.get("integral_data_path")
         integral_sha256 = entry.get("integral_sha256")
@@ -167,7 +167,7 @@ def test_every_benchmarkqc_point_has_common_scalar_reference_results(catalog: di
     results = json.loads(results_path.read_text(encoding="utf-8"))
     assert results["schema"] == "benchmark-qc.reference-results.v1"
     benchmark_entries = [entry for entry in catalog["datasets"] if entry["system"] != "MolVQE21"]
-    assert results["case_count"] == len(benchmark_entries) == 51
+    assert results["case_count"] == len(benchmark_entries) == 63
     assert set(results["cases"]) == {entry["id"] for entry in benchmark_entries}
     required = {
         "casci_energy_hartree",
@@ -199,10 +199,14 @@ def test_si_table_i_inventory_covers_all_rows_after_reconstruction() -> None:
         for variant in inventory["variants"]
         for geometry in variant["geometry_rows"]
     ]
-    assert inventory["geometry_row_count"] == 26
-    assert len(inventory["variants"]) == 13
-    assert len(rows) == 26
-    assert sum(row["status"] == "checked_in_payload" for row in rows) == 26
+    assert inventory["geometry_row_count"] == 32
+    assert len(inventory["variants"]) == 18
+    assert len(rows) == 32
+    assert inventory["payload_summary"]["geometry_rows"] == len(rows)
+    assert inventory["payload_summary"]["checked_in_payload"] == sum(
+        row["status"] == "checked_in_payload" for row in rows
+    )
+    assert sum(row["status"] == "checked_in_payload" for row in rows) == 32
     assert sum(row["status"] == "cloud_placeholder_payload" for row in rows) == 0
     assert sum(row["status"] == "results_metadata_only" for row in rows) == 0
     catalog_ids = {

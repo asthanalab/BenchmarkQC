@@ -1,9 +1,9 @@
 {
   "schema": "benchmark-qc.si-table-i-inventory.v1",
-  "source_table": "U2response/DD-ART-06-2026-000368/submission_bundle_2026-08-12/05_supporting_data/si_unified_benchmark_table.tex",
+  "source_table": "SI v3 Table I, updated 2026-11-14",
   "source_machine_readable_records": "U2response/DD-ART-06-2026-000368/submission_bundle_Fe2S2_candidate_v2_2026-08-12/05_supporting_data/unified_benchmark_rows.json",
-  "scope": "Every molecule/active-space variant and every geometry row in SI Table I. This inventory records payload availability; it is not an application-results catalog.",
-  "geometry_row_count": 26,
+  "scope": "18 active-space models, nine molecular species, and 32 representative geometry values; full PES grids are separate catalog entries.",
+  "geometry_row_count": 32,
   "status_definitions": {
     "checked_in_payload": "A validated Hamiltonian archive is present in this repository.",
     "cloud_placeholder_payload": "A source filename is present in OneDrive but no validated payload is available.",
@@ -100,6 +100,58 @@
     },
     {
       "table_number": 5,
+      "system_id": "fe2s2_chan30e20o_historical_rhf_cas4e4o_point0",
+      "system": "Fe2S2",
+      "active_space": "CAS(4e,4o)",
+      "geometry_rows": [
+        {
+          "label": "common parent frame",
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas4e4o/Fe2S2_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 6,
+      "system_id": "fe2s2_chan30e20o_historical_rhf_cas6e6o_point0",
+      "system": "Fe2S2",
+      "active_space": "CAS(6e,6o)",
+      "geometry_rows": [
+        {
+          "label": "common parent frame",
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas6e6o/Fe2S2_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 7,
+      "system_id": "fe2s2_chan30e20o_historical_rhf_cas8e6o_point0",
+      "system": "Fe2S2",
+      "active_space": "CAS(8e,6o)",
+      "geometry_rows": [
+        {
+          "label": "common parent frame",
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/accepted/historical_cas8e6o/Fe2S2_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 8,
+      "system_id": "fe2s2_chan30e20o_vi66_rhf_nested_cas8e8o_point0",
+      "system": "Fe2S2",
+      "active_space": "CAS(8e,8o)",
+      "geometry_rows": [
+        {
+          "label": "common parent frame",
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/source/molecules/Fe2S2/cas6e6o_chan30e20o/accepted/nested_cas8e8o/Fe2S2_H.npz"
+        }
+      ]
+    },
+    {
+      "table_number": 9,
       "system_id": "u2_sfx2c_anorccmb_cas6e6o_historical",
       "system": "U2",
       "active_space": "CAS(6e,6o)",
@@ -121,7 +173,7 @@
       ]
     },
     {
-      "table_number": 6,
+      "table_number": 10,
       "system_id": "fes_cas14e10o_anorccvdzp_sfx2c",
       "system": "FeS",
       "active_space": "CAS(14e,10o)",
@@ -149,7 +201,7 @@
       ]
     },
     {
-      "table_number": 7,
+      "table_number": 11,
       "system_id": "fe2s2_cas10e10o_anorccvdz_mb",
       "system": "Fe2S2",
       "active_space": "CAS(10e,10o)",
@@ -175,7 +227,7 @@
       ]
     },
     {
-      "table_number": 8,
+      "table_number": 12,
       "system_id": "u2_cas6e10o_anorccvdzp_sfx2c",
       "system": "U2",
       "active_space": "CAS(6e,10o)",
@@ -203,7 +255,7 @@
       ]
     },
     {
-      "table_number": 9,
+      "table_number": 13,
       "system_id": "c2h4_cas2e2o_augccpvdz",
       "system": "C2H4",
       "active_space": "CAS(2e,2o)",
@@ -229,7 +281,7 @@
       ]
     },
     {
-      "table_number": 10,
+      "table_number": 14,
       "system_id": "ch2_cas6e6o_augccpvtz",
       "system": "CH2",
       "active_space": "CAS(6e,6o)",
@@ -255,7 +307,7 @@
       ]
     },
     {
-      "table_number": 11,
+      "table_number": 15,
       "system_id": "c2_cas8e8o_augccpvtz",
       "system": "C2",
       "active_space": "CAS(8e,8o)",
@@ -280,7 +332,7 @@
       ]
     },
     {
-      "table_number": 12,
+      "table_number": 16,
       "system_id": "o2_cas12e8o_augccpvtz",
       "system": "O2",
       "active_space": "CAS(12e,8o)",
@@ -308,7 +360,7 @@
       ]
     },
     {
-      "table_number": 13,
+      "table_number": 17,
       "system_id": "feh_cas9e10o_augccpvtzdk_sfx2c",
       "system": "FeH",
       "active_space": "CAS(9e,10o)",
@@ -334,12 +386,36 @@
           "si_validation": "recomputed CASCI agrees within 1e-8 Eh"
         }
       ]
+    },
+    {
+      "table_number": 18,
+      "system_id": "n2_ccpvdz_cas6e6o_fixed_size_asf",
+      "system": "N2",
+      "active_space": "CAS(6e,6o)",
+      "basis_and_relativistic_treatment": "cc-pVDZ; nonrelativistic",
+      "active_orbital_definition": "N 2p sigma/sigma-star and pi/pi-star; ASF natural orbitals 4--9",
+      "geometry_rows": [
+        {
+          "label": "r1p2000",
+          "bond_length_angstrom": 1.2,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/N2_PES_H.npz"
+        },
+        {
+          "label": "r2p0000",
+          "bond_length_angstrom": 2.0,
+          "status": "checked_in_payload",
+          "source_archive": "datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/N2_PES_H.npz"
+        }
+      ]
     }
   ],
   "payload_summary": {
-    "geometry_rows": 26,
-    "checked_in_payload": 26,
+    "geometry_rows": 32,
+    "checked_in_payload": 32,
     "cloud_placeholder_payload": 0,
     "results_metadata_only": 0
-  }
+  },
+  "model_count": 18,
+  "molecular_species_count": 9
 }

@@ -9,7 +9,7 @@
   <a href="https://github.com/AsthanaLab/BenchmarkQC/actions/workflows/python-package.yml"><img src="https://github.com/AsthanaLab/BenchmarkQC/actions/workflows/python-package.yml/badge.svg" alt="CI"></a>
   <a href="https://pypi.org/project/benchmark-qc/"><img src="https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-BSD--3--Clause-0A7BBB.svg" alt="BSD 3-Clause license"></a>
-  <a href="datasets/catalog.json"><img src="https://img.shields.io/badge/dataset%20entries-78-6E56CF.svg" alt="78 dataset entries"></a>
+  <a href="datasets/catalog.json"><img src="https://img.shields.io/badge/dataset%20entries-90-6E56CF.svg" alt="90 dataset entries"></a>
 </p>
 
 <p align="center">
@@ -26,9 +26,9 @@ Benchmark-QC is a versioned collection of molecular quantum-computing benchmark 
 
 | Collection | Entries | What it contains |
 | --- | ---: | --- |
-| **BenchmarkQC** | 51 | C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2 benchmark systems |
+| **BenchmarkQC** | 63 | C2, C2H4, CH2, Fe2S2, FeH, FeS, N2, O2, and U2 benchmark systems |
 | ** MolVQE-21** | 27 | Al₃⁻, BeH₂, CH₂O, CO, cyclobutadiene, FeNO²⁺, Fe(NO)(CO)₃⁻, FeO, H₄–H₁₀ chains, hexatriene, m-benzyne, magnesium porphyrin, and N₂ |
-| **Total catalog** | **78** | Point-level entries with paths, metadata, and SHA-256 checksums |
+| **Total catalog** | **90** | Point-level entries with paths, metadata, and SHA-256 checksums |
 
 Each catalog entry has a runnable Hamiltonian archive, a normalized spatial integral archive, per-system metadata, and provenance links. The catalog is the authoritative index for the checked-in data.
 
@@ -70,9 +70,9 @@ python -m pip install benchmark-qc
 BenchmarkQC/
 ├── src/benchmark_qc/                 # Importable loaders and validation utilities
 ├── datasets/
-│   ├── catalog.json                  # Authoritative 78-entry dataset index
+│   ├── catalog.json                  # Authoritative 90-entry dataset index
 │   ├── benchmarkQC/
-│   │   ├── systems/                  # 51 runnable BenchmarkQC point systems
+│   │   ├── systems/                  # 63 runnable BenchmarkQC point systems
 │   │   ├── reference/                # Scalar reference results and inventories
 │   │   └── source/                   # Shared manifest, provenance, and builders
 │   └── molvqe21/

@@ -1,0 +1,58 @@
+{
+  "system": "N2",
+  "basis": "cc-pVDZ",
+  "active_electrons": 6,
+  "active_spatial_orbitals": 6,
+  "geometry_grid_angstrom": [
+    0.8,
+    1.0,
+    1.2,
+    1.4,
+    1.6,
+    1.8,
+    2.0,
+    2.2,
+    2.4,
+    2.5,
+    2.8,
+    3.0
+  ],
+  "construction_software": {
+    "pyscf": "2.5.0",
+    "numpy": "1.26.3",
+    "scipy": "1.12.0",
+    "active-space-finder": "2.0.1"
+  },
+  "independent_validation_software": {
+    "pyscf": "2.11.0",
+    "pennylane": "0.37.0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "status": "validated reconstruction; original numerical Figure 1 archive unavailable",
+  "original_inputs_recovered": false,
+  "public_catalog_updated": true,
+  "exact_regeneration": "python -m benchmark_qc.n2_cas6e6o --repository .",
+  "reconstruction_route": "ASF 2.0.1 MP2-natural preselection, fixed-size exact-FCI selection, active-space RHF rotation",
+  "reselection_warning": "Rerunning SCF/ASF can reach different solutions; saved full MO coefficients define these new Hamiltonians.",
+  "fermionic_integral_drop_threshold": 1e-14,
+  "orbital_basis": "canonical stationary active-only RHF rotation of the selected natural-orbital space",
+  "reference_frame_for_entropy_and_truncated_methods": "same as deposited Hamiltonian",
+  "ncore": 4,
+  "selected_natural_orbitals_zero_based": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "parent_reference": "internally stable molecular UHF, followed along the geometry grid",
+  "si_table_case": 18,
+  "si_representative_geometries_angstrom": [
+    1.2,
+    2.0
+  ],
+  "combined_hamiltonian_archive": "N2_PES_H.npz",
+  "validation": "hamiltonian_validation.json"
+}

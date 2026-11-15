@@ -1,0 +1,26 @@
+{
+  "points": 12,
+  "CAS": "6 electrons in 6 spatial orbitals; 4 frozen doubly occupied orbitals",
+  "protocol": "Density continuation with internal-stability checks; DF-UMP2 natural orbitals; fixed-size ASF; CASCI. All calculations on desktop.",
+  "active_natural_orbital_indices_zero_based": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "fallback_note": "At 0.8 Angstrom, ASF fixed-size selection uses its unfiltered fallback; this is retained explicitly.",
+  "forward_reverse_max_energy_difference_Ha": 1.504218971604132e-09,
+  "max_CASCI_residual": 1.4648247611490352e-14,
+  "max_absolute_CASCI_spin_square": 3.3306690738754696e-15,
+  "max_BSE_CASCI_energy_difference_Ha": 8.526512829121202e-14,
+  "max_BSE_transformed_hcore_difference": 2.842170943040401e-14,
+  "max_BSE_transformed_eri_difference": 8.104628079763643e-15,
+  "max_absolute_difference_from_paper_raster_mEh": 0.34945487206528014,
+  "all_within_paper_reading_uncertainty": true,
+  "exact_original_Hamiltonian_identity_established": false,
+  "limitation": "The original numeric PES/integral archive is not recovered. Image agreement is not proof of coefficient-by-coefficient identity or 1e-7 Ha agreement.",
+  "no_GCIM_in_this_test": true,
+  "no_fitted_energy_shifts": true
+}

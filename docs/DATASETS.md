@@ -1,7 +1,7 @@
 # Dataset catalog
 
-`datasets/catalog.json` is the machine-readable source of truth for the 78
-checked-in point-level Hamiltonian archives: 51 BenchmarkQC systems and 27
+`datasets/catalog.json` indexes the 90
+checked-in point-level Hamiltonian archives: 63 BenchmarkQC systems and 27
 corrected MolVQE-21 systems. SHA-256 checksums allow each binary file to be
 verified before use. Each geometry and active-space/orbital variant is a
 separate catalog row.
@@ -10,6 +10,7 @@ separate catalog row.
 | --- | --- | --- | --- |
 | C2 aug-cc-pVTZ CAS(8e,8o), state-specific CASCI natural orbitals | 2.2000 Angstrom | Current | `datasets/benchmarkQC/source/molecules/C2/cas8e8o_augccpvtz/casci_natural_orbitals/C2_PES_H.npz` |
 | N2 STO-6G CAS(4e,4o) | 11 points, 0.8-2.8 Angstrom | Historical, preserved unchanged | `datasets/benchmarkQC/source/molecules/N2/N2_PES_H1.npz` |
+| N2 cc-pVDZ CAS(6e,6o), ASF-selected space | 12 points, 0.8-3.0 Angstrom | Reconstructed CASCI series; original Figure 1 numerical archive unavailable | `datasets/benchmarkQC/source/molecules/N2/cas6e6o_ccpvdz/N2_PES_H.npz` |
 | N2 cc-pVDZ CAS(10e,8o), canonical RHF | 1.0977 and 2.0000 Angstrom | Current control | `datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/canonical/N2_PES_H.npz` |
 | N2 cc-pVDZ CAS(10e,8o), CASCI natural orbitals | 1.0977 and 2.0000 Angstrom | Current final calculation | `datasets/benchmarkQC/source/molecules/N2/cas10e8o_ccpvdz/casci_natural_orbitals/N2_PES_H.npz` |
 | FeS ANO-RCC-MB CAS(6e,6o), quintet | 14 points | Existing | `datasets/benchmarkQC/source/molecules/FeS/FeS_PES_H.npz` |
@@ -22,21 +23,27 @@ separate catalog row.
 | MolVQE-21 corrected CASSCF/natural-orbital reference cases | 27 one-point case archives | Current corrected-cache import | `datasets/molvqe21/systems/` |
 
 The full SI Table I inventory is at
-[`datasets/benchmarkQC/reference/inventory.json`](../datasets/benchmarkQC/reference/inventory.json).
-All 26 geometry rows are represented by a validated payload; the expanded U₂
-rows use the QCANT singlet certificate inputs because the SI-side OneDrive
-Hamiltonian files were dataless placeholders.
+[`si_table_i_inventory.json`](../datasets/benchmarkQC/source/si_table_i_inventory.json).
+It identifies 18 active-space models spanning nine molecular species and 32
+representative geometry values. A complete PES can contain additional catalog
+points: the new N2 CAS(6e,6o) model contributes twelve, not twelve SI models.
 
 Every catalog row includes a normalized numeric integral archive in addition to
 the historical PennyLane-object representation. Where the original orbital frame
 was not retained, the archive is explicitly marked as a JW-equivalent
 reconstruction rather than presented as original AO/MO data. Scalar CASCI,
-CISD, CCSD, Rényi, and cumulant records for the 51 BenchmarkQC rows are in
+CISD, CCSD, Rényi, and cumulant records and availability statuses for the 63 BenchmarkQC rows are in
 [`reference_results.json`](../datasets/benchmarkQC/reference/reference_results.json) and
 are copied into each point's `metadata.json`.
 
 The catalog describes only files actually present in this repository. It does
 not create entries for systems whose source Hamiltonians have not been added.
+
+For N2 CAS(6e,6o), the CASCI reference agrees with the visible Figure 1 curve
+within image-reading precision. The original numerical archive was not recovered,
+and agreement of the GCIM error curve is not claimed. Saved densities, orbital
+coefficients, both orbital frames, and AO-level regeneration tests accompany
+the Hamiltonians. See the model's `README.txt` for exact reproduction commands.
 
 ## MolVQE-21 corrected cache set
 

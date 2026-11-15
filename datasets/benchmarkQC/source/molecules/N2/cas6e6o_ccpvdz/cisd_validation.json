@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "points": [
+    {
+      "geometry_id": "r0p8000",
+      "energy": -108.47624071474281,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.0786711278450437e-14,
+      "spin_square": -8.881784197001252e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r1p0000",
+      "energy": -109.03003476474534,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.3499075026544905e-14,
+      "spin_square": 8.881784197001252e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r1p2000",
+      "energy": -109.05434005605052,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.630778594838304e-14,
+      "spin_square": -2.886579864025407e-15,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r1p4000",
+      "energy": -108.94555258891228,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.83861367852599e-14,
+      "spin_square": -6.661338147750939e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r1p6000",
+      "energy": -108.82302852740493,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.6545875221049328e-14,
+      "spin_square": -2.886579864025407e-15,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r1p8000",
+      "energy": -108.73727463357778,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.3744353285084567e-14,
+      "spin_square": -4.440892098500626e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r2p0000",
+      "energy": -108.6724598613091,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.617422482007038e-14,
+      "spin_square": -8.881784197001252e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r2p2000",
+      "energy": -108.62128899813155,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.8281264663986835e-14,
+      "spin_square": 8.881784197001252e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r2p4000",
+      "energy": -108.5798509293949,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.7092274075441028e-14,
+      "spin_square": 8.881784197001252e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r2p5000",
+      "energy": -108.5620134271639,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.038844067696459e-14,
+      "spin_square": 2.4424906541753444e-15,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r2p8000",
+      "energy": -108.52116521671098,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 3.283602904367516e-14,
+      "spin_square": 6.661338147750939e-16,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    },
+    {
+      "geometry_id": "r3p0000",
+      "energy": -108.52371384796292,
+      "dimension": 118,
+      "singlet_dimension": 55,
+      "residual_norm": 1.966008119231735e-14,
+      "spin_square": -1.5543122344752192e-15,
+      "method": "Dense diagonalization in the singlet subspace of the RHF-reference CISD space"
+    }
+  ]
+}
