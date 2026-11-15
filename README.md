@@ -22,6 +22,10 @@
 
 Benchmark-QC is a versioned collection of molecular quantum-computing benchmark Hamiltonians and portable active-space integral archives. It brings the original BenchmarkQC systems and the MolVQE-21 reference cases into one consistent, checksum-pinned repository.
 
+## Supporting dataset for the paper
+
+The [BenchmarkQC supporting dataset](releases/2026.11.14/README.md) contains all 18 models in Supporting Information Table I, with 68 geometry or integral-frame records. The same archive is publicly available on [Zenodo (DOI: 10.5281/zenodo.24237572)](https://doi.org/10.5281/zenodo.24237572).
+
 ## At a glance
 
 | Collection | Entries | What it contains |
