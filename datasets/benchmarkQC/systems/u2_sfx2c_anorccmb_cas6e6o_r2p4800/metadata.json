@@ -7,7 +7,7 @@
   },
   "active_space_variant": null,
   "basis": "ANO-RCC-MB",
-  "charge": null,
+  "charge": 0,
   "geometry": {
     "bond_length_angstrom": 2.48,
     "point_index_in_source_archive": 1,
@@ -20,7 +20,7 @@
   },
   "integrals": {
     "format": "pickle-free normalized spatial active-space archive",
-    "frame_status": "Jordan-Wigner-equivalent; original orbital coefficient frame unavailable",
+    "frame_status": "inverse Jordan-Wigner spatial representation of the deposited qubit Hamiltonian",
     "path": "datasets/benchmarkQC/systems/u2_sfx2c_anorccmb_cas6e6o_r2p4800/inputs/source_integrals.npz",
     "sha256": "2f3cb9db9cd8d0c73aef091fa47006db57452172972683dcb2419e8bde992496"
   },
@@ -31,11 +31,24 @@
       "method": "minimum-norm inverse Jordan-Wigner reconstruction over real spatial one-/two-body coefficients",
       "operator_equivalence_max_pauli_error": 2.9103830456733704e-11,
       "tool": "tools/recover_missing_integrals.py",
-      "warning": "This archive reproduces the saved JW Hamiltonian but does not recover the original AO/MO orbital frame."
+      "representation": "Spatial model-basis tensors. Molecular coefficients and their matching integrals are provided in the supporting dataset construction records."
     },
     "source_archive_path": "datasets/benchmarkQC/source/molecules/U2/U2_PES_H.npz",
     "source_archive_sha256": "47fc60711817e88ef3a5f2e5b0f693140efe87083947b7021420484d45cea419",
-    "source_catalog_id": "u2_sfx2c_anorccmb_cas6e6o"
+    "source_catalog_id": "u2_sfx2c_anorccmb_cas6e6o",
+    "orbital_definition": "Singlet-CASSCF(6e,6o) orbitals optimized at 2.50 angstrom and projected to each geometry; active reference columns 89--94 (zero-based), with 89 inactive doubly occupied orbitals.",
+    "molecular_construction": {
+      "archive": "releases/2026.11.14/BenchmarkQC-2026.11.14-data.zip",
+      "path_in_archive": "BenchmarkQC-2026.11.14/systems/U2/cas6e6o_anorccmb_sfx2c/records/",
+      "definition": "construction.json",
+      "orbital_and_integral_arrays": "construction_scan.npz",
+      "distance_index_zero_based": 3,
+      "target_state": "lowest singlet"
+    },
+    "integral_array_semantics": {
+      "pre_hf_active_mo_coeff": "Identity in the inverse Jordan-Wigner spatial model basis; not an AO-to-MO coefficient matrix.",
+      "pre_hf_projected_mp2_natural_occupation_data": "Formal closed-shell occupations in the model basis; not natural occupations."
+    }
   },
   "reference_energy_hartree": -55985.66282390914,
   "reference_results": {

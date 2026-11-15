@@ -12,4 +12,6 @@ Each record contains a geometry or integral-frame definition, numerical Pauli Ha
 
 N2 CAS(4e,4o)/STO-6G at 1.20 and 2.00 angstrom includes full orbital coefficients, construction settings and numerical validation records. The 2.00 angstrom record includes the initial UHF density. Orbital metadata distinguish molecular orbital coefficients from model-basis identity matrices.
 
+U2 CAS(6e,6o)/ANO-RCC-MB with spin-free X2C includes the 2.50 angstrom singlet-CASSCF reference orbitals and their projection to seven bond lengths. Molecular coefficients, matching spatial integrals, spin-resolved spectra and numerical validation are stored together under the U2 model. The benchmark targets the lowest singlet at each geometry.
+
 This archive is identical to the file distributed through the Zenodo deposit. Its internal `catalog.json` indexes the publication dataset. The repository-level `datasets/catalog.json` indexes the runnable datasets supported by the Python loaders.
